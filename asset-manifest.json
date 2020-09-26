@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Action-Aim/static/css/main.329c68c5.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.8ae86088.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.8ae86088.chunk.js.map",
+    "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
+    "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.18bd02cf.chunk.js": "/Action-Aim/static/js/2.18bd02cf.chunk.js",
+    "static/js/2.18bd02cf.chunk.js.map": "/Action-Aim/static/js/2.18bd02cf.chunk.js.map",
+    "index.html": "/Action-Aim/index.html",
+    "precache-manifest.da157e2d084b7d58ee54cab59c8d2e26.js": "/Action-Aim/precache-manifest.da157e2d084b7d58ee54cab59c8d2e26.js",
+    "service-worker.js": "/Action-Aim/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.329c68c5.chunk.css.map": "/Action-Aim/static/css/main.329c68c5.chunk.css.map",
+    "static/media/action.png": "/Action-Aim/static/media/action.44f49a14.png",
+    "static/media/bg1.jpg": "/Action-Aim/static/media/bg1.aa210a77.jpg",
+    "static/media/App.css": "/Action-Aim/static/media/bg3.9e341949.jpg",
+    "static/media/HomePage.css": "/Action-Aim/static/media/tshirt2.0b02e7d7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68c786cf.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.18bd02cf.chunk.js",
+    "static/css/main.329c68c5.chunk.css",
+    "static/js/main.8ae86088.chunk.js"
+  ]
+}
