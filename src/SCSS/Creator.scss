@@ -1,0 +1,154 @@
+@import './Variables.scss';
+
+
+.creator{
+    @include maxWidthmaxHeight(100%,auto);
+    border: 1px solid black;
+    .creator-title{
+        @include maxWidthmaxHeight(100%,100px);
+        background: rgb(61, 6, 190);
+        border-top: 5px solid black;
+        @include displayFlex(row);
+        p{
+            position: relative;
+            @include maxWidthmaxHeight(30%,50%);
+            @include top50;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color:rgb(255, 255, 255);
+            text-align: center;
+        }
+        .creator-list{
+            width:70%;
+            height: 100%;
+            background: #000;
+            ul{
+                list-style-type: none;
+                @include displayFlex(row);
+                @include top50;
+                li{
+                    color: white;
+                    margin: 0 50px;
+                    cursor: pointer;
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+        }
+    }
+    .creator-content{
+        @include maxWidthmaxHeight(100%,auto);
+        @include displayFlex(row);
+        .creator-pattern{
+            width:30%;
+            height: auto;
+            .creator-pattern-title{
+                @include maxWidthmaxHeight(100%,80px);
+                background: rgb(255, 255, 255);
+                p{
+                    text-align: center;
+                    color:rgb(45, 15, 153);
+                    @include top50;
+                    font-size: 1.5rem;
+                }
+            }
+            .creator-pattern-sizes{
+                @include maxWidthmaxHeight(100%,150px);
+                p{
+                    @include maxWidthmaxHeight(100%,50px); 
+                    background-color: snow;
+                    font-size:1.5rem;
+                    padding-top: 5px;
+                    border-bottom: 2px solid green;
+                    text-align: center;
+                }
+                ul{
+                    @include maxWidthmaxHeight(100%,auto);
+                    list-style-type: none;  
+                    @include displayFlex(row);
+                    padding:0;
+                    justify-content: center;
+                    li{
+                        @include maxWidthmaxHeight(60px,60px);
+                        box-shadow: 0 0 10px silver;
+                        border-bottom: 2px solid yellow;
+                        p{  
+                            background-color: white;
+                            @include maxWidthmaxHeight(100%,100%);
+                            color:rgb(170, 170, 170);
+                            padding: 10px;
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+            .creator-pattern-content{
+                @include maxWidthmaxHeight(100%,auto);
+                .color-pattern{
+                    @include maxWidthmaxHeight(100%,auto);
+                    padding: 5px;
+                    @include displayFlex(row);
+                    justify-content: center;
+                    .color-pattern-element{
+                        width:50px;
+                        height: 50px;
+                        margin: 5px;
+                        cursor: pointer;
+                        transform: skew(-20deg);
+                        box-shadow: 0 0 5px rgb(0, 0, 0);
+                        transition: all 0.2s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .theme-pattern{
+                    display: block;
+                    position: relative;
+                    @include maxWidthmaxHeight(100%,90%);
+                    overflow:scroll;
+                    .theme-pattern-element{
+                        width: 100%;
+                        height: 200px;
+                        background: #000;
+                        margin-top: 5px;
+                        color:white;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .creator-draw{
+            width:70%;
+            height: auto;
+            background: linear-gradient(to bottom,white,silver);
+            .tshirt{
+                margin: 0 auto;
+                @include top50;
+                width: 50%;
+                height:90%;
+                background: url('../img/tshirt.png') center;
+                position: relative;
+                border: 1px solid rgb(0, 0, 0);
+                .tshirt-content{
+                    width: 50%;
+                    height: 60%;
+                    margin: 25% auto;
+                    .tshirt-content-element{
+                        position: relative;
+                        @include maxWidthmaxHeight(100%,auto);
+                        text-align: center;
+                        cursor: move;
+                        p{
+                            font-size: 2rem;
+                            color:rgb(3, 0, 0);
+                            text-shadow: 0 0 5px silver;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

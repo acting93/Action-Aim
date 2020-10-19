@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAA;ECQL,OAAO,EDPgB,CAAC,CCON,UAAU;EAC5B,MAAM,EDRmB,CAAC,CCQX,UAAU;CDJ5B;;AALD,AAEI,SAFK,CAEL,IAAI,CAAA;ECEJ,KAAK,EDDyB,IAAI,CCCrB,UAAU;EACvB,MAAM,EDF6B,IAAI,CCExB,UAAU;CDDxB",
+    "sources": [
+        "MainContent.scss",
+        "Variables.scss"
+    ],
+    "names": [],
+    "file": "MainContent.css"
+}

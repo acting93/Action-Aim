@@ -1,0 +1,23 @@
+$backgroundColor:rgb(255, 255, 255);
+
+@mixin headerHeight($height){
+    height:$height;
+}
+@mixin maxWidthmaxHeight($width,$height){
+    width:$width !important;
+    height:$height !important;
+}
+@mixin paddingMargin($padding,$margin){
+    padding: $padding !important;
+    margin:$margin !important;
+}
+@mixin displayFlex($flexDirection){
+    display: flex;
+    flex-direction: $flexDirection;
+    flex-grow: 1;
+}
+@mixin top50{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

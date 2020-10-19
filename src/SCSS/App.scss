@@ -1,0 +1,13 @@
+@import './Variables';
+
+.container-fluid{
+    @include paddingMargin(0,0);
+    .wrapper{
+        @include maxWidthmaxHeight(100%,100%);
+        font-family: 'Monda', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+}
+
+

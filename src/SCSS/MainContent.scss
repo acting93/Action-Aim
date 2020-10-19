@@ -1,0 +1,8 @@
+@import './Variables';
+
+.main-col{
+    @include paddingMargin(0,0);
+    main{
+       @include maxWidthmaxHeight(100%,100%);
+    }
+}

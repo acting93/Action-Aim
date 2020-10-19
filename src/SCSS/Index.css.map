@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAA;ECQA,OAAO,EDPgB,CAAC,CCON,UAAU;EAC5B,MAAM,EDRmB,CAAC,CCQX,UAAU;EDPzB,UAAU,EAAC,qBAAqB;EAChC,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;CACzB",
+    "sources": [
+        "Index.scss",
+        "Variables.scss"
+    ],
+    "names": [],
+    "file": "Index.css"
+}

@@ -1,0 +1,13 @@
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container-fluid .wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  font-family: 'Monda', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=App.css.map */

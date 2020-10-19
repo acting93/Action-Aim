@@ -1,0 +1,37 @@
+{
+    "patterns":[
+        {
+            "id":1,
+            "name":"TRAVEL",
+            "category":"travel",
+            "active":"false"
+        },
+        {
+            "id":2,
+            "name":"MOTTO",
+            "category":"motto",
+            "active":"false"
+        },{
+            "id":3,
+            "name":"SPORT",
+            "category":"sport",
+            "active":"false"
+        },{
+            "id":4,
+            "name":"TRAVEL",
+            "category":"travel",
+            "active":"false"
+        },
+        {
+            "id":5,
+            "name":"MOTTO",
+            "category":"motto",
+            "active":"false"
+        },{
+            "id":6,
+            "name":"SPORT",
+            "category":"sport",
+            "active":"false"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+export const getColor =(getColor,id)=>({
+    type:'GET_COLOR',
+    getColor,
+    id
+});
+
+export const mapColor =()=>({
+    type:'MAP_COLOR',
+});
+
+export const getPatternSport =(getPattern,id)=>({
+    type:'GET_PATTERN_SPORT',
+    getPattern,
+    id
+});
+
+export const getPatternMotto =(getPattern,id)=>({
+    type:'GET_PATTERN_MOTTO',
+    getPattern,
+    id
+});
+
+export const getPatternTravel =(getPattern,id)=>({
+    type:'GET_PATTERN_TRAVEL',
+    getPattern,
+    id
+});
+
+export const getDataPattern =()=>({
+    type:'GET_DATA_PATTERN'
+});
+
+export const getTshirtPattern =(getPattern,id)=>({
+    type:'GET_TSHIRT_PATTERN',
+    getPattern,
+    id
+});
+
+export const activeFirstPatterns =()=>({
+    type:'ACTIVE_FIRST_PATTERNS',
+});
+
+export const getSizeColor =(color,isSize)=>({
+    type:'GET_SIZE_COLOR',
+    color,
+    isSize
+});

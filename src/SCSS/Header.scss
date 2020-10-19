@@ -1,0 +1,123 @@
+@import './Variables';
+
+.header-col{
+    @include headerHeight(130px);
+    @include displayFlex(row);
+    @include paddingMargin(0,0);
+    background: white;
+    @media(max-width: 768px){
+      @include displayFlex(column);
+      @include headerHeight(180px); 
+    }
+    .header-contents{
+        width:50%;
+        height:100%;
+        text-align: center;
+        &:first-child{
+            @media(max-width: 992px){
+                width:30%;
+            }
+            @media(max-width: 768px){
+                width:100%;
+            }
+        }
+        &:last-child{
+            @media(max-width: 992px){
+                width:70%;
+            }
+            @media(max-width: 768px){
+                width:100%;
+            }
+        }
+        img{
+            width:15rem;
+            @include top50;
+            @media(max-width: 768px){
+                width:9rem;
+            }
+        }
+        .menu{
+            @include paddingMargin(0,0);
+            @include maxWidthmaxHeight(100%,50%);
+            text-align: center;
+            @include top50;
+            z-index: 1;
+            background: rgb(67, 43, 153);
+            @media(max-width:768px){
+                background: none;
+            }
+            .toggler{
+                @include maxWidthmaxHeight(50px,40px);
+                background: none;
+                border:none;
+                display: none;
+                margin: -5px auto;
+                outline:none;
+                @media(max-width:768px){
+                    display: block; 
+                }
+                .toggler-hamburger{
+                    position: relative;
+                    @include maxWidthmaxHeight(auto,auto);
+                    span{
+                        margin: 6px auto;
+                        display: block;
+                        @include maxWidthmaxHeight(90%,5px);
+                        background-color: rgb(60, 3, 153);
+                    }
+                }
+                .toggler-double{
+                    position: relative;
+                    @include maxWidthmaxHeight(auto,auto);
+                    span{
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        display: block;
+                        left:5%;
+                        text-align: center;
+                        @include maxWidthmaxHeight(90%,5px);
+                        background-color: rgb(60, 3, 153);
+                        &:first-child{
+                            transform: rotate(45deg);
+                        }
+                        &:last-child{
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+            .menu-items{
+                width: 100%;
+                @include top50;
+                @include paddingMargin(20px,0);
+                @media(max-width:768px){
+                    @include displayFlex(column);
+                    position: absolute;
+                    width:100%;
+                    top: 180px;
+                    background: rgb(0, 0, 0);
+                }
+                a{
+                    color:rgb(255, 255, 255);
+                    position: relative;
+                    top: 30%;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    @media(max-width:768px){
+                        margin: 20px auto;
+                        &:hover{
+                            color: rgb(114, 114, 114);
+                        }
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        color: rgb(114, 114, 114);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
