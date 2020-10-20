@@ -8,7 +8,8 @@ const Contact = () => {
     return ( 
         <>
             <Col xl={12} className='contact-header'>
-                <p>Masz pytanie ? Pisz do nas śmiało !</p>
+                <p>Masz pytanie ?</p>
+                <p>Pisz do nas śmiało !</p>
             </Col>
             <Col xl={10} className='contact-col'>
                 <section className='contact'>
