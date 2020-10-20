@@ -1,15 +1,48 @@
+.contact-header {
+  padding: 0 !important;
+  margin: 10px auto !important;
+  height: 400px;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.322)), to(rgba(0, 0, 0, 0.322))), url("../img/contact.jpg") no-repeat;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.322)), url("../img/contact.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.contact-header p {
+  width: 100%;
+  background: rgba(236, 236, 236, 0.856);
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 3rem;
+  color: #4b0b70;
+}
+
 .contact-col {
-  height: auto;
+  height: 700px;
   padding: 0 !important;
   margin: 20px auto !important;
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .contact-col .contact {
-  width: 50%;
-  height: 100%;
-  -webkit-box-shadow: 0 0 10px #a1a1a1;
-          box-shadow: 0 0 10px #a1a1a1;
+  width: 50% !important;
+  height: 100% !important;
+  -webkit-box-shadow: 0 0 5px #a1a1a1;
+          box-shadow: 0 0 5px #a1a1a1;
   padding: 10px !important;
   margin: 0 !important;
 }
@@ -22,8 +55,8 @@
 }
 
 .contact-col .contact .form {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,16 +85,44 @@
 
 .contact-col .contact .form textarea {
   height: 300px;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+  border: none;
 }
 
 .contact-col .contact .form button {
-  width: 200px;
-  height: auto;
+  width: 200px !important;
+  height: auto !important;
   border: none;
   outline: none;
   -webkit-box-shadow: 0 0 5px silver;
           box-shadow: 0 0 5px silver;
   padding: 10px !important;
   margin: 0 auto !important;
+}
+
+.contact-col .contact .contact-logo {
+  position: relative;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.contact-col .contact .contact-logo img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 25rem;
+}
+
+.contact-col .contact .contact-info {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.contact-col .contact .contact-info p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=Contact.css.map */

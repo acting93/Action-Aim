@@ -1,13 +1,28 @@
 @import './Variables.scss';
 
+.contact-header{
+    @include paddingMargin(0,10px auto);
+    height: 400px;
+    box-shadow: 0 0 5px black;
+    background:linear-gradient(to left,rgba(0, 0, 0, 0.322),rgba(0, 0, 0, 0.322)), url('../img/contact.jpg') no-repeat;
+    background-position:center;
+    background-size: 100%;
+    p{
+        width: 100%;
+        background: rgba(236, 236, 236, 0.856);
+        text-align: center;
+        @include top50;
+        font-size: 3rem;
+        color: rgb(75, 11, 112);
+    }
+}
 .contact-col{
-    height: auto;
+    height: 700px;
     @include paddingMargin(0,20px auto);
-    border: 1px solid black;
+    @include displayFlex(row);
     .contact{
-        width:50%;
-        height: 100%;
-        box-shadow: 0 0 10px rgb(161, 161, 161);
+        @include maxWidthmaxHeight(50%,100%);
+        box-shadow: 0 0 5px rgb(161, 161, 161);
         @include paddingMargin(10px,0);
         .contact-title{
             font-size: 1.55rem;
@@ -16,8 +31,7 @@
             padding: 1.5rem;
         }
         .form{
-            width:100%;
-            height:100%;
+            @include maxWidthmaxHeight(100%,100%);
             @include displayFlex(column);
             color:silver;
             p{
@@ -31,14 +45,33 @@
             }
             textarea{
                 height: 300px;
+                box-shadow: 0 0 5px silver;
+                border: none;
             }
             button{
-                width:200px;
-                height: auto;
+                @include maxWidthmaxHeight(200px,auto);
                 border: none;
                 outline: none;
                 box-shadow: 0 0 5px silver;
                 @include paddingMargin(10px,0 auto);
+            }
+        }
+        .contact-logo{
+            position: relative;
+            @include maxWidthmaxHeight(100%,auto);
+            img{
+                position: relative;
+                left:50%;
+                transform: translateX(-50%);
+                width:25rem;
+            }
+        }
+        .contact-info{
+            @include maxWidthmaxHeight(100%,auto);
+            p{
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.2rem;
             }
         }
     }
