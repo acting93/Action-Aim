@@ -123,15 +123,14 @@
         .creator-draw{
             width:70%;
             height: auto;
-            background: linear-gradient(to bottom,white,silver);
+            background: rgb(83, 0, 0);
             .tshirt{
-                margin: 0 auto;
-                @include top50;
-                width: 50%;
-                height:90%;
+                position: absolute;
+                width: 500px;
+                height:600px;
+                left: 50%;
+                top: 20%;
                 background: url('../img/tshirt.png') center;
-                position: relative;
-                border: 1px solid rgb(0, 0, 0);
                 .tshirt-content{
                     width: 50%;
                     height: 60%;
