@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.35e883b4.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.602cded6.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.602cded6.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.ef8f97d7.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.84b0dee7.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.84b0dee7.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.994eac73.chunk.js": "/Action-Aim/static/js/2.994eac73.chunk.js",
-    "static/js/2.994eac73.chunk.js.map": "/Action-Aim/static/js/2.994eac73.chunk.js.map",
+    "static/js/2.d017936a.chunk.js": "/Action-Aim/static/js/2.d017936a.chunk.js",
+    "static/js/2.d017936a.chunk.js.map": "/Action-Aim/static/js/2.d017936a.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.0118d93455abca9e65e44886b570b9a3.js": "/Action-Aim/precache-manifest.0118d93455abca9e65e44886b570b9a3.js",
+    "precache-manifest.e84b21763fc6722653e9ffdbe4e7fde8.js": "/Action-Aim/precache-manifest.e84b21763fc6722653e9ffdbe4e7fde8.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.35e883b4.chunk.css.map": "/Action-Aim/static/css/main.35e883b4.chunk.css.map",
+    "static/css/main.ef8f97d7.chunk.css.map": "/Action-Aim/static/css/main.ef8f97d7.chunk.css.map",
     "static/media/action.png": "/Action-Aim/static/media/action.a722db4e.png",
     "static/media/bg1.jpg": "/Action-Aim/static/media/bg1.aa210a77.jpg",
-    "static/media/Index.css": "/Action-Aim/static/media/bg3.9e341949.jpg",
-    "static/media/HomePage.css": "/Action-Aim/static/media/tshirt2.0b02e7d7.jpg",
+    "static/media/Contact.css": "/Action-Aim/static/media/contact.07d53875.jpg",
+    "static/media/HomePage.css": "/Action-Aim/static/media/header.b4021e77.jpg",
     "static/media/Creator.scss": "/Action-Aim/static/media/tshirt.475df4a0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.994eac73.chunk.js",
-    "static/css/main.35e883b4.chunk.css",
-    "static/js/main.602cded6.chunk.js"
+    "static/js/2.d017936a.chunk.js",
+    "static/css/main.ef8f97d7.chunk.css",
+    "static/js/main.84b0dee7.chunk.js"
   ]
 }
