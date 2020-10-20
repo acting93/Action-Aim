@@ -7,25 +7,44 @@
   background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.322)), to(rgba(0, 0, 0, 0.322))), url("../img/contact.jpg") no-repeat;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.322)), url("../img/contact.jpg") no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 320px) {
+  .contact-header {
+    height: 200px;
+  }
 }
 
 .contact-header p {
   width: 100%;
-  background: rgba(236, 236, 236, 0.856);
+  background: rgba(89, 11, 134, 0.856);
   text-align: center;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 3rem;
-  color: #4b0b70;
+  color: #dbdbdb;
+  margin: none;
+}
+
+@media (max-width: 425px) {
+  .contact-header p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-header p {
+    font-size: 1.5rem;
+  }
 }
 
 .contact-col {
-  height: 700px;
+  height: 800px;
   padding: 0 !important;
-  margin: 20px auto !important;
+  margin: 0 auto !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,6 +57,22 @@
           flex-grow: 1;
 }
 
+@media (max-width: 768px) {
+  .contact-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: auto;
+  }
+}
+
 .contact-col .contact {
   width: 50% !important;
   height: 100% !important;
@@ -47,8 +82,15 @@
   margin: 0 !important;
 }
 
+@media (max-width: 768px) {
+  .contact-col .contact {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
 .contact-col .contact .contact-title {
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   text-align: center;
   width: 100%;
   padding: 1.5rem;
@@ -79,8 +121,15 @@
           box-shadow: 0 0 5px silver;
   border: none;
   width: 60%;
-  padding: 10px !important;
+  padding: 20px !important;
   margin: 10px auto !important;
+}
+
+@media (max-width: 425px) {
+  .contact-col .contact .form input {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
 
 .contact-col .contact .form textarea {
@@ -113,6 +162,12 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 25rem;
+}
+
+@media (max-width: 768px) {
+  .contact-col .contact .contact-logo img {
+    width: 18rem;
+  }
 }
 
 .contact-col .contact .contact-info {
