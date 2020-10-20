@@ -10,7 +10,7 @@ const HomePageInfo = () => {
                     <div className='homePage-title'>
                         <p>Witamy w krainie kreacji koszulek</p>
                     </div>
-                    <article className='homePage-article'>
+                    <article className='homePage-article col-lg-10'>
                         <div className='article-part'>
                             <p>Zapraszamy do skorzystania z naszego kreatora koszulek. Do wyboru ferujemy kilkadziesiąt wzorów do wyboru,
                                 Naszym głównym celem jest zadowolenie klienta czyli Ciebie
