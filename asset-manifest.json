@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.81cc11a5.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.37bad382.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.37bad382.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.d8e6d3c8.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.3e6fc371.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.3e6fc371.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d017936a.chunk.js": "/Action-Aim/static/js/2.d017936a.chunk.js",
-    "static/js/2.d017936a.chunk.js.map": "/Action-Aim/static/js/2.d017936a.chunk.js.map",
+    "static/js/2.933a624f.chunk.js": "/Action-Aim/static/js/2.933a624f.chunk.js",
+    "static/js/2.933a624f.chunk.js.map": "/Action-Aim/static/js/2.933a624f.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.ff824d294c1b1d9472642b1864c757de.js": "/Action-Aim/precache-manifest.ff824d294c1b1d9472642b1864c757de.js",
+    "precache-manifest.8ab70ed0b766874324c26fb3cc5d76cd.js": "/Action-Aim/precache-manifest.8ab70ed0b766874324c26fb3cc5d76cd.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.81cc11a5.chunk.css.map": "/Action-Aim/static/css/main.81cc11a5.chunk.css.map",
-    "static/media/action.png": "/Action-Aim/static/media/action.a722db4e.png",
+    "static/css/main.d8e6d3c8.chunk.css.map": "/Action-Aim/static/css/main.d8e6d3c8.chunk.css.map",
+    "static/media/HomePage.css": "/Action-Aim/static/media/action.a722db4e.png",
     "static/media/bg1.jpg": "/Action-Aim/static/media/bg1.5fb777b7.jpg",
     "static/media/Contact.css": "/Action-Aim/static/media/contact.07d53875.jpg",
     "static/media/Creator.scss": "/Action-Aim/static/media/tshirt.475df4a0.png"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d017936a.chunk.js",
-    "static/css/main.81cc11a5.chunk.css",
-    "static/js/main.37bad382.chunk.js"
+    "static/js/2.933a624f.chunk.js",
+    "static/css/main.d8e6d3c8.chunk.css",
+    "static/js/main.3e6fc371.chunk.js"
   ]
 }
