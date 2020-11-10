@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c0b0ab31ff3f650cd31c1a9fad136d0",
+    "revision": "8399973a35c8e64083f869fbd80b173c",
     "url": "/Action-Aim/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "33108943caece7ac19e5",
+    "revision": "e711283e74c7b0e83da6",
     "url": "/Action-Aim/static/css/main.ac494932.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/js/2.e3c93ec2.chunk.js"
   },
   {
-    "revision": "33108943caece7ac19e5",
-    "url": "/Action-Aim/static/js/main.f224f814.chunk.js"
+    "revision": "e711283e74c7b0e83da6",
+    "url": "/Action-Aim/static/js/main.49a5df2e.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
