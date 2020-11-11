@@ -1,15 +1,35 @@
-import React from 'react';
+import React,{useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import CreatorPatternColors from './CreatorPatternColors';
 import SizesAvailable from './SizesAvailable';
 import TshirtPattern from './ThemesPatternFunctions/TshirtPattern';
 
 const CreatorPattern = () => {
-    const colors = useSelector(state => state.tshirtReducer.colors);
-    const pattern = useSelector(state => state.tshirtReducer.activePattern);
-    const isSize = useSelector(state => state.tshirtReducer.isSize);
-    const mapColors = colors.map(color => <CreatorPatternColors id={color.id} key={color.id} color={color.color} sizes={color.sizes} />);
-    const sizes = useSelector(state => state.tshirtReducer.activeSizePerColor);
+    const colors = useSelector(state => state.tshirtReducer.colors);//pobranie kolorów ze state redux
+    const pattern = useSelector(state => state.tshirtReducer.activePattern);//pobranie wzorów koszulek ze state redux
+    const isSize = useSelector(state => state.tshirtReducer.isSize); //pobieram stan boolean do aktywnych rozmiarów przy wyborze koloru
+    const mapColors = colors.map(color => <CreatorPatternColors id={color.id} key={color.id} color={color.color} active={color.active} sizes={color.sizes} />);//mapowanie listy kolorów => utworzenie nowgo komponentu kolorów
+    const sizes = useSelector(state => state.tshirtReducer.activeSizePerColor);//pobranie aktywnych rozmiarów danego koloru przy kliknięciu na kolor
+    const [showPattern,setShowPattern] = useState(true);
+    
+    //auto pojawianie się TshirtPattern
+    const windowWidth =()=>{
+        const widthScreen = window.innerWidth;
+
+        if(widthScreen > 768){
+            setShowPattern(true);
+        }
+    };
+
+    useEffect(()=>{
+        window.addEventListener('resize',windowWidth);
+        return ()=> {window.removeEventListener('resize',windowWidth);}
+    },[]);
+
+    const showHide =()=>{
+        setShowPattern(!showPattern);
+    };
+
     return ( 
         <>
             <div className='color-pattern'>
@@ -19,11 +39,11 @@ const CreatorPattern = () => {
                 <p>Dostępne rozmiary:</p>
                 {isSize === true ? <SizesAvailable sizes={sizes} /> : null}
             </div>
-            <div className='theme-pattern'>
-                <TshirtPattern pattern={pattern}/>
-            </div>
+            <p>as</p>
+            <div className='theme-pattern-button'><button onClick={showHide}>{showPattern === true ? 'ukryj wzory' : 'pokaż wzory'}</button></div>
+            <TshirtPattern pattern={pattern} show={showPattern}/>
         </>
      );
 }
  
-export default CreatorPattern;
+export default React.memo(CreatorPattern);

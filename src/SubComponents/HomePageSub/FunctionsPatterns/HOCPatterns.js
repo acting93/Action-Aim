@@ -10,6 +10,7 @@ const withHOCPatterns =(Patterns)=>{
             this.handleTravel = this.handleTravel.bind(this);
             this.handleMotto = this.handleMotto.bind(this);
             this.handleSport = this.handleSport.bind(this);
+            this.showMobilePattern = this.showMobilePattern.bind(this);
         }
 
         handleMotto(){
@@ -24,12 +25,17 @@ const withHOCPatterns =(Patterns)=>{
             this.props.dispatchTravel();
         };
 
+        showMobilePattern(){
+            this.props.showMobilePattern();
+        }
+
         render(){
             return(
                 <Patterns
                     motto={this.handleMotto}
                     sport={this.handleSport}
                     travel={this.handleTravel}
+                    showMobilePattern={this.showMobilePattern}
                     {...this.props}
                 />
             )
@@ -42,7 +48,8 @@ const mapDispatchToProps = dispatch => {
     return{
         dispatchTravel: ()=> dispatch({type:'GET_PATTERN_TRAVEL'}),
         dispatchSport: ()=> dispatch({type:'GET_PATTERN_SPORT'}),
-        dispatchMotto: ()=> dispatch({type:'GET_PATTERN_MOTTO'})
+        dispatchMotto: ()=> dispatch({type:'GET_PATTERN_MOTTO'}),
+        showMobilePattern: ()=> dispatch({type:'SHOW_PATTERN_CLICK',show:true})
     }
 };
 

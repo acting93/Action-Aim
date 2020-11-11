@@ -26,6 +26,7 @@ const RenderPropsToggler =(HOCMenu)=>{
 
         componentDidMount(){
             window.addEventListener('resize',this.handleWidth);
+            this.handleWidth();
         };
 
         componentDidUpdate(){

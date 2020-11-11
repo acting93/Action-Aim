@@ -17,7 +17,6 @@
 .homePageInfo-col{
     padding: 0 !important;
     height:auto;
-    background:linear-gradient(to right,black,rgb(85, 6, 138));
     .homePageInfo{
         height: auto;
         padding: 0 !important;
@@ -28,7 +27,7 @@
             padding: 1rem;
             text-align: center;
             text-transform: uppercase;
-            color: rgb(255, 255, 255);
+            color: rgb(180, 180, 180);
             @media(max-width:992px){
                 font-size: 1.5rem;
             }
@@ -43,7 +42,7 @@
             }
         }
         .homePage-article{
-            margin: 0 auto;
+            @include paddingMargin(0,10px auto);
             height:400px;
             @include displayFlex(row);
             @media(max-width:992px){
@@ -57,11 +56,12 @@
             .article-part{
                 width:50%;
                 height: 100%;
-                color: rgb(255, 255, 255);
+                color: rgb(148, 148, 148);
                 @media(max-width:768px){
                     width:100%;
                 }
                 &:first-child{
+                    box-shadow: 0 0 5px silver;
                     p{
                         text-align: center;
                         @include top50;
@@ -81,7 +81,7 @@
                     }
                 };
                 &:last-child{
-                    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+                    background: rgb(19, 1, 66);
                     p{
                         text-align: center;
                         @include top50;
@@ -104,31 +104,49 @@
                 }
             }
         }
+        
         .homePage-article-2{
-            margin-top: 20px;
-            height:auto;
-            padding: 0;
-            background:linear-gradient(to bottom, rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.562)), url('../img/header.jpg');
+            @include paddingMargin(15px,0);
+            @include maxWidthmaxHeight(100%,auto);
+            background:linear-gradient(to bottom,rgba(0, 0, 0, 0.815),rgba(0, 0, 0, 0.39)), url('../img/action.png');
+            background-size: cover;
+            background-position: center;
+            .homePage-title-article-2{
+                @include maxWidthmaxHeight(100%,100px);
+                p{
+                    @include top50;
+                    font-size: 2rem;
+                    text-align: center;
+                    @include paddingMargin(2rem,0);
+                    color:white;
+                }
+            }
             .homePage-article-2-part{
                 @include displayFlex(row);
                 justify-content: center;
-                width: 100%;
-                height: 300px;
+                @include maxWidthmaxHeight(100%,350px);
                 @media(max-width:768px){
-                    @include displayFlex(row);
-                }
-                @media(max-width:576px){
                     @include displayFlex(column);
+                    @include maxWidthmaxHeight(100%,auto);
                 }
                 .homePage-article-2-icon{
                     position: relative;
-                    width:30%;
-                    height:100%;
-                    margin: 5px;
+                    @include maxWidthmaxHeight(30%,100%);
+                    @include paddingMargin(0,0px);
                     text-align: center;
-                    @media(max-width:576px){
-                        width:100%;
-                        margin-left:0;
+                    border-top: 5px solid rgb(233, 233, 233);
+                    border-bottom: 5px solid rgb(233, 233, 233);
+                    box-shadow: 0 0 5px black;
+                    background: rgba(0, 0, 0, 0.712);
+                    @media(max-width:768px){
+                        @include paddingMargin(0,0 auto);
+                        @include maxWidthmaxHeight(80%,250px);
+                    }
+                    @media(max-width:425px){
+                        @include maxWidthmaxHeight(90%,250px);
+                    }
+                    @media(max-width:320px){
+                        @include maxWidthmaxHeight(100%,250px);
                     }
                     .fa{
                         position: absolute;
@@ -139,14 +157,6 @@
                         top:10%;
                         @media(max-width:768px){
                             font-size: 5rem; 
-                            top:5%;
-                        }
-                        @media(max-width:576px){
-                            left:5%;
-                            transform: translateX(-5%);
-                        }
-                        @media(max-width:375px){
-                            font-size: 3rem;
                         }
                     }
                     .fas{
@@ -158,13 +168,6 @@
                         @media(max-width:768px){
                             font-size: 5rem;
                             top:5%; 
-                        }
-                        @media(max-width:576px){
-                            left:5%;
-                            transform: translateX(-5%);
-                        }
-                        @media(max-width:375px){
-                            font-size: 3rem;
                         }
                     }
                     .fa-palette{
@@ -183,15 +186,10 @@
                         top:60%;
                         @media(max-width:768px){
                             font-size: 1.3rem;
-                            top:40%;  
+                            top:50%;  
                         }
                         @media(max-width:576px){
                             font-size: 1rem;
-                            top:10%;
-                            left:60%;
-                            transform: translateX(-60%);
-                        }
-                        @media(max-width:375px){
                             left:50%;
                             transform: translateX(-50%);
                         }
@@ -203,16 +201,12 @@
                         top:80%;
                         @media(max-width:768px){
                             font-size: 0.9rem;
-                            top:60%;  
+                            top:70%;  
                         }
                         @media(max-width:576px){
-                            width:60%;
                             font-size: 0.9rem;
-                            top:40%; 
-                            text-align: right;
                         }
                         @media(max-width:375px){
-                            width:70%;
                             font-size: 0.8rem;
                         }
                     }
@@ -224,9 +218,7 @@
             margin: 0 !important;
             height: auto;
             padding: 50px;
-            background:linear-gradient(to bottom, rgba(0, 0, 0,0.562),rgba(0, 0, 0, 0.808)), url('../img/header.jpg');
-            clip-path: polygon(20% 0%, 85% 0%, 90% 100%, 15% 100%);
-            transform: rotateX(-10deg);
+            background:white;
             @media(max-width:768px){
                 padding: 30px;
             }

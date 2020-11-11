@@ -1,7 +1,8 @@
-export const getColor =(getColor,id)=>({
+export const getColor =(getColor,id,active)=>({
     type:'GET_COLOR',
     getColor,
-    id
+    id,
+    active
 });
 
 export const mapColor =()=>({
@@ -44,4 +45,9 @@ export const getSizeColor =(color,isSize)=>({
     type:'GET_SIZE_COLOR',
     color,
     isSize
+});
+
+export const ShowPatternClick =(show)=>({
+    type:'SHOW_PATTERN_CLICK',
+    show
 });

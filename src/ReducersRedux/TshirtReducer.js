@@ -1,34 +1,51 @@
 import data from '../Shapes.json';
-import colors from '../colorsSizes.json';
- 
+import colorsJSON from '../colorsSizes.json';
+
+
 const patternArray = JSON.parse(JSON.stringify(data.patterns));
 const arrayNames = ["motto","sport","travel"];
-const a = [...patternArray];
+const groupPattern = [...patternArray];
 const randomArrayName = arrayNames[Math.floor(Math.random() * 3)]
-const filterPattern = a.filter(element => {
+const randomPattern = groupPattern.filter(element => {
     if(element.category === randomArrayName){
         return element
     };
-});
-
-const colorsSizes = JSON.parse(JSON.stringify(colors.colors));
+    return element
+});/// losowa grupa wzorów
+const colorsSizes = JSON.parse(JSON.stringify(colorsJSON.colors)); //pobieram kolory z colorSizes.json
 
 const tshirtState ={
-    activeColor: 'white',
-    dataPattern:patternArray,
-    activePattern:filterPattern,
-    tshirtPattern:[],
+    activeColor: 'white', //domyślny kolor biały przy pierwszym załadowaniu strony
+    dataPattern:patternArray,//wzory z JSON
+    activePattern:randomPattern,//losowa grupa wzorów przy załadowaniu kreatora
+    tshirtPattern:null,//aktywny wzór na koszulce
     tshirtActive:true,
     colors:colorsSizes,
-    isSize:false
+    isSize:true,
+    activeSizePerColor: [colorsSizes[0]], //domyślny przypisany rozmiar do pierwszego koloru w tablicy 'white' - state.activeColor
+    showPattern: null//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
 }
+
 const TshirtReducer =(state=tshirtState,action)=>{
 
     switch(action.type){
+        
         case 'GET_COLOR':
+
+            let copyColorArray = [...state.colors];
+
+            copyColorArray.filter(element => { //pobranie id z akcji, zmiana element.active na true co powoduje doanie stylu transform skew w elemencie koloru
+                if(element.id === action.id){
+                   return element.active = true
+                }else{
+                   return element.active = false
+                }
+            });
+
             return{
                 ...state,
-                activeColor: action.getColor
+                activeColor: action.getColor,
+                colors: copyColorArray 
             }
 
         case 'GET_PATTERN_SPORT':
@@ -37,6 +54,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "sport"){
                     return element
                 }
+                return element
             })
             return{
                 ...state,
@@ -49,6 +67,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "travel"){
                     return element
                 }
+                return element
             })
 
             return{
@@ -62,6 +81,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "motto"){
                     return element
                 }
+                return element
             })            
             return{
                 ...state,
@@ -84,15 +104,22 @@ const TshirtReducer =(state=tshirtState,action)=>{
             let colorsSize = [...state.colors];
 
             const getSize = colorsSize.filter(element=>{
-                if(element.color === action.color){
+                if(element.color === action.color){//porównanie klikniętego koloru z kolerm z json
                     return element
                 };
+                return element
             });
 
             return{
                 ...state,
                 activeSizePerColor: getSize,
                 isSize: true
+            }
+        
+        case 'SHOW_PATTERN_CLICK':
+            return{
+                ...state,
+                showPattern: action.show
             }
 
         default: return state

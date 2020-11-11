@@ -22,7 +22,7 @@ const HomePageInfo = () => {
                         </div>
                     </article>
                     <article className='homePage-article-2'>
-                        <div className='homePage-title'>
+                        <div className='homePage-title-article-2'>
                             <p>Sprawdź jakie to proste !</p>
                         </div>
                         <div className='homePage-article-2-part'>

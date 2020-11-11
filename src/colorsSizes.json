@@ -3,7 +3,7 @@
         {
             "id":0,
             "color":"white",
-            "active":"none",
+            "active":true,
             "sizes":[
                 {
                     "id":0,
@@ -30,7 +30,7 @@
         },{
             "id":1,
             "color":"red",
-            "active":"none",
+            "active":false,
             "sizes":[
                 {
                     "id":0,
@@ -57,7 +57,7 @@
         },{
             "id":2,
             "color":"black",
-            "active":"none",
+            "active":false,
             "sizes":[
                 {
                     "id":0,
@@ -84,7 +84,7 @@
         },{
             "id":3,
             "color":"orange",
-            "active":"none",
+            "active":false,
             "sizes":[
                 {
                     "id":0,
@@ -111,7 +111,7 @@
         },{
             "id":4,
             "color":"green",
-            "active":"none",
+            "active":false,
             "sizes":[
                 {
                     "id":0,

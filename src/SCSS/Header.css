@@ -98,6 +98,7 @@
 .header-col .header-contents .menu .toggler {
   width: 50px !important;
   height: 40px !important;
+  position: relative;
   background: none;
   border: none;
   display: none;

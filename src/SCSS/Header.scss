@@ -7,7 +7,7 @@
     background: white;
     @media(max-width: 768px){
       @include displayFlex(column);
-      @include headerHeight(180px); 
+      @include headerHeight(180px);
     }
     .header-contents{
         width:50%;
@@ -48,6 +48,7 @@
             }
             .toggler{
                 @include maxWidthmaxHeight(50px,40px);
+                position: relative;
                 background: none;
                 border:none;
                 display: none;

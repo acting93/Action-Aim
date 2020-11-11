@@ -3,8 +3,10 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import './SCSS/App.css';
 import Header from './MainComponents/Header';
 import MainContent from './MainComponents/MainContent';
+import Footer from './MainComponents/Footer';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ScrollToTop from 'react-router-scroll-to-top'
 
 class App extends PureComponent {
   constructor(props) {
@@ -39,15 +41,18 @@ class App extends PureComponent {
   render() { 
     return( 
       <>
-        <Router basename={process.env.PUBLIC_URL} onUpdate={()=> window.scrollTo(0,0)}>
-          <div className='container-fluid'>
-            <div className='root'>
-              <div className='wrapper'>
-                  <Header />
-                  <MainContent />
+        <Router /*basename={process.env.PUBLIC_URL}*/ onUpdate={()=> window.scrollTo(0,0)}>
+          <ScrollToTop>
+            <div className='container-fluid'>
+              <div className='root'>
+                <div className='wrapper'>
+                    <Header />
+                    <MainContent />
+                    <Footer />
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollToTop>
         </Router>
       </>
      );

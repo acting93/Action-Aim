@@ -25,12 +25,12 @@ const Header = () => {
         const topWindow = window.pageYOffset;
         const heightHeader = headerRef.current.offsetHeight;
 
-        heightHeader < topWindow  ? dispatch({type:'SPREAD_MENU',isSticky:true}) : dispatch({type:'SPREAD_MENU',isSticky:false})
-    }
+        heightHeader < topWindow  ? dispatch({type:'SPREAD_MENU',isSticky:true}) : dispatch({type:'SPREAD_MENU',isSticky:false});
+    };
 
     useEffect(()=>{
         window.addEventListener('scroll',headerSticky);
-    })
+    });
 
     return ( 
         <>
