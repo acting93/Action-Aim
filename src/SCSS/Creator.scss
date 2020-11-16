@@ -69,8 +69,8 @@
             @include displayFlex(column);
         }
         .creator-pattern{
-            @include maxWidthmaxHeight(35%,auto);
-            box-shadow: 0 0 5px rgb(195, 195, 195);
+            @include maxWidthmaxHeight(25%,auto);
+            box-shadow: 0 0 5px rgb(61, 1, 1);
             @include paddingMargin(0,0);
             @media(max-width: 768px){
                 @include maxWidthmaxHeight(100%,auto); 
@@ -82,10 +82,7 @@
                     text-align: center;
                     color:rgb(223, 223, 223);
                     @include top50;
-                    font-size: 1.5rem;
-                    @media(max-width: 992px){
-                        font-size: 1.1rem;
-                    }
+                    font-size: 1.1rem;
                     @media(max-width: 768px){
                         font-size: 1rem;
                     }
@@ -102,34 +99,24 @@
                     .color-pattern-element{
                         position: relative;
                         top:30%;
-                        @include maxWidthmaxHeight(50px,50px); 
+                        @include maxWidthmaxHeight(40px,40px); 
                         margin: 5px;
                         cursor: pointer;
                         transform: skew(-20deg);
                         box-shadow: 0 0 5px rgb(124, 124, 124);
                         transition: all 0.2s;
-                        @media(max-width: 992px){
-                            @include maxWidthmaxHeight(40px,40px);  
-                        }
-                        &:hover{
-                            transform: scale(1.1);
-                        }
                     }
                 }
                 .creator-pattern-sizes{
                     @include maxWidthmaxHeight(100%,180px);
-                    box-shadow: 0 0 5px rgb(207, 207, 207);
                     @include paddingMargin(0, 0);
-                    background-color: rgb(61, 9, 128);
+                    background-color: rgb(223, 223, 223);
                     p{
                         @include maxWidthmaxHeight(100%,50px); 
-                        font-size:1.5rem;
-                        padding-top: 5px;
+                        font-size: 1.1rem;
+                        padding-top: 10px;
                         text-align: center;
-                        color:rgb(185, 185, 185);
-                        @media(max-width: 992px){
-                            font-size: 1.1rem;
-                        }
+                        color:rgb(68, 68, 68);
                         @media(max-width: 768px){
                             font-size: 1rem;
                         }
@@ -203,13 +190,13 @@
                     .theme-pattern-element{
                         @include maxWidthmaxHeight(80%,200px);
                         @include paddingMargin(0,5px auto);
-                        background: rgb(255, 255, 255);
                         color:white;
                         text-align: center;
                         cursor: pointer;
+                        box-shadow: 0 0 5px silver;
                         img{
                             @include top50;
-                            height: 100%;
+                            width: 10rem;
                         }
                         @media(max-width: 992px){
                             @include maxWidthmaxHeight(100%,150px); 
@@ -226,7 +213,7 @@
         }
         .creator-draw{
             position: relative;
-            @include maxWidthmaxHeight(65%,auto);
+            @include maxWidthmaxHeight(50%,auto);
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,auto);
                 background: #000;
@@ -242,7 +229,7 @@
                 background: url('../img/tshirt.png');
                 background-size: cover;
                 background-position: center;
-                box-shadow: 0 0 10px rgb(0, 0, 0);
+                box-shadow: 0 0 10px rgb(122, 122, 122);
                 @media(max-width:1200px){
                     @include maxWidthmaxHeight(600px,700px);
                 }
@@ -276,7 +263,6 @@
                     margin-top: 20%;
                     margin-left:50%;
                     transform: translateX(-50%);
-                    border: 1px solid black;
                     @media(max-width:576px){
                         width: 42%;
                     }
@@ -293,6 +279,77 @@
                             @include maxWidthmaxHeight(100%,5%);
                         }
                     }
+                }
+            }
+        }
+        .creator-settings{
+            @include maxWidthmaxHeight(30%,auto);
+            box-shadow: 0 0 5px silver;
+            p{
+                width: 100%;
+                text-align: center;
+                padding:20px;
+                background: rgb(223, 223, 223);
+            }
+            .creator-sett-content{
+                @include maxWidthmaxHeight(100%,100px);
+                @include displayFlex(row);
+                justify-content: center;
+                flex-wrap: wrap;
+                border-bottom: 1px solid black;
+                button{
+                    @include maxWidthmaxHeight(80px,80px);
+                    @include paddingMargin(0,5px);
+                    @include top50;
+                    background: rgb(255, 255, 255);
+                    box-shadow: 0 0 5px silver;
+                    border:none;
+                    font-size: 0.8rem;
+                    .fas{
+                        display: block;
+                        @include paddingMargin(0,5px auto);
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .creator-summary{
+                @include maxWidthmaxHeight(100%,auto);
+                .summary-title{
+                    text-align: center;
+                    @include paddingMargin(20px,0);
+                }
+                .summary-element{
+                    @include maxWidthmaxHeight(100%,80px);
+                    box-shadow: 0 0 5px rgb(197, 190, 190);
+                    @include displayFlex(row);
+                    p{
+                        @include maxWidthmaxHeight(auto,auto);
+                        @include top50;
+                        background-color: white;
+                        text-align: left;
+                    }
+                    input{
+                        @include maxWidthmaxHeight(50px,50px);
+                        @include top50;
+                        border: none;
+                        box-shadow: 0 0 5px silver;
+                    }
+                    .price{
+                        @include top50;
+                        background-color: white;
+                        font-size: 1.2rem;
+                        color:rgb(60, 10, 117);
+                    }
+                }
+                .buy{
+                    position: relative;
+                    @include maxWidthmaxHeight(100px,50px);
+                    @include paddingMargin(0,0 50%);
+                    transform: translate(-50%);
+                    border:none;
+                    outline: none;
+                    box-shadow: 0 0 5px silver;
+                    background-color: rgb(149, 247, 149);
                 }
             }
         }

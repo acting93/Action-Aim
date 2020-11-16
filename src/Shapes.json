@@ -5,14 +5,14 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"action.png"
+            "img":"pks.png"
         },
         {
             "id":2,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"action.png"
+            "img":"kdst.png"
         },{
             "id":3,
             "name":"SPORT",
@@ -24,14 +24,14 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"action.png"
+            "img":"pks.png"
         },
         {
             "id":5,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"action.png"
+            "img":"kdst.png"
         },{
             "id":6,
             "name":"SPORT",
@@ -44,14 +44,14 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"action.png"
+            "img":"pks.png"
         },
         {
             "id":8,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"action.png"
+            "img":"kdst.png"
         },{
             "id":9,
             "name":"SPORT",
@@ -63,13 +63,13 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"action.png"
+            "img":"pks.png"
         },{
             "id":11,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"action.png"
+            "img":"kdst.png"
         },{
             "id":12,
             "name":"SPORT",

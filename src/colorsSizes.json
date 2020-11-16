@@ -135,6 +135,33 @@
                     "active":true
                 }
             ]
-        }
+        },{
+        "id":5,
+        "color":"#06048d",
+        "active":true,
+        "sizes":[
+            {
+                "id":0,
+                "size":"XS",
+                "active":true
+            },{
+                "id":1,
+                "size":"S",
+                "active":true
+            },{
+                "id":2,
+                "size":"M",
+                "active":true
+            },{
+                "id":3,
+                "size":"L",
+                "active":true
+            },{
+                "id":4,
+                "size":"XL",
+                "active":true
+            }
+        ]
+    }
     ]
 }

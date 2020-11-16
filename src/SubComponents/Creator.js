@@ -1,7 +1,8 @@
-import React,{useEffect,useCallback,useState} from 'react';
+import React from 'react';
 import '../SCSS/Creator.scss';
 import CreatorPattern from './CreatorComponents/CreatorPattern';
 import CreatorShape from './CreatorComponents/CreatorShape';
+import CreatorSettings from './CreatorComponents/CreatorSettings';
 import composedHOCPatterns from './HomePageSub/FunctionsPatterns/HOCPatterns';
 
 const Creator = (props) => {
@@ -27,6 +28,9 @@ const Creator = (props) => {
                     </div>
                     <div className='creator-draw'>
                         <CreatorShape />
+                    </div>
+                    <div className='creator-settings'>
+                        <CreatorSettings />
                     </div>
                 </article>
             </section>

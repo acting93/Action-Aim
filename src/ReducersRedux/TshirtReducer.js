@@ -10,8 +10,8 @@ const randomPattern = groupPattern.filter(element => {
     if(element.category === randomArrayName){
         return element
     };
-    return element
 });/// losowa grupa wzorów
+
 const colorsSizes = JSON.parse(JSON.stringify(colorsJSON.colors)); //pobieram kolory z colorSizes.json
 
 const tshirtState ={
@@ -54,7 +54,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "sport"){
                     return element
                 }
-                return element
             })
             return{
                 ...state,
@@ -67,7 +66,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "travel"){
                     return element
                 }
-                return element
             })
 
             return{
@@ -81,7 +79,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.category === "motto"){
                     return element
                 }
-                return element
             })            
             return{
                 ...state,
@@ -107,7 +104,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 if(element.color === action.color){//porównanie klikniętego koloru z kolerm z json
                     return element
                 };
-                return element
             });
 
             return{

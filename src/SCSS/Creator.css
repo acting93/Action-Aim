@@ -163,10 +163,10 @@
 }
 
 .creator .creator-content .creator-pattern {
-  width: 35% !important;
+  width: 25% !important;
   height: auto !important;
-  -webkit-box-shadow: 0 0 5px #c3c3c3;
-          box-shadow: 0 0 5px #c3c3c3;
+  -webkit-box-shadow: 0 0 5px #3d0101;
+          box-shadow: 0 0 5px #3d0101;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -191,13 +191,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  font-size: 1.5rem;
-}
-
-@media (max-width: 992px) {
-  .creator .creator-content .creator-pattern .creator-pattern-title p {
-    font-size: 1.1rem;
-  }
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
@@ -234,8 +228,8 @@
 .creator .creator-content .creator-pattern .creator-pattern-content .color-pattern .color-pattern-element {
   position: relative;
   top: 30%;
-  width: 50px !important;
-  height: 50px !important;
+  width: 40px !important;
+  height: 40px !important;
   margin: 5px;
   cursor: pointer;
   -webkit-transform: skew(-20deg);
@@ -246,41 +240,21 @@
   transition: all 0.2s;
 }
 
-@media (max-width: 992px) {
-  .creator .creator-content .creator-pattern .creator-pattern-content .color-pattern .color-pattern-element {
-    width: 40px !important;
-    height: 40px !important;
-  }
-}
-
-.creator .creator-content .creator-pattern .creator-pattern-content .color-pattern .color-pattern-element:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .creator .creator-content .creator-pattern .creator-pattern-content .creator-pattern-sizes {
   width: 100% !important;
   height: 180px !important;
-  -webkit-box-shadow: 0 0 5px #cfcfcf;
-          box-shadow: 0 0 5px #cfcfcf;
   padding: 0 !important;
   margin: 0 !important;
-  background-color: #3d0980;
+  background-color: #dfdfdf;
 }
 
 .creator .creator-content .creator-pattern .creator-pattern-content .creator-pattern-sizes p {
   width: 100% !important;
   height: 50px !important;
-  font-size: 1.5rem;
-  padding-top: 5px;
+  font-size: 1.1rem;
+  padding-top: 10px;
   text-align: center;
-  color: #b9b9b9;
-}
-
-@media (max-width: 992px) {
-  .creator .creator-content .creator-pattern .creator-pattern-content .creator-pattern-sizes p {
-    font-size: 1.1rem;
-  }
+  color: #444444;
 }
 
 @media (max-width: 768px) {
@@ -406,10 +380,11 @@
   height: 200px !important;
   padding: 0 !important;
   margin: 5px auto !important;
-  background: white;
   color: white;
   text-align: center;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
 }
 
 .creator .creator-content .creator-pattern .creator-pattern-content .theme-pattern .theme-pattern-element img {
@@ -417,7 +392,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  height: 100%;
+  width: 10rem;
 }
 
 @media (max-width: 992px) {
@@ -443,7 +418,7 @@
 
 .creator .creator-content .creator-draw {
   position: relative;
-  width: 65% !important;
+  width: 50% !important;
   height: auto !important;
 }
 
@@ -470,8 +445,8 @@
   background: url("../img/tshirt.png");
   background-size: cover;
   background-position: center;
-  -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px #7a7a7a;
+          box-shadow: 0 0 10px #7a7a7a;
 }
 
 @media (max-width: 1200px) {
@@ -538,7 +513,6 @@
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border: 1px solid black;
 }
 
 @media (max-width: 576px) {
@@ -564,5 +538,139 @@
 .creator .creator-content .creator-draw .tshirt .tshirt-content .tshirt-content-element img {
   width: 100% !important;
   height: 5% !important;
+}
+
+.creator .creator-content .creator-settings {
+  width: 30% !important;
+  height: auto !important;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+}
+
+.creator .creator-content .creator-settings p {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #dfdfdf;
+}
+
+.creator .creator-content .creator-settings .creator-sett-content {
+  width: 100% !important;
+  height: 100px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 1px solid black;
+}
+
+.creator .creator-content .creator-settings .creator-sett-content button {
+  width: 80px !important;
+  height: 80px !important;
+  padding: 0 !important;
+  margin: 5px !important;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: white;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.creator .creator-content .creator-settings .creator-sett-content button .fas {
+  display: block;
+  padding: 0 !important;
+  margin: 5px auto !important;
+  font-size: 1.5rem;
+}
+
+.creator .creator-content .creator-settings .creator-summary {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-title {
+  text-align: center;
+  padding: 20px !important;
+  margin: 0 !important;
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-element {
+  width: 100% !important;
+  height: 80px !important;
+  -webkit-box-shadow: 0 0 5px #c5bebe;
+          box-shadow: 0 0 5px #c5bebe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-element p {
+  width: auto !important;
+  height: auto !important;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  text-align: left;
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-element input {
+  width: 50px !important;
+  height: 50px !important;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-element .price {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  font-size: 1.2rem;
+  color: #3c0a75;
+}
+
+.creator .creator-content .creator-settings .creator-summary .buy {
+  position: relative;
+  width: 100px !important;
+  height: 50px !important;
+  padding: 0 !important;
+  margin: 0 50% !important;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+  background-color: #95f795;
 }
 /*# sourceMappingURL=Creator.css.map */
