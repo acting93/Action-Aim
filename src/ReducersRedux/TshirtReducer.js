@@ -1,7 +1,7 @@
 import data from '../Shapes.json';
 import colorsJSON from '../colorsSizes.json';
 
-
+///funkcje wstępne aby zaladować elementy w poszczególnych komponentach 
 const patternArray = JSON.parse(JSON.stringify(data.patterns));
 const arrayNames = ["motto","sport","travel"];
 const groupPattern = [...patternArray];
@@ -29,7 +29,7 @@ const tshirtState ={
 const TshirtReducer =(state=tshirtState,action)=>{
 
     switch(action.type){
-        
+//akcja do wyboru koloru
         case 'GET_COLOR':
 
             let copyColorArray = [...state.colors];
@@ -47,7 +47,8 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 activeColor: action.getColor,
                 colors: copyColorArray 
             }
-
+        
+//akcja do wyboru rodzaju wzroru SPORT
         case 'GET_PATTERN_SPORT':
             let sportPattern = [...state.dataPattern];
             const sportElement = sportPattern.filter(element =>{
@@ -59,7 +60,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: sportElement
             }
-
+//akcja do wyboru rodzaju wzroru TRAVEL
         case 'GET_PATTERN_TRAVEL':
             let travelPattern = [...state.dataPattern];
             const travelElement = travelPattern.filter(element =>{
@@ -72,7 +73,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: travelElement
             }
-
+//akcja do wyboru rodzaju wzroru MOTTO
         case 'GET_PATTERN_MOTTO':
             let mottoPattern = [...state.dataPattern];
             const mottoElement = mottoPattern.filter(element =>{
@@ -84,24 +85,24 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: mottoElement
             }
-
+//akcja pobierająca wszystkie wzory 
         case 'GET_DATA_PATTERN':
             return{
                 ...state,
                 dataPattern: JSON.parse(JSON.stringify(data.patterns))
             }
-        
+//akcja wybierająca konkretny wzór        
         case 'GET_TSHIRT_PATTERN':
             return{
                 ...state,
                 tshirtPattern:action.getPattern
             }
-        
+//akcja dopasowująca rozmiary do wybranego koloru        
         case 'GET_SIZE_COLOR':
             let colorsSize = [...state.colors];
 
             const getSize = colorsSize.filter(element=>{
-                if(element.color === action.color){//porównanie klikniętego koloru z kolerm z json
+                if(element.color === action.color){//porównanie klikniętego koloru z kolerm z JSON
                     return element
                 };
             });
@@ -111,11 +112,27 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 activeSizePerColor: getSize,
                 isSize: true
             }
-        
+//akcja pokazująca/ukrywająca listę wzorów na urządzeniach mobilnych         
         case 'SHOW_PATTERN_CLICK':
             return{
                 ...state,
                 showPattern: action.show
+            }
+
+//akcja resetująca wszystko na koszulce 
+
+        case 'RESET_ALL':
+            return{
+                ...state,
+                activeColor: 'white',
+                dataPattern:patternArray,//wzory z JSON
+                activePattern:randomPattern,//losowa grupa wzorów przy załadowaniu kreatora
+                tshirtPattern:null,//aktywny wzór na koszulce
+                tshirtActive:true,
+                colors:colorsSizes,
+                isSize:true,
+                activeSizePerColor: [colorsSizes[0]], //domyślny przypisany rozmiar do pierwszego koloru w tablicy 'white' - state.activeColor
+                showPattern: null//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
             }
 
         default: return state

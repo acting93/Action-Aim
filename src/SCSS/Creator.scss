@@ -3,6 +3,8 @@
 
 .creator{
     @include maxWidthmaxHeight(100%,auto);
+    background: url('../img/bg5.jpg') no-repeat;
+    background-position: center;
     .creator-title{
         @include maxWidthmaxHeight(100%,100px);
         background: rgb(255, 255, 255);
@@ -33,7 +35,7 @@
         .creator-list{
             position: relative;
             @include maxWidthmaxHeight(70%,100%);
-            background: rgb(63, 7, 168);
+            background: rgb(67, 5, 117);
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
             }
@@ -62,15 +64,16 @@
         }
     }
     .creator-content{
-        @include maxWidthmaxHeight(100%,auto);
-        @include paddingMargin(0,10px auto);
+        @include maxWidthmaxHeight(80%,auto);
+        @include paddingMargin(0,0 auto);
         @include displayFlex(row);
+        background: rgb(255, 255, 255);
         @media(max-width: 768px){
             @include displayFlex(column);
         }
         .creator-pattern{
             @include maxWidthmaxHeight(25%,auto);
-            box-shadow: 0 0 5px rgb(61, 1, 1);
+            box-shadow: 0 0 5px rgb(224, 224, 224);
             @include paddingMargin(0,0);
             @media(max-width: 768px){
                 @include maxWidthmaxHeight(100%,auto); 
@@ -221,7 +224,7 @@
             }
             .tshirt{
                 position: relative;
-                @include maxWidthmaxHeight(600px,700px);
+                @include maxWidthmaxHeight(500px,600px);
                 margin-top:5%;
                 transform: translateY(-5%);
                 left:50%;
@@ -283,8 +286,8 @@
             }
         }
         .creator-settings{
-            @include maxWidthmaxHeight(30%,auto);
-            box-shadow: 0 0 5px silver;
+            @include maxWidthmaxHeight(25%,auto);
+            box-shadow: 0 0 5px rgb(214, 214, 214);
             p{
                 width: 100%;
                 text-align: center;
@@ -313,6 +316,7 @@
                 }
             }
             .creator-summary{
+                position: relative;
                 @include maxWidthmaxHeight(100%,auto);
                 .summary-title{
                     text-align: center;
@@ -333,6 +337,8 @@
                         @include top50;
                         border: none;
                         box-shadow: 0 0 5px silver;
+                        text-align: center;
+                        -webkit-appearance: textfield;
                     }
                     .price{
                         @include top50;

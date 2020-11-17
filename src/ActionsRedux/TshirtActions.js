@@ -51,3 +51,7 @@ export const ShowPatternClick =(show)=>({
     type:'SHOW_PATTERN_CLICK',
     show
 });
+
+export const ResetAll =()=>({
+    type:'RESET_ALL'
+});
