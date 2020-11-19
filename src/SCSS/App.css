@@ -1,13 +1,18 @@
 .container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-fluid .row {
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.container-fluid .wrapper {
+.container-fluid .row .wrapper {
+  position: relative;
   width: 100% !important;
   height: 100% !important;
   font-family: 'Monda', sans-serif;
-  letter-spacing: 1px;
   font-weight: 400;
 }
 /*# sourceMappingURL=App.css.map */

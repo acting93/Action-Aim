@@ -1,9 +1,4 @@
-.main-col {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.main-col main {
+main {
   width: 100% !important;
   height: 100% !important;
 }

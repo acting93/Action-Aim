@@ -33,13 +33,17 @@ const CreatorPattern = () => {
     return ( 
         <>
             <div className='color-pattern'>
-                {mapColors}
+                <div className='color-title'>
+                    <p>Paleta kolorów</p>
+                </div>
+                <div className='color-elements'>
+                    {mapColors}
+                </div>
             </div>
             <div className='creator-pattern-sizes'>
                 <p>Dostępne rozmiary:</p>
                 {isSize === true ? <SizesAvailable sizes={sizes} /> : null}
             </div>
-            <p>as</p>
             <div className='theme-pattern-button'><button onClick={showHide}>{showPattern === true ? 'ukryj wzory' : 'pokaż wzory'}</button></div>
             <TshirtPattern pattern={pattern} show={showPattern}/>
         </>

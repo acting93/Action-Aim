@@ -10,16 +10,14 @@ import Contact from '../SubComponents/Contact'
 const MainContent = () => {
     return ( 
         <>
-            <Col lg={12} className='main-col'>
-                <main>
-                    <Switch>
-                        <Route exact path='/' component={HomePage} />
-                        <Route path='/creator' component={Creator} />
-                        <Route path='/aboutus' component={AboutUs} />
-                        <Route path='/contact' component={Contact} />
-                    </Switch>
-                </main> 
-            </Col>
+            <main>
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route path='/creator' component={Creator} />
+                    <Route path='/aboutus' component={AboutUs} />
+                    <Route path='/contact' component={Contact} />
+                </Switch>
+            </main> 
         </>
      );
 }

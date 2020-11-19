@@ -19,12 +19,9 @@ const Creator = (props) => {
                         </ul>
                     </div>
                 </div>
-                <article className='creator-content'>
+                <div className='creator-content'>
                     <div className='creator-pattern'>
-                        <div className='creator-pattern-title'><p>Paleta kolorów</p></div>
-                        <div className='creator-pattern-content'>
-                            <CreatorPattern />
-                        </div>
+                        <CreatorPattern />
                     </div>
                     <div className='creator-draw'>
                         <CreatorShape />
@@ -32,7 +29,7 @@ const Creator = (props) => {
                     <div className='creator-settings'>
                         <CreatorSettings />
                     </div>
-                </article>
+                </div>
             </section>
         </>
      );
