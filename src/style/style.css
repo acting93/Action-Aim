@@ -1,13 +1,18 @@
 .container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-fluid .row {
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.container-fluid .wrapper {
+.container-fluid .row .wrapper {
+  position: relative;
   width: 100% !important;
   height: 100% !important;
   font-family: 'Monda', sans-serif;
-  letter-spacing: 1px;
   font-weight: 400;
 }
 
@@ -670,18 +675,14 @@
   }
 }
 
-body {
-  padding: 0 !important;
-  margin: 0 !important;
-  background: white;
+html body {
+  padding: none !important;
+  margin: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.main-col {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.main-col main {
+main {
   width: 100% !important;
   height: 100% !important;
 }

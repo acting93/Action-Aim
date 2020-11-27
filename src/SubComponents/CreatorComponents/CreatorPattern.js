@@ -18,7 +18,7 @@ const CreatorPattern = () => {
 
         if(widthScreen > 768){
             setShowPattern(true);
-        }
+        };
     };
 
     useEffect(()=>{

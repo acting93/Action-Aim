@@ -1,7 +1,8 @@
 @import './Variables.scss';
 
 .creator{
-    @include maxWidthmaxHeight(100%,auto);
+   // @include maxWidthmaxHeight(100%,auto);
+    height:auto;
     @include paddingMargin(0,0);
     background: url('../img/bg5.jpg') no-repeat;
     background-position: center;
@@ -64,7 +65,6 @@
         }
     }
     .creator-content{
-        display: none;
         @include maxWidthmaxHeight(85%,auto);
         @include paddingMargin(0,10px auto);
         @include displayFlex(row);
@@ -73,16 +73,14 @@
         @media(max-width: 1300px){
             @include maxWidthmaxHeight(100%,auto);
         }
-        @media(max-width: 992px){
-            @include displayFlex(column);
+        @media(max-width: 1200px){
+            flex-wrap: wrap;
         }
         .creator-pattern{
             position: relative;
-            @include maxWidthmaxHeight(25%,auto);
+            //@include maxWidthmaxHeight(25%,auto);
+            height: auto;
             @include paddingMargin(0,0);
-            @media(max-width: 992px){
-                @include maxWidthmaxHeight(100%,auto); 
-            }
             .color-pattern{
                 @include maxWidthmaxHeight(100%,150px);
                 @include displayFlex(column);
@@ -137,7 +135,6 @@
                 position: relative;
                 @include maxWidthmaxHeight(100%,150px);
                 @include paddingMargin(0,0);
-                background: rgba(0, 0, 0, 0.452);
                 @media(max-width:992px){
                     @include maxWidthmaxHeight(50%,150px);
                     float: left;
@@ -173,6 +170,9 @@
                         height:50px;
                         box-shadow: 0 0 5px rgb(156, 156, 156);
                         border-bottom: 2px solid rgb(104, 0, 0);
+                        &:hover{
+                          cursor:pointer;
+                        }
                         @media(max-width: 992px){
                             @include maxWidthmaxHeight(50px,50px);  
                         }
@@ -253,9 +253,10 @@
         }
         .creator-draw{
             position: relative;
-            @include maxWidthmaxHeight(50%,auto);
+            //@include maxWidthmaxHeight(50%,auto);
+            height: auto;
             @include paddingMargin(0,0);
-            @media(max-width:768px){
+            @media(max-width:992px){
                 @include maxWidthmaxHeight(100%,auto);
             }
             .tshirt{
@@ -320,18 +321,30 @@
         }
         .creator-settings{
             position: relative;
-            @include maxWidthmaxHeight(25%,auto);
+            //@include maxWidthmaxHeight(25%,auto);
+            height:auto;
+            @media(max-width:1200px){
+                @include paddingMargin(0,0 auto);
+            }
             p{
                 width: 100%;
                 text-align: center;
                 padding:20px;
                 background: rgb(223, 223, 223);
+                @media(max-width:576px){
+                    padding:14px;
+                }
             }
             .creator-sett-content{
                 @include maxWidthmaxHeight(100%,100px);
                 @include displayFlex(row);
                 justify-content: center;
                 flex-wrap: wrap;
+                @media(max-width:992px){
+                    @include paddingMargin(0,0 auto);
+                    @include maxWidthmaxHeight(80%,100px);
+                }
+                
                 button{
                     position: relative;
                     @include maxWidthmaxHeight(80px,80px);
@@ -358,6 +371,17 @@
             .creator-summary{
                 position: relative;
                 @include maxWidthmaxHeight(100%,auto);
+                @include displayFlex(column);
+                @media(max-width:1200px){
+                    @include displayFlex(row);
+                }
+                @media(max-width:576px){
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                @media(max-width:300px){
+                    @include displayFlex(column);
+                }
                 .summary-title{
                     text-align: center;
                     @include paddingMargin(20px,0);
@@ -366,37 +390,89 @@
                     @include maxWidthmaxHeight(100%,80px);
                     box-shadow: 0 0 5px rgb(197, 190, 190);
                     @include displayFlex(row);
+                    @media(max-width:1200px){
+                        @include displayFlex(column);
+                        @include maxWidthmaxHeight(auto,250px);
+                    }
+                    @media(max-width:576px){
+                        @include maxWidthmaxHeight(30%,200px);
+                    }
+                    @media(max-width:300px){
+                        @include maxWidthmaxHeight(100%,150px);
+                    }
                     p{
-                        @include maxWidthmaxHeight(auto,auto);
+                        @include maxWidthmaxHeight(50%,auto);
                         @include top50;
-                        background-color: white;
+                        background-color: rgb(26, 3, 3);
+                        color:silver;
                         text-align: left;
+                        @media(max-width:1200px){
+                            @include maxWidthmaxHeight(100%,auto);
+                            top:0%;
+                            transform: none;
+                            text-align: center;
+                        }
+                        @media(max-width:576px){
+                            font-size: 14px;
+                        }
+                    }
+                    .choosenColor{
+                        @include maxWidthmaxHeight(50px,50px);
+                        @include top50;
+                        @include paddingMargin(0,0 auto);
+                        box-shadow: 0 0 5px silver;
+                        @media(max-width:1200px){
+                          top:20%;
+                          transform: translateY(-20%);  
+                        }
+                        p{
+                            text-align: center;
+                            @include top50;
+                        }
+                    }
+                    .choosenSize{
+                        @extend .choosenColor;
                     }
                     input{
                         @include maxWidthmaxHeight(50px,50px);
                         @include top50;
+                        @include paddingMargin(0,0 auto);
                         border: none;
                         box-shadow: 0 0 5px silver;
                         text-align: center;
-                        -webkit-appearance: textfield;
+                        @media(max-width:1200px){
+                            top:20%;
+                            transform: translateY(-20%);
+                            @include paddingMargin(0,0 auto);
+                            @include maxWidthmaxHeight(100px,50px);
+                        }
+                    }
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button{
+                        -webkit-appearance: none;
                     }
                     .price{
-                        @include top50;
-                        background-color: white;
+                        text-align: center;
+                        background-color: rgb(209, 209, 209);
                         font-size: 1.2rem;
                         color:rgb(60, 10, 117);
+                        @media(max-width:1200px){
+                            @include maxWidthmaxHeight(100%,auto);
+                            top:20%;
+                            transform: translateY(-20%);
+                        }
                     }
                 }
-                .buy{
-                    position: relative;
-                    @include maxWidthmaxHeight(100px,50px);
-                    @include paddingMargin(0,0 50%);
-                    transform: translate(-50%);
-                    border:none;
-                    outline: none;
-                    box-shadow: 0 0 5px silver;
-                    background-color: rgb(149, 247, 149);
-                }
+            }
+            .buy{
+                position: relative;
+                @include maxWidthmaxHeight(100px,50px);
+                @include paddingMargin(0,0 50%);
+                transform: translate(-50%);
+                border:none;
+                outline: none;
+                box-shadow: 0 0 5px silver;
+                background-color: rgb(149, 247, 149);
             }
         }
     }

@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
-import {useDispatch} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 
 const CreatorSettings = (props) => {
 
+    const choosenColor = useSelector(state => state.tshirtReducer.activeColor);
+    const pickedSize = useSelector(state => state.tshirtReducer.choosenSize);
     const dispatch = useDispatch();
     const [piece, setPiece] = useState(1);
     const [price, setPrice] = useState(15);
@@ -30,13 +32,15 @@ const CreatorSettings = (props) => {
                 <button onClick={clearPattern}><i className="fas fa-trash-alt"></i>Usuń</button>
                 <button onClick={resetAll}><i className="fas fa-broom"></i>Reset</button>
             </div>
+            <p className='summary-title'>Podsumowanie</p>
             <div className='creator-summary'>
-                <p className='summary-title'>Podsumowanie</p>
                 <div className='summary-element'>
                     <p>Kolor:</p>
+                    <div className='choosenColor' style={{backgroundColor:choosenColor}}></div>
                 </div>
                 <div className='summary-element'>
                     <p>Rozmiar:</p>
+                    <div className='choosenSize'><p>{pickedSize}</p></div>
                 </div>
                 <div className='summary-element'>
                     <p>Ilość sztuk:</p>
@@ -53,8 +57,8 @@ const CreatorSettings = (props) => {
                     <p>Suma:</p>
                     <p className='price'>{price},00 zł</p>
                 </div>
-                <button className='buy' onClick={props.console}>Kup</button>
             </div>
+            <button className='buy' onClick={props.console}>Kup</button>
         </>
      );
 }

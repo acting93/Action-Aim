@@ -9,7 +9,7 @@ const Creator = (props) => {
     
     return ( 
         <>
-            <section className='creator'>
+            <section className='creator col-12'>
                 <div className='creator-title'><p>Kreator koszulek</p>
                     <div className='creator-list'>
                         <ul>
@@ -20,13 +20,13 @@ const Creator = (props) => {
                     </div>
                 </div>
                 <div className='creator-content'>
-                    <div className='creator-pattern'>
+                    <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
-                    <div className='creator-draw'>
+                    <div className='creator-draw col-12 col-lg-8 col-xl-6'>
                         <CreatorShape />
                     </div>
-                    <div className='creator-settings'>
+                    <div className='creator-settings col-12 col-md-10 col-xl-3'>
                         <CreatorSettings />
                     </div>
                 </div>

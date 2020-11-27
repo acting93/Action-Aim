@@ -47,6 +47,11 @@ export const getSizeColor =(color,isSize)=>({
     isSize
 });
 
+export const choosenSize =(id)=>({
+    type:'CHOOSEN_SIZE',
+    id
+});
+
 export const ShowPatternClick =(show)=>({
     type:'SHOW_PATTERN_CLICK',
     show

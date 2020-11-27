@@ -23,7 +23,8 @@ const tshirtState ={
     colors:colorsSizes,
     isSize:true,
     activeSizePerColor: [colorsSizes[0]], //domyślny przypisany rozmiar do pierwszego koloru w tablicy 'white' - state.activeColor
-    showPattern: null//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
+    showPattern: null,//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
+    choosenSize: null //wybrany rozmiar koszulki przez klienta 
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -60,6 +61,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: sportElement
             }
+            
 //akcja do wyboru rodzaju wzroru TRAVEL
         case 'GET_PATTERN_TRAVEL':
             let travelPattern = [...state.dataPattern];
@@ -73,6 +75,7 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: travelElement
             }
+
 //akcja do wyboru rodzaju wzroru MOTTO
         case 'GET_PATTERN_MOTTO':
             let mottoPattern = [...state.dataPattern];
@@ -85,18 +88,21 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: mottoElement
             }
+
 //akcja pobierająca wszystkie wzory 
         case 'GET_DATA_PATTERN':
             return{
                 ...state,
                 dataPattern: JSON.parse(JSON.stringify(data.patterns))
             }
+
 //akcja wybierająca konkretny wzór        
         case 'GET_TSHIRT_PATTERN':
             return{
                 ...state,
                 tshirtPattern:action.getPattern
             }
+
 //akcja dopasowująca rozmiary do wybranego koloru        
         case 'GET_SIZE_COLOR':
             let colorsSize = [...state.colors];
@@ -112,6 +118,24 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 activeSizePerColor: getSize,
                 isSize: true
             }
+
+//akcja wybierająca rozmiar koszulki
+        case 'CHOOSEN_SIZE':
+            const sizesPerColor = [...state.activeSizePerColor][0].sizes;
+            const filterSizesPerColor = sizesPerColor.filter(size =>{
+                if(size.id === action.id){
+                    return size;
+                };
+            });
+
+            const mapSize = filterSizesPerColor.map(size => size.size);
+            console.log(sizesPerColor)
+            console.log(action.id)
+            return{
+                ...state,
+                choosenSize:mapSize
+            }
+
 //akcja pokazująca/ukrywająca listę wzorów na urządzeniach mobilnych         
         case 'SHOW_PATTERN_CLICK':
             return{
@@ -120,7 +144,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             }
 
 //akcja resetująca wszystko na koszulce 
-
         case 'RESET_ALL':
             return{
                 ...state,
