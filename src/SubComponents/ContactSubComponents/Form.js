@@ -34,7 +34,7 @@ class Form extends Component {
 
     sentFormTimer(){
 
-        const {timeCounter,sendingTimer} = this.state;
+        const {timeCounter} = this.state;
 
         this.setState({
             timeCounter: this.state.timeCounter -= 1
