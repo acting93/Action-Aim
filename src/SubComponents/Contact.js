@@ -1,10 +1,16 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import '../SCSS/Contact.css';
 import {Col} from 'react-bootstrap';
 import Form from './ContactSubComponents/Form';
 import Logo from '../img/action.png'
+import FormSent from './ContactSubComponents/FormSent';
+import FormNotSent from './ContactSubComponents/FormNotSent';
 
 const Contact = () => {
+    //pobranie statusu wysłania formularza do klienta
+    const formSendingStatus = useSelector(state => state.mainReducer.formSendingStatus);
+
     return ( 
         <>
             <Col xl={12} className='contact-header'>
@@ -15,6 +21,8 @@ const Contact = () => {
                 <section className='contact'>
                     <div className='contact-title'>Formularz kontaktowy</div>
                     <Form />
+                    {/*<FormSent />*/}
+                    {/*<FormNotSent />*/}
                 </section>
                 <section className='contact'>
                     <div className='contact-logo'><img src={Logo} alt=''/></div>

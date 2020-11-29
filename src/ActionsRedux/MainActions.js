@@ -12,3 +12,7 @@ export const isActiveToggler =(isActiveToggler)=>({
     isActiveToggler
 });
 
+export const FormSendingStatus =(status)=>({
+    type:'FORM_SENDING_STATUS',
+    status
+});

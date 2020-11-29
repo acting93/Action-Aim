@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+let timeInterval = ''
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -15,14 +17,48 @@ class Form extends Component {
                 phoneVal:false,
                 emailVal:false,
                 messageVal:false
-            }
+            },
+            timeCounter:5,
+            sendingTimer:null,
+            spinner:false
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.validation = this.validation.bind(this);
+        this.sentFormTimer = this.sentFormTimer.bind(this);
+        this.counterTime = this.counterTime.bind(this);
     }
 
+//pojawienie się informacji o wysłaniu formularza
+
+    sentFormTimer(){
+
+        const {timeCounter,sendingTimer} = this.state;
+
+        this.setState({
+            timeCounter: this.state.timeCounter -= 1
+        });
+            
+        if(timeCounter === 0){
+            this.setState({
+                timeCounter: 5,
+                sendingTimer:false
+            });
+            
+            clearInterval(timeInterval);
+        };
+        console.log(timeCounter)
+        console.log('funckja działa')
+    };
+
+    counterTime(){
+        timeInterval = setInterval(this.sentFormTimer,1000);
+        console.log('funckja stop')
+    };
+
+
+//obsługa inputów
     handleChange(e){
         const name = e.target.name;
         const value = e.target.value;
@@ -32,6 +68,7 @@ class Form extends Component {
         });
     };
 
+//warunki wysłania inputów
     handleSubmitForm(e){
 
         e.preventDefault();
@@ -39,8 +76,9 @@ class Form extends Component {
         const validationCheck = this.validation();
 
         if(validationCheck.validationStatus){
-            console.log("formularz wysłany")
+            this.counterTime();
             this.setState({
+                sendingTimer:true,
                 name:'',
                 surname:'',
                 phone:'',
@@ -52,10 +90,11 @@ class Form extends Component {
                     phoneVal:false,
                     emailVal:false,
                     messageVal:false
-                }
+                },
+                
             })
+
         }else{
-            console.log("formularz niewysłany")
             this.setState({
                 validation:{
                     nameVal:!validationCheck.nameVal,
@@ -63,12 +102,11 @@ class Form extends Component {
                     phoneVal:!validationCheck.phoneVal,
                     emailVal:!validationCheck.emailVal,
                     messageVal:!validationCheck.messageVal
-                }
+                },
             })
         };
     };
-
-
+//walidacja inputów
     validation(){
         const {name,surname,phone,email,message} = this.state;
         let nameVal = false;
@@ -78,16 +116,19 @@ class Form extends Component {
         let messageVal = false;
         let validationStatus = false;
 
+        const numberValidate = new RegExp(/[0-9]+$|^$/g);
+        const emailVaidate = new RegExp(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g);
+
         if(name.length > 3){
             nameVal = true;
         }
         if(surname.length > 3){
             surnameVal = true;
         }
-        if(phone.length > 9){
+        if(numberValidate.test(phone.length)){
             phoneVal = true;
         }
-        if(email.indexOf('@') !== -1){
+        if(emailVaidate.test(email)){
             emailVal = true;
         }
         if(message.length > 10){
@@ -97,10 +138,9 @@ class Form extends Component {
         if(nameVal === true && surnameVal === true && phoneVal === true && emailVal === true && messageVal === true){
             validationStatus = true;
         }
-        console.log(validationStatus)
 
-        return ({nameVal,surnameVal,phoneVal,emailVal,messageVal,validationStatus})
-    }
+        return ({nameVal,surnameVal,phoneVal,emailVal,messageVal,validationStatus});
+    };
 
 
     render() { 
@@ -116,7 +156,7 @@ class Form extends Component {
                             value={name}
                             onChange={this.handleChange}
                         />
-                        {nameVal ? <p>Minimum trzy znaki</p> : null}
+                        {nameVal ? <p className='errorVal'>Minimum trzy znaki</p> : null}
                         <input 
                             type='text'
                             name='surname'
@@ -124,7 +164,7 @@ class Form extends Component {
                             value={surname}
                             onChange={this.handleChange}
                         />
-                        {surnameVal ? <p>Minimum trzy znaki</p> : null}
+                        {surnameVal ? <p className='errorVal'>Minimum trzy znaki</p> : null}
                         <input 
                             type='number'
                             name='phone'
@@ -132,7 +172,7 @@ class Form extends Component {
                             value={phone}
                             onChange={this.handleChange}
                         />
-                        {phoneVal ? <p>Numer zbyt krótki</p> : null }
+                        {phoneVal ? <p className='errorVal'>Numer zbyt krótki</p> : null }
                         <input 
                             type='email'
                             name='email'
@@ -140,7 +180,7 @@ class Form extends Component {
                             value={email}
                             onChange={this.handleChange}
                         />
-                        {emailVal ? <p>Brakuje @</p> : null}
+                        {emailVal ? <p className='errorVal'>Niewłaśaciwy format adresu e-mail</p> : null}
                         <textarea
                             type='text'
                             name='message'
@@ -148,8 +188,7 @@ class Form extends Component {
                             value={message}
                             onChange={this.handleChange}
                         />
-                        {messageVal ? <p>Wiadomość zbyt krótka</p> : null}
-
+                        {messageVal ? <p className='errorVal'>Wiadomość zbyt krótka</p> : null}
                     <button onClick={this.handleSubmitForm}>Prześlij wiadomość</button>
                 </form>
             </>

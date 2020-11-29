@@ -170,14 +170,16 @@
                         height:50px;
                         box-shadow: 0 0 5px rgb(156, 156, 156);
                         border-bottom: 2px solid rgb(104, 0, 0);
+                        background-color: white;
                         &:hover{
                           cursor:pointer;
+                          background-color: rgb(177, 177, 177);
                         }
                         @media(max-width: 992px){
                             @include maxWidthmaxHeight(50px,50px);  
                         }
                         p{  
-                            background-color: white;
+                            background: none;
                             @include maxWidthmaxHeight(100%,100%);
                             color:rgb(53, 53, 53);
                             padding: 10px;
@@ -406,6 +408,7 @@
                         background-color: rgb(26, 3, 3);
                         color:silver;
                         text-align: left;
+                        font-size: 0.9rem;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(100%,auto);
                             top:0%;
@@ -432,6 +435,10 @@
                     }
                     .choosenSize{
                         @extend .choosenColor;
+                        p{
+                            background: none;
+                            color:rgb(42, 0, 121);
+                        }
                     }
                     input{
                         @include maxWidthmaxHeight(50px,50px);

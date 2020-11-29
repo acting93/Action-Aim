@@ -353,10 +353,12 @@
   -webkit-box-shadow: 0 0 5px #9c9c9c;
           box-shadow: 0 0 5px #9c9c9c;
   border-bottom: 2px solid #680000;
+  background-color: white;
 }
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul li:hover {
   cursor: pointer;
+  background-color: #b1b1b1;
 }
 
 @media (max-width: 992px) {
@@ -367,7 +369,7 @@
 }
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul li p {
-  background-color: white;
+  background: none;
   width: 100% !important;
   height: 100% !important;
   color: #353535;
@@ -811,6 +813,7 @@
   background-color: #1a0303;
   color: silver;
   text-align: left;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1200px) {
@@ -857,6 +860,11 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.creator .creator-content .creator-settings .creator-summary .summary-element .choosenSize p {
+  background: none;
+  color: #2a0079;
 }
 
 .creator .creator-content .creator-settings .creator-summary .summary-element input {

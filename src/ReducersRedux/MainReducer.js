@@ -1,5 +1,6 @@
 const mainState={
     isMenu:false,
+    formSendingStatus:null
 }
 
 const MainReducer =(state=mainState,action)=>{
@@ -20,6 +21,12 @@ const MainReducer =(state=mainState,action)=>{
             return{
                 ...state,
                 isSticky: action.isSticky
+            }
+        
+        case 'FORM_SENDING_STATUS':
+            return{
+                ...state,
+                formSendingStatus:action.status
             }
 
         default: return state

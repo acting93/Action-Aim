@@ -65,7 +65,7 @@
 }
 
 .homePageInfo-col .homePageInfo .homePage-article {
-  padding: 0 !important;
+  padding: 5px !important;
   margin: 10px auto !important;
   height: 400px;
   display: -webkit-box;
@@ -155,6 +155,8 @@
 
 .homePageInfo-col .homePageInfo .homePage-article .article-part:last-child {
   background: #130142;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
 }
 
 .homePageInfo-col .homePageInfo .homePage-article .article-part:last-child p {
