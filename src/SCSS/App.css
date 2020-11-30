@@ -1,17 +1,19 @@
 .container-fluid {
-  margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 !important !important;
+  margin: 0 !important !important;
 }
 
 .container-fluid .row {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0 !important !important;
+  margin: 0 !important !important;
 }
 
 .container-fluid .row .wrapper {
   position: relative;
   width: 100% !important;
   height: 100% !important;
+  padding: 0 !important !important;
+  margin: 0 !important !important;
   font-family: 'Monda', sans-serif;
   font-weight: 400;
 }

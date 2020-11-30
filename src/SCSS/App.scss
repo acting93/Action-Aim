@@ -1,14 +1,13 @@
 @import './Variables';
 
 .container-fluid{
-    margin: 0 !important;
-    padding: 0 !important;
+    @include paddingMargin(0!important,0!important);
     .row{
-        padding: 0 !important;
-        margin: 0 !important;
+        @include paddingMargin(0!important,0!important);
         .wrapper{
             position: relative;
             @include maxWidthmaxHeight(100%,100%);
+            @include paddingMargin(0!important,0!important);
             font-family: 'Monda', sans-serif;
             font-weight: 400;
         }

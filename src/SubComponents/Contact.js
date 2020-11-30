@@ -17,22 +17,21 @@ const Contact = () => {
                 <p>Masz pytanie ?</p>
                 <p>Pisz do nas śmiało !</p>
             </Col>
-            <Col xl={10} className='contact-col'>
+            <Col xl={12} className='contact-col-form'>
                 <section className='contact'>
                     <div className='contact-title'>Formularz kontaktowy</div>
-                    <Form />
-                    {/*<FormSent />*/}
-                    {/*<FormNotSent />*/}
+                    {formSendingStatus || formSendingStatus === false ? null : <Form />}
+                    {formSendingStatus === true ? <FormSent /> : null}
+                    {formSendingStatus === false ? <FormNotSent /> : null}
                 </section>
-                <section className='contact'>
-                    <div className='contact-logo'><img src={Logo} alt=''/></div>
-                    <div className='contact-info'>
-                        <p>Action-Aim</p>
-                        <p>ul. Aleja Grunwaldzka 250 82-300 Elbląg</p>
-                        <p>Tel: 000 000 000</p>
-                        <p>E-mail: actionaim@action.com</p>
-                    </div>
-                </section>
+            </Col>
+            <Col xl={12} className='contact-col-info'>
+                <div className='contact-info'>
+                    <div className='contact-info-el'><img src={Logo} alt=''/></div>
+                    <div className='contact-info-el'><i className="far fa-building"></i><p>ul. Aleja Grunwaldzka 250,<br/> 82-300 Elbląg</p></div>
+                    <div className='contact-info-el'><i className="fas fa-mobile-alt"></i><p>Tel: 000 000 000</p></div>
+                    <div className='contact-info-el'><i className="fas fa-envelope"></i><p>E-mail: actionaim@action.com</p></div>
+                </div>
             </Col>
         </>
      );
