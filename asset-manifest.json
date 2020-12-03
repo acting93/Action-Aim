@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.e6d1652e.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.b7b6c6f4.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.b7b6c6f4.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.86f01255.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.e03df94f.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.e03df94f.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ab75e88d.chunk.js": "/Action-Aim/static/js/2.ab75e88d.chunk.js",
-    "static/js/2.ab75e88d.chunk.js.map": "/Action-Aim/static/js/2.ab75e88d.chunk.js.map",
+    "static/js/2.1805b4bc.chunk.js": "/Action-Aim/static/js/2.1805b4bc.chunk.js",
+    "static/js/2.1805b4bc.chunk.js.map": "/Action-Aim/static/js/2.1805b4bc.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.039631394e7b70d30c4ae088d0f45d00.js": "/Action-Aim/precache-manifest.039631394e7b70d30c4ae088d0f45d00.js",
+    "precache-manifest.f864f1833dc7fb9a7ce8724e02e6de38.js": "/Action-Aim/precache-manifest.f864f1833dc7fb9a7ce8724e02e6de38.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.e6d1652e.chunk.css.map": "/Action-Aim/static/css/main.e6d1652e.chunk.css.map",
+    "static/css/main.86f01255.chunk.css.map": "/Action-Aim/static/css/main.86f01255.chunk.css.map",
     "static/media/Footer.scss": "/Action-Aim/static/media/action.b63a54b8.png",
     "static/media/bg1.jpg": "/Action-Aim/static/media/bg1.5fb777b7.jpg",
-    "static/media/bg2.jpg": "/Action-Aim/static/media/bg2.0910f4a6.jpg",
-    "static/media/bg3.jpg": "/Action-Aim/static/media/bg3.9e341949.jpg",
+    "static/media/bg2.jpg": "/Action-Aim/static/media/bg2.32027dde.jpg",
     "static/media/bg4.png": "/Action-Aim/static/media/bg4.25232d67.png",
     "static/media/bg5.jpg": "/Action-Aim/static/media/bg5.6b50a0c8.jpg",
     "static/media/buggles.png": "/Action-Aim/static/media/buggles.21de0e49.png",
@@ -32,8 +31,8 @@
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ab75e88d.chunk.js",
-    "static/css/main.e6d1652e.chunk.css",
-    "static/js/main.b7b6c6f4.chunk.js"
+    "static/js/2.1805b4bc.chunk.js",
+    "static/css/main.86f01255.chunk.css",
+    "static/js/main.e03df94f.chunk.js"
   ]
 }
