@@ -18,6 +18,9 @@
         font-size: 3rem;
         color: rgb(219, 219, 219);
         margin: none;
+        @media(max-width: 576px){
+            font-size: 2.5rem;
+        }
         @media(max-width: 425px){
             font-size: 2rem;
         }
@@ -27,18 +30,116 @@
     }
 }
 .contact-col-form{
-    height: 750px;
-    @include paddingMargin(0,0 auto);
+    height: auto;
+    background:url('../img/bg2.jpg') no-repeat;
+    background-size: cover;
+    @include paddingMargin(10px,0 auto);
     @include displayFlex(row);
     overflow: hidden;
-    background: url('../img/bg5.jpg');
     @media(max-width: 768px){
         @include displayFlex(column);
         height: auto;
     }
+    .spinnerContent{
+        @include maxWidthmaxHeight(100%,400px);
+        @include paddingMargin(0,0 auto);
+        position: relative;
+        text-align: center;
+        .spinnerTitle{
+            @include paddingMargin(20px,0 auto);
+            color:white;
+            font-size: 2rem;
+            @media(max-width:992px){
+                font-size: 1.5rem;
+            }
+            @media(max-width: 576px){
+                font-size: 1rem;
+            }
+        }
+        .spinnerForm{
+            @include maxWidthmaxHeight(100px,100px);
+            position: relative;
+            top:20%;
+            color: rgb(204, 204, 204);
+        }
+    }
+    .form-sent{
+        @include maxWidthmaxHeight(50%,auto);
+        @include paddingMargin(20px, 10% auto);
+        text-align: center;
+        @media(max-width:992px){
+            @include maxWidthmaxHeight(80%,auto); 
+        }
+        @media(max-width:768px){
+            @include maxWidthmaxHeight(80%,auto); 
+        }
+        @media(max-width:576px){
+            @include maxWidthmaxHeight(100%,auto); 
+        }
+        @media(max-width:350px){
+            @include maxWidthmaxHeight(100%,auto); 
+        }
+        .fas{
+            @include paddingMargin(0, 5% auto);
+            font-size: 10rem;
+            color:rgb(45, 196, 95);
+            @media(max-width: 768px){
+                font-size: 6rem; 
+            }
+            @media(max-width:320px){
+                font-size: 4rem;
+            }
+        }
+        p{
+            text-align: center; 
+            font-size: 2rem;
+            color:rgb(207, 207, 207);
+            @media(max-width: 992px){
+            font-size: 1.2rem; 
+            }
+            @media(max-width:576px){
+                font-size: 1.1rem; 
+            
+            }
+            @media(max-width:320px){
+                font-size: 1rem; 
+            
+            }
+        }
+    }
+    .form-not-sent{
+        /*@include maxWidthmaxHeight(50%,auto);
+        @include paddingMargin(5px, 10% auto);
+        text-align: center;
+        @media(max-width:576px){
+            @include maxWidthmaxHeight(100%,250px); 
+        }*/
+        @extend .form-sent;
+        .far{
+            @include paddingMargin(0, 5% auto);
+            font-size: 10rem;
+            color:rgb(212, 0, 0);
+            @media(max-width: 992px){
+                font-size: 8rem; 
+            }
+            @media(max-width:320px){
+                font-size: 6rem;
+            }
+        }
+        /*p{
+            text-align: center; 
+            font-size: 1.5rem;
+            color:rgb(207, 207, 207);
+            @media(max-width: 992px){
+                font-size: 1.2rem; 
+            }
+            @media(max-width:320px){
+                font-size: 1rem; 
+            }
+        }*/
+    }
     .contact{
         @include maxWidthmaxHeight(50%,100%);
-        box-shadow: 0 0 5px rgb(161, 161, 161);
         @include paddingMargin(0,0 auto);
         @media(max-width: 768px){
             @include maxWidthmaxHeight(100%,100%);
@@ -48,6 +149,7 @@
             text-align: center;
             width:100%;
             padding: 1.5rem;
+            color: rgb(148, 148, 148);
             @media(max-width: 320px){
                 font-size: 1.2rem;
             }
@@ -56,15 +158,18 @@
             @include maxWidthmaxHeight(100%,auto);
             @include displayFlex(column);
             @include paddingMargin(0,0);
-            color:silver;
+            color: rgb(148, 148, 148);
             p{
                 text-align:center;
             }
             input{
-                box-shadow: 0 0 5px silver;
                 border: none;
                 width:60%;
                 @include paddingMargin(10px,10px auto);
+                background: none;
+                border-left:1px solid silver;
+                border-bottom:1px solid silver;
+                color: rgb(148, 148, 148);
                 @media(max-width: 425px){
                     width:80%;
                     font-size: 1rem;
@@ -78,105 +183,37 @@
                 -moz-appearance:textfield;
             }
             textarea{
+                @include paddingMargin(5px,0 auto);
+                width: 80%;
                 max-height: 200px;
                 min-height: 200px;
-                box-shadow: 0 0 5px silver;
-                border: none;
+                border-left:1px solid silver;
+                border-bottom:1px solid silver;
+                background: none;
+                color: rgb(148, 148, 148);
             }
             button{
                 @include maxWidthmaxHeight(200px,auto);
-                border: none;
+                background: none;
+                border-left:1px solid silver;
+                border-bottom:1px solid silver;
                 outline: none;
-                box-shadow: 0 0 5px silver;
                 @include paddingMargin(10px,0 auto);
+                color: rgb(148, 148, 148);
             }
             .errorVal{
                 color:red;
                 font-size: 0.8rem;
-                @include paddingMargin(0,10px);
+                margin-top: 0;
+                margin-bottom: 2px;
             }
         }
-        .form-sent{
-            @include maxWidthmaxHeight(100%,400px);
-            @include paddingMargin(0, 10% auto);
-            background:rgba(0, 0, 0, 0.555);
-            text-align: center;
-            border: 10px solid rgba(52, 0, 100, 0.267);
-            box-shadow: 0 0 10px silver;
-            @media(max-width:768px){
-                @include maxWidthmaxHeight(80%,300px); 
-            }
-            @media(max-width:576px){
-                @include maxWidthmaxHeight(100%,250px); 
-            }
-            @media(max-width:350px){
-                @include maxWidthmaxHeight(100%,230px); 
-            }
-            .fas{
-                @include paddingMargin(0, 5% auto);
-                font-size: 10rem;
-                color:rgb(207, 207, 207);
-                @media(max-width: 768px){
-                    font-size: 6rem; 
-                }
-                @media(max-width:320px){
-                    font-size: 4rem;
-                }
-            }
-            p{
-                text-align: center; 
-                font-size: 2rem;
-                color:rgb(207, 207, 207);
-                @media(max-width: 992px){
-                font-size: 1.2rem; 
-                }
-                @media(max-width:576px){
-                    font-size: 1.1rem; 
-                
-                }
-                @media(max-width:320px){
-                    font-size: 1rem; 
-                
-                }
-            }
-        }
-        .form-not-sent{
-            @include maxWidthmaxHeight(100%,400px);
-            @include paddingMargin(5px, 10% auto);
-            background:linear-gradient(to bottom,black,black,rgb(87, 0, 0));
-            text-align: center;
-            box-shadow: 0 0 10px silver;
-            @media(max-width:576px){
-                @include maxWidthmaxHeight(100%,250px); 
-            }
-            .far{
-                @include paddingMargin(0, 5% auto);
-                font-size: 10rem;
-                color:rgb(212, 0, 0);
-                @media(max-width: 992px){
-                    font-size: 8rem; 
-                }
-                @media(max-width:320px){
-                    font-size: 6rem;
-                }
-            }
-            p{
-                text-align: center; 
-                font-size: 1.5rem;
-                color:rgb(207, 207, 207);
-                @media(max-width: 992px){
-                    font-size: 1.2rem; 
-                }
-                @media(max-width:320px){
-                    font-size: 1rem; 
-                }
-            }
-        }
+        
     }
 }
 .contact-col-info{
+    background-color: black;
     height: auto;
-    background: rgb(128, 117, 117);
     @include paddingMargin(0,0 auto);
     display: block;
     .contact-info{
@@ -184,7 +221,6 @@
         @include displayFlex(row);
         flex-wrap: wrap;
         justify-content: center;
-        background: rgb(255, 255, 255);
         @media(max-width:320px){
             @include displayFlex(column);
         }
@@ -192,7 +228,6 @@
             @include maxWidthmaxHeight(24%,180px);
             @include paddingMargin(0,5px);
             text-align: center;
-            box-shadow: 0 0 5px rgb(165, 165, 165);
             @media(max-width:1100px){
                 @include maxWidthmaxHeight(50%,180px);
                 @include paddingMargin(5px,0px);
@@ -210,7 +245,7 @@
             }
             .fas{
                 font-size: 3rem;
-                color:rgb(72, 0, 121);
+                color:rgb(165, 165, 165);
                 margin-top: 12%;
                 @media(max-width:768px){
                     margin-top: 15%;
@@ -223,14 +258,14 @@
                 @extend .fas;
             }
             p{
-                font-size: 1.2rem;
-                color:rgb(72, 0, 121);
+                font-size: 1rem;
+                color:rgb(165, 165, 165);
                 margin-top: 10px;
                 @media(max-width: 992px){
-                    font-size: 1.1rem;
+                    font-size: 0.8rem;
                 }
                 @media(max-width: 567px){
-                    font-size: 1rem;
+                    font-size: 0.7rem;
                 }
             }
         }

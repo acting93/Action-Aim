@@ -12,6 +12,11 @@ export const isActiveToggler =(isActiveToggler)=>({
     isActiveToggler
 });
 
+export const FormSpinner =(spinner)=>({
+    type:'FORM_SPINNER',
+    spinner
+});
+
 export const FormSendingStatus =(status)=>({
     type:'FORM_SENDING_STATUS',
     status

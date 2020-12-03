@@ -3,14 +3,16 @@ import {useSelector} from 'react-redux';
 import '../SCSS/Contact.css';
 import {Col} from 'react-bootstrap';
 import Form from './ContactSubComponents/Form';
-import Logo from '../img/action.png'
 import FormSent from './ContactSubComponents/FormSent';
 import FormNotSent from './ContactSubComponents/FormNotSent';
+import SpinnerForm from './ContactSubComponents/SpinnerForm';
+import ContactInfo from './ContactSubComponents/ContactInfo';
 
 const Contact = () => {
     //pobranie statusu wysłania formularza do klienta
-    const formSendingStatus = useSelector(state => state.mainReducer.formSendingStatus);
-
+    const formResponseStatus = useSelector(state => state.mainReducer.formResponseStatus);
+    const formSpinner = useSelector(state => state.mainReducer.formSpinner);
+    console.log(formResponseStatus)
     return ( 
         <>
             <Col xl={12} className='contact-header'>
@@ -18,20 +20,16 @@ const Contact = () => {
                 <p>Pisz do nas śmiało !</p>
             </Col>
             <Col xl={12} className='contact-col-form'>
-                <section className='contact'>
-                    <div className='contact-title'>Formularz kontaktowy</div>
-                    {formSendingStatus || formSendingStatus === false ? null : <Form />}
-                    {formSendingStatus === true ? <FormSent /> : null}
-                    {formSendingStatus === false ? <FormNotSent /> : null}
+                <section className='contact' style={formSpinner || formResponseStatus || formResponseStatus === false ? {display:"none"}:null}>
+                    <p className='contact-title'>Formularz kontaktowy</p>
+                    <Form />
                 </section>
+                {formResponseStatus === true ? <FormSent /> : null}
+                {formResponseStatus === false ? <FormNotSent /> : null}
+                {formSpinner ? <SpinnerForm /> : null }
             </Col>
             <Col xl={12} className='contact-col-info'>
-                <div className='contact-info'>
-                    <div className='contact-info-el'><img src={Logo} alt=''/></div>
-                    <div className='contact-info-el'><i className="far fa-building"></i><p>ul. Aleja Grunwaldzka 250,<br/> 82-300 Elbląg</p></div>
-                    <div className='contact-info-el'><i className="fas fa-mobile-alt"></i><p>Tel: 000 000 000</p></div>
-                    <div className='contact-info-el'><i className="fas fa-envelope"></i><p>E-mail: actionaim@action.com</p></div>
-                </div>
+                <ContactInfo />
             </Col>
         </>
      );

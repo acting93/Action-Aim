@@ -1,6 +1,7 @@
 const mainState={
     isMenu:false,
-    formSendingStatus:null
+    formResponseStatus:null,
+    formSpinner:false
 }
 
 const MainReducer =(state=mainState,action)=>{
@@ -23,10 +24,16 @@ const MainReducer =(state=mainState,action)=>{
                 isSticky: action.isSticky
             }
         
-        case 'FORM_SENDING_STATUS':
+        case 'FORM_RESPONSE_STATUS':
             return{
                 ...state,
-                formSendingStatus:action.status
+                formResponseStatus: action.response
+            }
+
+        case 'FORM_SPINNER':
+            return{
+                ...state,
+                formSpinner:action.spinner
             }
 
         default: return state

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
 
 let timeInterval = ''
 
@@ -7,56 +9,48 @@ class Form extends Component {
         super(props);
         this.state = { 
             name:'',
-            surname:'',
+            subject:'',
             phone:'',
             email:'',
             message:'',
+            counter:5,
             validation:{
                 nameVal:false,
-                surnameVal:false,
+                subjectVal:false,
                 phoneVal:false,
                 emailVal:false,
                 messageVal:false
             },
-            timeCounter:5,
-            sendingTimer:null,
-            spinner:false
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.validation = this.validation.bind(this);
-        this.sentFormTimer = this.sentFormTimer.bind(this);
+        this.sentFormTimer= this.sentFormTimer.bind(this);
         this.counterTime = this.counterTime.bind(this);
     }
 
-//pojawienie się informacji o wysłaniu formularza
+    sentFormTimer =()=>{
 
-    sentFormTimer(){
-
-        const {timeCounter} = this.state;
+        const countDown = 1;
+        const {counter} = this.state;
 
         this.setState({
-            timeCounter: this.state.timeCounter -= 1
+            counter: counter - countDown
         });
             
-        if(timeCounter === 0){
+        if(counter === 0){
             this.setState({
-                timeCounter: 5,
-                sendingTimer:false
-            });
-            
+                counter: 5
+            })
             clearInterval(timeInterval);
+            this.props.formStatus(null)
         };
-        console.log(timeCounter)
-        console.log('funckja działa')
     };
 
-    counterTime(){
+    counterTime=()=>{
         timeInterval = setInterval(this.sentFormTimer,1000);
-        console.log('funckja stop')
     };
-
 
 //obsługa inputów
     handleChange(e){
@@ -77,40 +71,41 @@ class Form extends Component {
 
         if(validationCheck.validationStatus){
             this.counterTime();
+            this.props.formSpinner(true);
+            this.sendForm();
             this.setState({
-                sendingTimer:true,
                 name:'',
-                surname:'',
+                subject:'',
                 phone:'',
                 email:'',
                 message:'',
                 validation:{
                     nameVal:false,
-                    surnameVal:false,
+                    subjectVal:false,
                     phoneVal:false,
                     emailVal:false,
                     messageVal:false
                 },
                 
-            })
-
+            });
         }else{
             this.setState({
                 validation:{
                     nameVal:!validationCheck.nameVal,
-                    surnameVal:!validationCheck.surnameVal,
+                    subjectVal:!validationCheck.subjectVal,
                     phoneVal:!validationCheck.phoneVal,
                     emailVal:!validationCheck.emailVal,
                     messageVal:!validationCheck.messageVal
                 },
-            })
+            });
         };
     };
+
 //walidacja inputów
     validation(){
-        const {name,surname,phone,email,message} = this.state;
+        const {name,subject,phone,email,message} = this.state;
         let nameVal = false;
-        let surnameVal = false;
+        let subjectVal = false;
         let phoneVal = false;
         let emailVal = false;
         let messageVal = false;
@@ -122,8 +117,8 @@ class Form extends Component {
         if(name.length > 3){
             nameVal = true;
         }
-        if(surname.length > 3){
-            surnameVal = true;
+        if(subject.length > 3){
+            subjectVal = true;
         }
         if(numberValidate.test(phone.length)){
             phoneVal = true;
@@ -134,18 +129,41 @@ class Form extends Component {
         if(message.length > 10){
             messageVal = true;
         }
-
-        if(nameVal === true && surnameVal === true && phoneVal === true && emailVal === true && messageVal === true){
+        if(nameVal === true && subjectVal === true && phoneVal === true && emailVal === true && messageVal === true){
             validationStatus = true;
-        }
+        };
 
-        return ({nameVal,surnameVal,phoneVal,emailVal,messageVal,validationStatus});
+        return ({nameVal,subjectVal,phoneVal,emailVal,messageVal,validationStatus});
     };
 
 
+// wysyłanie zapytania do PHPMailer
+
+    sendForm(){
+        axios('http://localhost/sklepmailer/index.php',{
+            method:'post',
+            mode:'no-cors',
+            data:this.state,
+            headers:{'Content-Type':'application/json'}
+        })
+        .then(response =>{
+            if(response.status === 200){
+                this.props.formStatus(true);
+                this.props.formSpinner(false);
+            }
+            console.log(response)
+        })
+        .catch(error => {
+            this.props.formStatus(false);
+            this.props.formSpinner(false);
+            console.log(error)
+        })
+        console.log('axios dziala')
+    };
+
     render() { 
-        const {name,surname,phone,email,message} = this.state;
-        const {nameVal,surnameVal,phoneVal,emailVal,messageVal} = this.state.validation;
+        const {name,subject,phone,email,message} = this.state;
+        const {nameVal,subjectVal,phoneVal,emailVal,messageVal} = this.state.validation;
         return ( 
             <>
                 <form className='form' onSubmit={this.handleSubmitForm} noValidate>
@@ -159,12 +177,12 @@ class Form extends Component {
                         {nameVal ? <p className='errorVal'>Minimum trzy znaki</p> : null}
                         <input 
                             type='text'
-                            name='surname'
-                            placeholder='NAZWISKO'
-                            value={surname}
+                            name='subject'
+                            placeholder='TEMAT'
+                            value={subject}
                             onChange={this.handleChange}
                         />
-                        {surnameVal ? <p className='errorVal'>Minimum trzy znaki</p> : null}
+                        {subjectVal ? <p className='errorVal'>Minimum trzy znaki</p> : null}
                         <input 
                             type='number'
                             name='phone'
@@ -195,5 +213,12 @@ class Form extends Component {
          );
     }
 }
+
+const mapDispatchToProps = dispatch =>{
+    return{
+        formStatus: (response)=> dispatch({type:'FORM_RESPONSE_STATUS',response:response}),
+        formSpinner: (spinner)=> dispatch({type:'FORM_SPINNER',spinner:spinner})
+    }
+}
  
-export default Form;
+export default connect(null,mapDispatchToProps)(Form);

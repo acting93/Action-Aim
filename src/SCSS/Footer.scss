@@ -4,12 +4,11 @@
     @include maxWidthmaxHeight(100%,auto);
     @include paddingMargin(0,0);
     @include displayFlex(column);
-    background:linear-gradient(to bottom,rgba(0, 0, 0, 0.534),black),url('../img/action.png') no-repeat;
+    background:linear-gradient(to bottom,rgba(0, 0, 0, 0.900),rgba(0, 0, 0, 0.900)),url('../img/action.png') no-repeat;
     background-size: cover;
     background-position-x: center;
     .footer-element-logo{
         @include maxWidthmaxHeight(100%,auto);
-        background: rgba(0, 0, 0, 0.712);
         img{
             position: relative;
             width: 10rem;
