@@ -4,8 +4,8 @@
    // @include maxWidthmaxHeight(100%,auto);
     height:auto;
     @include paddingMargin(0,0);
-    background: url('../img/bg5.jpg') no-repeat;
-    background-position: center;
+    background: radial-gradient(rgb(58, 58, 58),black);
+    background-position: top;
     .creator-title{
         @include maxWidthmaxHeight(100%,100px);
         background: rgb(255, 255, 255);
@@ -21,7 +21,7 @@
             @include paddingMargin(5px,0);
             text-transform: uppercase;
             font-size: 1.5rem;
-            color:rgb(173, 173, 173);
+            @include colorFont;
             text-align: center;
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
@@ -36,7 +36,7 @@
         .creator-list{
             position: relative;
             @include maxWidthmaxHeight(70%,100%);
-            background: rgb(67, 5, 117);
+            background: rgb(110, 0, 0);
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
             }
@@ -47,7 +47,7 @@
                 @include top50;
                 justify-content: center;
                 li{
-                    color: white;
+                    color:rgb(228, 228, 228);
                     margin-left:10px;
                     margin-right:10px;
                     cursor: pointer;
@@ -69,7 +69,7 @@
         @include paddingMargin(0,10px auto);
         @include displayFlex(row);
         overflow: hidden;
-        background: rgb(255, 255, 255);
+        box-shadow: 0 0 5px rgb(90, 0, 0);
         @media(max-width: 1300px){
             @include maxWidthmaxHeight(100%,auto);
         }
@@ -85,7 +85,6 @@
                 @include maxWidthmaxHeight(100%,150px);
                 @include displayFlex(column);
                 justify-content: center;
-                background: rgba(0, 0, 0, 0.404);
                 @media(max-width:992px){
                     @include maxWidthmaxHeight(50%,150px);
                     float: left;
@@ -96,8 +95,6 @@
                 }
                 .color-title{
                     @include maxWidthmaxHeight(100%,30%);
-                    background: rgb(67, 5, 117);
-                    
                     p{
                         text-align: center;
                         color:rgb(223, 223, 223);
@@ -123,7 +120,6 @@
                         margin: 2px;
                         cursor: pointer;
                         transform: skew(-20deg);
-                        box-shadow: 0 0 5px rgb(124, 124, 124);
                         transition: all 0.2s;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(30px,30px); 
@@ -150,7 +146,6 @@
                     margin-bottom: 0;
                     text-align: center;
                     color:rgb(230, 230, 230);
-                    background: rgb(67, 5, 117);
                     @media(max-width: 768px){
                         font-size: 1rem;
                     }
@@ -163,14 +158,15 @@
                     position: relative;
                     list-style-type: none;  
                     li{
+                        @include paddingMargin(0,2px);
                         position: relative;
                         top:50%;
                         transform: translateY(-50%);
                         width:60px;
                         height:50px;
-                        box-shadow: 0 0 5px rgb(156, 156, 156);
-                        border-bottom: 2px solid rgb(104, 0, 0);
-                        background-color: white;
+                        border-bottom: 2px solid rgb(119, 119, 119);
+                        border-left: 2px solid rgb(119, 119, 119);
+                        border-radius: 0 0 0 10px;
                         &:hover{
                           cursor:pointer;
                           background-color: rgb(177, 177, 177);
@@ -196,22 +192,22 @@
                 button{
                     @include maxWidthmaxHeight(130px,60px);
                     @include paddingMargin(0,10px auto);
-                    background: rgb(253, 253, 253);
-                    box-shadow: 0 0 5px rgb(85, 85, 85);
-                    color:rgb(60, 10, 124);
-                    border: none;
+                    border-left: 1px solid silver;
+                    border-top: 1px solid silver;
+                    color:silver;
                     outline: none;
                     text-transform: uppercase;
                     display: none;
+                    background: none;
+                    font-size: 0.8rem;
                     @media(max-width: 768px){
                         display:block;
                         @include maxWidthmaxHeight(130px,60px);
-                        font-size: 0.9rem;
                     }
                 }
             }
             .theme-pattern::-webkit-scrollbar{
-                width: 10px;
+                width: 2px;
             }
             .theme-pattern::-webkit-scrollbar-thumb{
                 background: rgb(201, 201, 201);
@@ -235,8 +231,8 @@
                     @include paddingMargin(0,5px auto);
                     color:white;
                     text-align: center;
+                    border-bottom: 2px solid silver;
                     cursor: pointer;
-                    box-shadow: 0 0 5px silver;
                     img{
                         @include top50;
                         width: 10rem;
@@ -271,7 +267,8 @@
                 background: url('../img/tshirt.png');
                 background-size: cover;
                 background-position: center;
-                box-shadow: 0 0 10px rgb(122, 122, 122);
+                border-radius: 50px;
+                box-shadow: 0 5px 0 rgb(105, 105, 105);
                 @media(max-width:1100px){
                     @include maxWidthmaxHeight(450px,550px);
                 }
@@ -332,7 +329,7 @@
                 width: 100%;
                 text-align: center;
                 padding:20px;
-                background: rgb(223, 223, 223);
+                @include colorFont;
                 @media(max-width:576px){
                     padding:14px;
                 }
@@ -346,16 +343,17 @@
                     @include paddingMargin(0,0 auto);
                     @include maxWidthmaxHeight(80%,100px);
                 }
-                
                 button{
                     position: relative;
                     @include maxWidthmaxHeight(80px,80px);
                     @include paddingMargin(0,5px);
                     @include top50;
-                    background: rgb(255, 255, 255);
-                    box-shadow: 0 0 5px silver;
+                    @include colorFont;
                     border:none;
                     font-size: 0.8rem;
+                    background: none;
+                    border: 1px solid silver;
+                    border-radius: 10px;
                     @media(max-width:1400px){
                         @include maxWidthmaxHeight(60px,60px);
                         font-size: 0.7rem;
@@ -390,7 +388,6 @@
                 }
                 .summary-element{
                     @include maxWidthmaxHeight(100%,80px);
-                    box-shadow: 0 0 5px rgb(197, 190, 190);
                     @include displayFlex(row);
                     @media(max-width:1200px){
                         @include displayFlex(column);
@@ -402,13 +399,10 @@
                     @media(max-width:300px){
                         @include maxWidthmaxHeight(100%,150px);
                     }
-                    p{
-                        @include maxWidthmaxHeight(50%,auto);
-                        @include top50;
-                        background-color: rgb(26, 3, 3);
+                    .element-title{
+                        @include maxWidthmaxHeight(50%,100%);
                         color:silver;
-                        text-align: left;
-                        font-size: 0.9rem;
+                        text-align: center;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(100%,auto);
                             top:0%;
@@ -418,40 +412,45 @@
                         @media(max-width:576px){
                             font-size: 14px;
                         }
+                        p{
+                            @include top50;
+                        }
                     }
                     .choosenColor{
                         @include maxWidthmaxHeight(50px,50px);
                         @include top50;
                         @include paddingMargin(0,0 auto);
-                        box-shadow: 0 0 5px silver;
+                        border: 1px solid silver;
+                        border-radius: 10px;
+                        overflow: hidden;
                         @media(max-width:1200px){
                           top:20%;
                           transform: translateY(-20%);  
                         }
-                        p{
-                            text-align: center;
-                            @include top50;
-                        }
                     }
                     .choosenSize{
                         @extend .choosenColor;
-                        p{
-                            background: none;
-                            color:rgb(42, 0, 121);
+                        text-align: center;
+                        span{
+                            color:rgb(201, 201, 201);
+                            position: relative;
+                            top:25%;
+                            transform: translateY(-25%);
                         }
                     }
                     input{
                         @include maxWidthmaxHeight(50px,50px);
                         @include top50;
                         @include paddingMargin(0,0 auto);
-                        border: none;
-                        box-shadow: 0 0 5px silver;
+                        color:rgb(201, 201, 201);
                         text-align: center;
+                        background: none;
+                        border: 1px solid silver;
+                        border-radius: 10px;
                         @media(max-width:1200px){
                             top:20%;
                             transform: translateY(-20%);
                             @include paddingMargin(0,0 auto);
-                            @include maxWidthmaxHeight(100px,50px);
                         }
                     }
                     input::-webkit-outer-spin-button,
@@ -460,9 +459,8 @@
                     }
                     .price{
                         text-align: center;
-                        background-color: rgb(209, 209, 209);
                         font-size: 1.2rem;
-                        color:rgb(60, 10, 117);
+                        @include colorFont;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(100%,auto);
                             top:20%;
@@ -474,12 +472,13 @@
             .buy{
                 position: relative;
                 @include maxWidthmaxHeight(100px,50px);
-                @include paddingMargin(0,0 50%);
+                @include paddingMargin(0,10px 50%);
                 transform: translate(-50%);
-                border:none;
+                border-top:1px solid rgb(104, 104, 104);
+                border-left:1px solid rgb(104, 104, 104);
                 outline: none;
-                box-shadow: 0 0 5px silver;
-                background-color: rgb(149, 247, 149);
+                background:none;
+                color:silver;
             }
         }
     }

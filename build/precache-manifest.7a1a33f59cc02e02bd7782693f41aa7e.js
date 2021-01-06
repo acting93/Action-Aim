@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b26c37fa61e9788295ab8618c8d7a9fb",
+    "revision": "a23c4dbe2e55463a17ff49cb2283e69f",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "79506f2cb592073a69f5",
+    "revision": "db11abc8fc2aa94cfd89",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "b4d856d6f8e3be6ff463",
-    "url": "/Action-Aim/static/css/main.e6d1652e.chunk.css"
+    "revision": "37168c8ec1a650a2870b",
+    "url": "/Action-Aim/static/css/main.bf5a70e1.chunk.css"
   },
   {
-    "revision": "79506f2cb592073a69f5",
-    "url": "/Action-Aim/static/js/2.ab75e88d.chunk.js"
+    "revision": "db11abc8fc2aa94cfd89",
+    "url": "/Action-Aim/static/js/2.0fc9e38e.chunk.js"
   },
   {
-    "revision": "b4d856d6f8e3be6ff463",
-    "url": "/Action-Aim/static/js/main.b7b6c6f4.chunk.js"
+    "revision": "37168c8ec1a650a2870b",
+    "url": "/Action-Aim/static/js/main.093a4849.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
@@ -28,16 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/action.b63a54b8.png"
   },
   {
+    "revision": "3d0157d7d5c2dc42068f856f3ebb2cfe",
+    "url": "/Action-Aim/static/media/action2.3d0157d7.png"
+  },
+  {
+    "revision": "0bd50f0b12755038fb44d839f910d499",
+    "url": "/Action-Aim/static/media/action3.0bd50f0b.png"
+  },
+  {
     "revision": "5fb777b7455054ce20056a510ab0da29",
     "url": "/Action-Aim/static/media/bg1.5fb777b7.jpg"
   },
   {
-    "revision": "0910f4a66259cf8c63c817bd6cbe0c62",
-    "url": "/Action-Aim/static/media/bg2.0910f4a6.jpg"
-  },
-  {
-    "revision": "9e341949ed4053301c7ed2e77f362eef",
-    "url": "/Action-Aim/static/media/bg3.9e341949.jpg"
+    "revision": "32027ddec540a30180a6b4518c6202e0",
+    "url": "/Action-Aim/static/media/bg2.32027dde.jpg"
   },
   {
     "revision": "25232d67e324e0aaae31d4bda11d5b18",
@@ -70,6 +74,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bdf9d57b087687fb8c1f0b2132899374",
     "url": "/Action-Aim/static/media/pks.bdf9d57b.png"
+  },
+  {
+    "revision": "ec351c93a467f1b1093e66705c93d9c1",
+    "url": "/Action-Aim/static/media/sport2.ec351c93.png"
+  },
+  {
+    "revision": "286db7e2164a17ce7fc8004855fceb3f",
+    "url": "/Action-Aim/static/media/sport3.286db7e2.png"
   },
   {
     "revision": "475df4a01f569015eff31644da2c0f34",

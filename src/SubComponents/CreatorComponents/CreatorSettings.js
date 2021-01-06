@@ -35,15 +35,15 @@ const CreatorSettings = (props) => {
             <p className='summary-title'>Podsumowanie</p>
             <div className='creator-summary'>
                 <div className='summary-element'>
-                    <p>Kolor:</p>
+                    <div className='element-title'><p>Kolor:</p></div>
                     <div className='choosenColor' style={{backgroundColor:choosenColor}}></div>
                 </div>
                 <div className='summary-element'>
-                    <p>Rozmiar:</p>
-                    <div className='choosenSize'><p>{pickedSize}</p></div>
+                    <div className='element-title'><p>Rozmiar:</p></div>
+                    <div className='choosenSize'><span>{pickedSize}</span></div>
                 </div>
                 <div className='summary-element'>
-                    <p>Ilość sztuk:</p>
+                    <div className='element-title'><p>Ilość sztuk:</p></div>
                     <input
                         onChange={handlePiece}
                         type='number'

@@ -1,5 +1,5 @@
 .header-col {
-  height: 130px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +12,8 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  background: white;
+  border-bottom: 1px solid silver;
+  background: radial-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.658)), url("../img/bg6.jpg");
 }
 
 @media (max-width: 768px) {
@@ -62,7 +63,7 @@
 }
 
 .header-col .header-contents img {
-  width: 15rem;
+  width: 12rem;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -81,12 +82,12 @@
   width: 100% !important;
   height: 50% !important;
   text-align: center;
+  z-index: 1;
+  position: relative;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 1;
-  background: #432b99;
 }
 
 @media (max-width: 768px) {
@@ -123,7 +124,7 @@
   display: block;
   width: 90% !important;
   height: 5px !important;
-  background-color: #3c0399;
+  background-color: #707070;
 }
 
 .header-col .header-contents .menu .toggler .toggler-double {
@@ -142,7 +143,7 @@
   text-align: center;
   width: 90% !important;
   height: 5px !important;
-  background-color: #3c0399;
+  background-color: #707070;
 }
 
 .header-col .header-contents .menu .toggler .toggler-double span:first-child {

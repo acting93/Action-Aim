@@ -21,3 +21,6 @@ $backgroundColor:rgb(255, 255, 255);
     top: 50%;
     transform: translateY(-50%);
 }
+@mixin colorFont{
+    color: rgb(148, 148, 148);
+}

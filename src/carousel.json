@@ -1,0 +1,16 @@
+{
+    "slides":[
+        {
+            "id":0,
+            "img":"bg5.jpg"
+        },
+        {
+            "id":1,
+            "img":"bg6.jpg"
+        },
+        {
+            "id":2,
+            "img":"bg2.jpg"
+        }
+    ]
+}

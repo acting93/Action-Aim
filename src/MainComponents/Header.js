@@ -1,7 +1,7 @@
 import React,{useEffect, useRef} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import '../SCSS/Header.css';
-import Logo from '../img/action.png';
+import Logo from '../img/action3.png';
 import {Col} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import Menu from './HeaderMenu/Menu';
@@ -16,7 +16,7 @@ const Header = () => {
         height:'80px',
         position:'fixed',
         zIndex:'300',
-        background:'white',
+        background:'black',
         display:'flex',
         flexDirection:'row'
     }

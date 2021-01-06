@@ -1,10 +1,11 @@
 @import './Variables';
 
 .header-col{
-    @include headerHeight(130px);
+    @include headerHeight(150px);
     @include displayFlex(row);
     @include paddingMargin(0,0);
-    background: white;
+    border-bottom: 1px solid silver;
+    background: radial-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.658)),url('../img/bg6.jpg');
     @media(max-width: 768px){
       @include displayFlex(column);
       @include headerHeight(180px);
@@ -30,7 +31,7 @@
             }
         }
         img{
-            width:15rem;
+            width:12rem;
             @include top50;
             @media(max-width: 768px){
                 width:9rem;
@@ -40,9 +41,9 @@
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,50%);
             text-align: center;
-            @include top50;
             z-index: 1;
-            background: rgb(67, 43, 153);
+            position: relative;
+            @include top50;
             @media(max-width:768px){
                 background: none;
             }
@@ -64,7 +65,7 @@
                         margin: 6px auto;
                         display: block;
                         @include maxWidthmaxHeight(90%,5px);
-                        background-color: rgb(60, 3, 153);
+                        background-color: rgb(112, 112, 112);
                     }
                 }
                 .toggler-double{
@@ -78,7 +79,7 @@
                         left:5%;
                         text-align: center;
                         @include maxWidthmaxHeight(90%,5px);
-                        background-color: rgb(60, 3, 153);
+                        background-color: rgb(112, 112, 112);
                         &:first-child{
                             transform: rotate(45deg);
                         }

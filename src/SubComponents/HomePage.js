@@ -1,12 +1,13 @@
 import React from 'react';
 import '../SCSS/HomePage.css'
-import Carousel from './HomePageSub/Carousel';
+import CarouselFunctions from './HomePageSub/CarouselFunctions';
+import CarouselElement from './HomePageSub/CarouselElement/CarouselElement'; 
 import HomePageInfo from './HomePageSub/HomePageInfo';
 
 const HomePage = () => {
     return ( 
         <>
-            <Carousel />
+            <CarouselFunctions render={(slide) => <CarouselElement slide={slide}/>} /> 
             <HomePageInfo />
         </>
      );
