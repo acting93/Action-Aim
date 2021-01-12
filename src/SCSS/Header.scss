@@ -1,11 +1,11 @@
 @import './Variables';
 
 .header-col{
-    @include headerHeight(150px);
+    @include headerHeight(100px);
     @include displayFlex(row);
     @include paddingMargin(0,0);
-    border-bottom: 1px solid silver;
-    background: radial-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.658)),url('../img/bg6.jpg');
+    background: black;
+    border-bottom: 2px solid white;
     @media(max-width: 768px){
       @include displayFlex(column);
       @include headerHeight(180px);
@@ -31,7 +31,7 @@
             }
         }
         img{
-            width:12rem;
+            width:9rem;
             @include top50;
             @media(max-width: 768px){
                 width:9rem;
@@ -101,7 +101,7 @@
                     background: rgb(0, 0, 0);
                 }
                 a{
-                    color:rgb(255, 255, 255);
+                    color:rgb(238, 238, 238);
                     position: relative;
                     top: 30%;
                     margin-left: 20px;

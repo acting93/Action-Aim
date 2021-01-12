@@ -138,7 +138,7 @@
         },{
         "id":5,
         "color":"#06048d",
-        "active":true,
+        "active":false,
         "sizes":[
             {
                 "id":0,

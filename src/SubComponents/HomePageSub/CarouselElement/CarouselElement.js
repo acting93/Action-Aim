@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from 'react';
+import React from 'react';
 import '../../../SCSS/HomePage.css'
 
 const CarouselElement = (props) => {
@@ -7,6 +7,7 @@ const CarouselElement = (props) => {
     return ( 
         <>
             {slide}
+
         </>
      );
 }

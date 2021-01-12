@@ -7,7 +7,7 @@ const HomePageInfo = () => {
         <>
             <Col lg={12} className='homePageInfo-col'>
                 <section className='homePageInfo'>
-                    <div className='homePage-title'>
+                    <div className='homePage-title col-12'>
                         <p>Witamy w krainie kreacji koszulek</p>
                     </div>
                     <article className='homePage-article col-12'>
@@ -42,6 +42,12 @@ const HomePageInfo = () => {
                                 <p className='description'>Koszulka Twojego własnego autorstwa jest gotowa.</p>
                             </div>   
                         </div>
+                    </article>
+                    <article className='homePage-article-3'>
+                        <div className='homePage-article-3-title'><p>Kategorie wzorów</p></div>
+                        <div className='category'><p>MOTTO</p></div>
+                        <div className='category'><p>SPORT</p></div>
+                        <div className='category'><p>TRAVEL</p></div>
                     </article>
                     <article className='homePage-redirect'>
                         <NavLink to='/creator'><button>Przejdź do kreatora</button></NavLink>

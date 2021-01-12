@@ -98,7 +98,10 @@ console.log(touchDown)
                         ref={patternRef}
                         style={{position:'relative',top:`${posY}px`}}
                         className='tshirt-content-element'>
-                        {tshirtPattern === null ? null : <img src={require(`../../img/${tshirtPattern}`)} alt=''/>} 
+                        {tshirtPattern === null
+                        ? null
+                        : <img src={require(`../../img/${tshirtPattern}`)} alt=''/>
+                        }
                     </div>
                 </div>
             </div>

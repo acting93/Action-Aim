@@ -11,8 +11,15 @@ const CarouselFunctions = (props) => {
     const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue === item.id ? {background:"red"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id} id={item.id}></span>);
 
     const slide = carousel.map(element => {
-        return <div className='carousel-element' ref={elementRef} key={element.id} id={element.id}>
-            <img src={require(`../../img/${element.img}`)} alt='' />
+        return <div
+            className='carousel-element'
+            style={{background:`url(`+ require(`../../img/${element.img}`) +`)no-repeat`,backgroundSize:"cover"}}
+            ref={elementRef}
+            key={element.id}
+            id={element.id}
+        >
+            <span className={element.spanClass}><p>{element.firstText}</p></span>
+            <span className={element.spanClass}><p>{element.secondText}</p></span>
         </div>
     });
 
@@ -29,7 +36,15 @@ const CarouselFunctions = (props) => {
         if(currentValue === slide.length -1){
             setCurrentValue(0);
         }
-    };  
+    }; 
+    
+    const prevSlide =()=>{
+        const value = currentValue;
+        setCurrentValue(value - 1);
+        if(currentValue === 0){
+            setCurrentValue(slide.length -1);
+        }
+    };
 
 
     const scrollByBtn =(id)=>{
@@ -45,17 +60,32 @@ const CarouselFunctions = (props) => {
     },[currentValue]);
 
 
+    useEffect(()=>{
+        const slider = document.querySelector('.carousel-content');
+        const lastId = document.querySelector('.carousel-content').lastChild.id;
+        slider.addEventListener('transitionend',()=>{
+            if(currentValue === slider.length -1){
+                lastId.style.transition = 'none';
+                slider.style.transform = `translateX(` +(0) + `px)`;
+            }
+        })
+    },[currentValue])
+    console.log(slide)
+
     return ( 
         <>
             <div className='carousel'>
                 <div className='navBtnContent'>
                     {createNavBtn}
                 </div>
-                <button onClick={nextSlide} className='nextBtn'>Next</button>
+                <button onClick={nextSlide} className='nextBtn'></button>
+                <button onClick={prevSlide} className='prevBtn'></button>
                 <div className='carousel-content' ref={carouselRef}>
                     {props.render(slide)}
                 </div>
+                <div className='carousel-tv'><p>KOSZULKA TV</p></div>
             </div>
+            <div className='carousel-content-stand'></div>
         </>
      );
 }

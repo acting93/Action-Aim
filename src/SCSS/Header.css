@@ -1,5 +1,5 @@
 .header-col {
-  height: 150px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,8 +12,8 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  border-bottom: 1px solid silver;
-  background: radial-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.658)), url("../img/bg6.jpg");
+  background: black;
+  border-bottom: 2px solid white;
 }
 
 @media (max-width: 768px) {
@@ -63,7 +63,7 @@
 }
 
 .header-col .header-contents img {
-  width: 12rem;
+  width: 9rem;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -186,7 +186,7 @@
 }
 
 .header-col .header-contents .menu .menu-items a {
-  color: white;
+  color: #eeeeee;
   position: relative;
   top: 30%;
   margin-left: 20px;

@@ -2,15 +2,23 @@
     "slides":[
         {
             "id":0,
-            "img":"bg5.jpg"
-        },
+            "img":"bg7.jpg",
+            "firstText":"Kotaaaaamm koszulki",
+            "spanClass":"catClass"
+        },            
         {
             "id":1,
-            "img":"bg6.jpg"
+            "img":"africa.jpg",
+            "firstText":"Meczówka Ghany",
+            "secondText":"99 PLN",
+            "spanClass":"africaClass"
         },
         {
             "id":2,
-            "img":"bg2.jpg"
+            "img":"bg2.jpg",
+            "firstText":"Multum wzorów",
+            "secondText":"do wyboru",
+            "spanClass":"papugClass"            
         }
     ]
 }
