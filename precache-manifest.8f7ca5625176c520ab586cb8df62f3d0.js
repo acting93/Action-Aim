@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6ac26b3c4933ac0970dc414b338bf3a",
+    "revision": "22f70ea6e0ded7741f590138704f859b",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "6c7f7e74787a62a68cd5",
+    "revision": "e9d5c9609185df090bb0",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "e935cc3421a7b335a839",
-    "url": "/Action-Aim/static/css/main.e81fc382.chunk.css"
+    "revision": "ac99763b55ee05a93027",
+    "url": "/Action-Aim/static/css/main.3e6eacfa.chunk.css"
   },
   {
-    "revision": "6c7f7e74787a62a68cd5",
-    "url": "/Action-Aim/static/js/2.3dccccbd.chunk.js"
+    "revision": "e9d5c9609185df090bb0",
+    "url": "/Action-Aim/static/js/2.74ed8472.chunk.js"
   },
   {
-    "revision": "e935cc3421a7b335a839",
-    "url": "/Action-Aim/static/js/main.3c0c9e6e.chunk.js"
+    "revision": "ac99763b55ee05a93027",
+    "url": "/Action-Aim/static/js/main.5af85139.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
@@ -82,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d98dcec99fbcbffd48706aa05fd9525e",
     "url": "/Action-Aim/static/media/krose.d98dcec9.png"
+  },
+  {
+    "revision": "05f2d853cfd273be633160289f81810f",
+    "url": "/Action-Aim/static/media/moon.05f2d853.jpg"
   },
   {
     "revision": "a8df7ffdede47698bd7e2cd86014f060",
