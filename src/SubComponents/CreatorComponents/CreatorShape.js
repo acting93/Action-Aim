@@ -81,7 +81,6 @@ const CreatorShape = (props) => {
         setTouchDown(false);
     };
 
-console.log(touchDown)
     return ( 
         <>
             <div className='tshirt' style={{backgroundColor:activeColor}}>

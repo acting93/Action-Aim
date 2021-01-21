@@ -4,8 +4,8 @@
     @include headerHeight(100px);
     @include displayFlex(row);
     @include paddingMargin(0,0);
-    background: black;
-    border-bottom: 2px solid white;
+    background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
+    border-bottom: 2px solid rgb(136, 136, 136);
     @media(max-width: 768px){
       @include displayFlex(column);
       @include headerHeight(180px);

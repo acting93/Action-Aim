@@ -8,7 +8,7 @@ const RenderPropsToggler =(HOCMenu)=>{
         constructor(props){
             super(props);
             this.state={
-                widthPage: false,
+                less768px: false,
             }
 
             this.handleWidth = this.handleWidth.bind(this);
@@ -16,8 +16,8 @@ const RenderPropsToggler =(HOCMenu)=>{
         };
 
         handleWidth(){
-            const innerWidthPages = window.innerWidth;
-            innerWidthPages <= 768 ? this.setState({widthPage: true}) : this.setState({widthPage: false});
+            const innerWidthPage = window.innerWidth;
+            innerWidthPage <= 768 ? this.setState({less768px: true}) : this.setState({less768px: false});
         };
 
         changeToggler(){
@@ -26,7 +26,6 @@ const RenderPropsToggler =(HOCMenu)=>{
 
         componentDidMount(){
             window.addEventListener('resize',this.handleWidth);
-            this.handleWidth();
         };
 
         componentDidUpdate(){
@@ -40,7 +39,7 @@ const RenderPropsToggler =(HOCMenu)=>{
         render(){
             return(
                 <>
-                    <HOCMenu widthPage={this.state.widthPage} changeToggler={this.changeToggler} {...this.state}/>
+                    <HOCMenu less768px={this.state.less768px} changeToggler={this.changeToggler} {...this.state}/>
                 </>
             )
         }

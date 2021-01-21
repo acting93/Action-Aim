@@ -4,8 +4,8 @@
     @include maxWidthmaxHeight(100%,auto);
     @include paddingMargin(0,0);
     @include displayFlex(column);
-    background:linear-gradient(to bottom,rgba(0, 0, 0, 0.900),rgba(0, 0, 0, 0.900)),url('../img/action3.png') no-repeat;
-    background-size: cover;
+    border-top: 10px solid rgb(85, 85, 85);
+    background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
     .footer-element-logo{
         @include maxWidthmaxHeight(100%,auto);
         img{
@@ -16,6 +16,7 @@
         }
     }
     .footer-element{
+        border-top: 2px solid rgb(59, 59, 59);
         @include maxWidthmaxHeight(100%,auto);
         @include displayFlex(row);
         justify-content: center;
@@ -23,9 +24,9 @@
             @include displayFlex(column);
         }
         .footer-element-info{
-            @include paddingMargin(5px,0);
-            @include maxWidthmaxHeight(40%,100%);
-            text-align: left;
+            @include paddingMargin(2px,0);
+            @include maxWidthmaxHeight(45%,100%);
+            text-align: center;
             @media(max-width:992px){
                 @include maxWidthmaxHeight(50%,100%);
             }
@@ -34,15 +35,12 @@
                 @include displayFlex(column);
             }
             p{
+                font-size: 1rem;
                 padding-top: 10px;
                 width: 50%;
                 margin: 10px auto;
-                color:rgb(207, 207, 207);
-                @media(max-width:992px){
-                   font-size: 0.9rem;
-                   padding-top: 5px;
-                }
-                @media(max-width:576px){
+                color:rgb(110, 110, 110);
+                @media(max-width:768px){
                     font-size: 0.8rem;
                     text-align: center;
                     width: 80%;
@@ -57,7 +55,7 @@
                 }
                 li{
                     @include maxWidthmaxHeight(100%,auto);
-                    padding:10px;
+                    padding:8px;
                     text-align: center;
                     display: block;
                     text-decoration: none;
@@ -77,7 +75,7 @@
                         font-size: 0.9rem;
                         position: relative;
                         text-decoration: none;
-                        color:rgb(230, 230, 230);
+                        color:rgb(110, 110, 110);
                         &:hover{
                           color:silver;
                         }

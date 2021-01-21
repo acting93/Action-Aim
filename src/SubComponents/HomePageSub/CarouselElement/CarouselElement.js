@@ -7,7 +7,6 @@ const CarouselElement = (props) => {
     return ( 
         <>
             {slide}
-
         </>
      );
 }

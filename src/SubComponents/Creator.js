@@ -4,6 +4,7 @@ import CreatorPattern from './CreatorComponents/CreatorPattern';
 import CreatorShape from './CreatorComponents/CreatorShape';
 import CreatorSettings from './CreatorComponents/CreatorSettings';
 import composedHOCPatterns from './HomePageSub/FunctionsPatterns/HOCPatterns';
+import Summary from './CreatorComponents/Summary';
 
 const Creator = (props) => {
     
@@ -13,9 +14,9 @@ const Creator = (props) => {
                 <div className='creator-title'><p>Kreator koszulek</p>
                     <div className='creator-list'>
                         <ul>
-                            <li onClick={()=>{props.sport();props.showMobilePattern()}}>SPORT</li>
-                            <li onClick={()=>{props.travel();props.showMobilePattern()}}>TRAVEL</li>
-                            <li onClick={()=>{props.motto();props.showMobilePattern()}}>MOTTO</li>
+                            <li onClick={()=>{props.sport();props.showMobilePattern()}}><p>SPORT</p></li>
+                            <li onClick={()=>{props.travel();props.showMobilePattern()}}><p>TRAVEL</p></li>
+                            <li onClick={()=>{props.motto();props.showMobilePattern()}}><p>MOTTO</p></li>
                         </ul>
                     </div>
                 </div>
@@ -30,6 +31,7 @@ const Creator = (props) => {
                         <CreatorSettings />
                     </div>
                 </div>
+                <Summary />
             </section>
         </>
      );

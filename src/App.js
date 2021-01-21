@@ -16,28 +16,29 @@ class App extends PureComponent {
     this.handleWidth = this.handleWidth.bind(this);
   }
 
+  //funkcja zmieniajaca widok togglera menu w zależności od szerokości ekranu
   handleWidth(){
-      let width = window.innerWidth;
-      if(width > 768){
-        this.props.setWidth(true)
+      const width = window.outerWidth;
+      if(width <= 768){
+        this.props.setMenu(false);
       }else{
-        this.props.setWidth(false)
+        this.props.setMenu(true);
       }
-  }
+  };
 
   componentDidMount(){
-     // this.props.getDataPatterns();
-      this.handleWidth();
-      window.addEventListener('resize', this.handleWidth);
-  }
-
+     //this.props.getDataPatterns();
+    this.handleWidth();
+    window.addEventListener('resize', this.handleWidth);
+  };
+ 
   componentDidUpdate(){
     window.addEventListener('resize', this.handleWidth);
-  }
+  };
 
   componentWillUnmount(){
     window.removeEventListener('resize', this.handleWidth);
-  }
+  };
 
   render() { 
     return( 
@@ -68,7 +69,7 @@ const mapStateToProps = state =>{
 
 const mapDispatchToProps = dispatch =>{
   return{
-    setWidth: (isActiveToggler)=> dispatch({type:'IS_ACTIVE_TOGGLER',isActiveToggler:isActiveToggler}),
+    setMenu: (isActiveToggler)=> dispatch({type:'IS_ACTIVE_TOGGLER',isActiveToggler:isActiveToggler}),
     getDataPatterns: ()=> dispatch({type:'GET_DATA_PATTERN'})
   }
 };

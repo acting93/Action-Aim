@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className='footer-element'>
                     <div className='footer-element-info'>
                         <p>Action-Aim</p>
-                        <p>ul. Aleja Grunwaldzka 250, 82-300 Elbląg</p>
+                        <p>ul. Aleja Grunwaldzka 250,<br/> 82-300 Elbląg</p>
                         <p>Tel: 000 000 000</p>
                         <p>E-mail: actionaim@action.com</p>
                     </div>

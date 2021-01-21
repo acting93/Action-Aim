@@ -3,4 +3,5 @@
 main{
     @include maxWidthmaxHeight(100%,100%);
     background: url('../img/desks.jpg') no-repeat top;
+    background-size:contain;
 }

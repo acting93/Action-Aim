@@ -12,8 +12,9 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  background: black;
-  border-bottom: 2px solid white;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#073264));
+  background: linear-gradient(to right, black, #073264);
+  border-bottom: 2px solid #888888;
 }
 
 @media (max-width: 768px) {

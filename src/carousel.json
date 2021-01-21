@@ -15,10 +15,7 @@
         },
         {
             "id":2,
-            "img":"bg2.jpg",
-            "firstText":"Multum wzorów",
-            "secondText":"do wyboru",
-            "spanClass":"papugClass"            
+            "img":"prize2.jpg"
         }
     ]
 }

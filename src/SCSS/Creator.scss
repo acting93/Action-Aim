@@ -4,12 +4,16 @@
    // @include maxWidthmaxHeight(100%,auto);
     height:auto;
     @include paddingMargin(0,0);
-    background: radial-gradient(rgb(58, 58, 58),black);
+    background: url('../img/desks.jpg');
     background-position: top;
     .creator-title{
-        @include maxWidthmaxHeight(100%,100px);
-        background: rgb(255, 255, 255);
+        @include maxWidthmaxHeight(85%,100px);
+        @include paddingMargin(0,0 auto);
         @include displayFlex(row);
+        background: rgb(0, 0, 0);
+        @media(max-width:1200px){
+            @include maxWidthmaxHeight(100%,100px);
+        }
         @media(max-width:768px){
             @include displayFlex(column);
             @include maxWidthmaxHeight(100%,150px);
@@ -36,29 +40,35 @@
         .creator-list{
             position: relative;
             @include maxWidthmaxHeight(70%,100%);
-            background: rgb(110, 0, 0);
+            background:rgb(0, 0, 0);
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
             }
             ul{
-                @include maxWidthmaxHeight(100%,auto);
-                list-style-type: none;
+                @include maxWidthmaxHeight(100%,100%);
                 @include displayFlex(row);
-                @include top50;
+                list-style-type: none;
                 justify-content: center;
                 li{
-                    color:rgb(228, 228, 228);
+                    @include maxWidthmaxHeight(auto,100%);
+                    padding: 10px;
+                    background: rgb(0, 0, 0);
                     margin-left:10px;
                     margin-right:10px;
-                    cursor: pointer;
-                    &:hover{
-                        color:red;
-                    }
-                    @media(max-width:768px){
-                        font-size: 0.8rem;
-                    }
-                    @media(max-width:300px){
-                        font-size: 0.7rem;
+                        &:hover{
+                            background: rgb(196, 0, 0);
+                        }
+                    P{
+                        @include maxWidthmaxHeight(100%,auto);
+                        font-size: 0.9rem;
+                        color:rgb(231, 231, 231);
+                        cursor: pointer;
+                            @media(max-width:768px){
+                                font-size: 0.8rem;
+                            }
+                            @media(max-width:300px){
+                                font-size: 0.7rem;
+                            }
                     }
                 }
             }
@@ -66,10 +76,11 @@
     }
     .creator-content{
         @include maxWidthmaxHeight(85%,auto);
-        @include paddingMargin(0,10px auto);
+        @include paddingMargin(0,0 auto);
         @include displayFlex(row);
         overflow: hidden;
-        box-shadow: 0 0 5px rgb(90, 0, 0);
+        border:2px solid rgb(97, 87, 0);
+        background: linear-gradient(to top,rgba(58, 58, 58, 0.384),black);
         @media(max-width: 1300px){
             @include maxWidthmaxHeight(100%,auto);
         }
@@ -208,10 +219,13 @@
             }
             .theme-pattern::-webkit-scrollbar{
                 width: 2px;
+                    @media(max-width: 768px){
+                        height: 5px; 
+                    }
             }
             .theme-pattern::-webkit-scrollbar-thumb{
-                background: rgb(201, 201, 201);
-                border-radius: 20px;
+                background: rgb(122, 122, 122);
+                border-radius: 10px;
             }
             .theme-pattern{
                 position: relative;
@@ -231,7 +245,7 @@
                     @include paddingMargin(0,5px auto);
                     color:white;
                     text-align: center;
-                    border-bottom: 2px solid silver;
+                    border-bottom: 2px solid rgb(245, 245, 245);
                     cursor: pointer;
                     img{
                         @include top50;
@@ -400,7 +414,7 @@
                     }
                     .element-title{
                         @include maxWidthmaxHeight(50%,100%);
-                        color:silver;
+                        color:rgb(255, 255, 255);
                         text-align: center;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(100%,auto);
@@ -431,7 +445,7 @@
                         @extend .choosenColor;
                         text-align: center;
                         span{
-                            color:rgb(201, 201, 201);
+                            color:rgb(240, 240, 240);
                             position: relative;
                             top:25%;
                             transform: translateY(-25%);
@@ -441,7 +455,7 @@
                         @include maxWidthmaxHeight(50px,50px);
                         @include top50;
                         @include paddingMargin(0,0 auto);
-                        color:rgb(201, 201, 201);
+                        color:rgb(240, 240, 240);
                         text-align: center;
                         background: none;
                         border: 1px solid silver;
@@ -477,7 +491,77 @@
                 border-left:1px solid rgb(104, 104, 104);
                 outline: none;
                 background:none;
-                color:silver;
+                color:rgb(240, 240, 240);
+            }
+        }
+    }
+    .summary{
+        padding: 0;
+        position: absolute;
+        height:700px;
+        background: rgb(250, 250, 250);
+        top:0%;
+        left:50%;
+        transform: translateX(-50%);
+        background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
+        .summary-title{
+            @include maxWidthmaxHeight(100%,20%);
+            position: relative;
+            p{
+                text-align: center;
+                color:white;
+                @include top50;
+            }
+        }
+        .summary-content{
+            @include paddingMargin(0,0);
+            @include maxWidthmaxHeight(100%,80%);
+            @include displayFlex(row);
+            position: relative;
+            .summary-content-element{
+                @include maxWidthmaxHeight(50%,100%);
+                overflow: hidden;
+                &:last-child{
+                    border-radius: 20% 0 0 20%;
+                    border-left:10px solid rgb(192, 192, 192);
+                }
+               .element-info{
+                    @include maxWidthmaxHeight(100%,30%); 
+                    display: block;
+                    border-bottom: 2px solid rgb(163, 163, 163);
+                    border-radius: 0 0 20% 20%;
+                    p{
+                        margin-top: 5px;
+                        text-align: center;
+                        color:rgb(202, 202, 202);
+                        font-size: 1.5rem;
+                    }
+                    .summary-color{
+                        @include maxWidthmaxHeight(80px,80px); 
+                        @include paddingMargin(0,0 auto);
+                        border:1px solid black;
+                        border-radius: 10%;
+                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                    }
+                    .summary-size{
+                        text-align: center;
+                        @include maxWidthmaxHeight(80px,80px); 
+                        @include paddingMargin(0,0 auto);
+                        font-size: 3rem;
+                        color:rgb(78, 78, 78);
+                        background-color: white;
+                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                    }
+                    .summary-quantity{
+                        text-align: center;
+                        @include maxWidthmaxHeight(80px,80px); 
+                        @include paddingMargin(0,0 auto);
+                        font-size: 3rem;
+                        color:rgb(78, 78, 78);
+                        background-color: white;
+                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                    }
+               }
             }
         }
     }

@@ -5,17 +5,17 @@ import composedRenderPropsToggler from './RenderPropsToggler';
 const Toggler = (props) => {
     const menuDropped = useSelector(state => state.mainReducer.isMenu);
     const isSticky = useSelector(state => state.mainReducer.isSticky);
-    const {widthPage,changeToggler} = props;
+    const {less768px,changeToggler} = props;
 
     const styleToggler ={
         position: 'relative',
         marginRight: '5%',
         top:'0',
-    }
+    };
 
     return ( 
         <>
-            <button className='toggler' onClick={changeToggler} style={widthPage === true && isSticky === true ? styleToggler : null}>
+            <button className='toggler' onClick={changeToggler} style={less768px === true && isSticky === true ? styleToggler : null}>
                 {menuDropped === false ?
                     <div className='toggler-hamburger'>
                         <span></span>

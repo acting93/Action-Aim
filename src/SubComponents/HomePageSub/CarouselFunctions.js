@@ -1,6 +1,7 @@
-import React,{useState,useEffect,useRef,useMemo, useCallback} from 'react'; 
+import React,{useState,useEffect,useRef} from 'react'; 
 import '../../SCSS/HomePage.css';
 import carouselSlides from '../../carousel.json';
+import SignalImg from '../../img/signal.jpg';
 
 const CarouselFunctions = (props) => {
    
@@ -8,12 +9,16 @@ const CarouselFunctions = (props) => {
     const elementRef = useRef(null);
     const [currentValue,setCurrentValue] = useState(0);
     const [carousel,setCarousel] = useState(carouselSlides.slides);
-    const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue === item.id ? {background:"red"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id} id={item.id}></span>);
+    const [signal,setSignal] = useState(false);
 
+    //funkcja zwraza spany dla każdego elementu do przechodzenia między elementami karuzeli
+     const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue=== item.id ? {background:"#007ea5"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id}></span>);
+
+    //mapowanie elementów z json do karuzeli tworzenie diva dla każdego elementu.
     const slide = carousel.map(element => {
         return <div
             className='carousel-element'
-            style={{background:`url(`+ require(`../../img/${element.img}`) +`)no-repeat`,backgroundSize:"cover"}}
+            style={{background:`url(`+ require(`../../img/${element.img}`) +`) no-repeat`,backgroundPosition:"top",backgroundSize:"cover"}}
             ref={elementRef}
             key={element.id}
             id={element.id}
@@ -23,11 +28,12 @@ const CarouselFunctions = (props) => {
         </div>
     });
 
+    // funkcja odpowiada z poruszanie karuzeli3
     const movingSlide =()=>{
-            const slider = document.querySelector('.carousel-content');
-            const element = document.querySelector('.carousel-element');
-            slider.style.transform = `translateX(` +(-element.offsetWidth * currentValue) + `px)`;
-            slider.style.transition = '0.8s';
+        const slider = document.querySelector('.carousel-content');
+        const element = document.querySelector('.carousel-element');
+        slider.style.transform = `translateX(` +(-element.offsetWidth * currentValue) + `px)`;
+        slider.style.transition = '0.8s';
     };
 
     const nextSlide =()=>{
@@ -46,7 +52,7 @@ const CarouselFunctions = (props) => {
         }
     };
 
-
+    //scrollowanie po kliknięciu btn nawigacyjnego w karuzeli
     const scrollByBtn =(id)=>{
         setCurrentValue(id); 
         const slider = document.querySelector('.carousel-content');
@@ -56,32 +62,30 @@ const CarouselFunctions = (props) => {
     };
 
     useEffect(()=>{
-        movingSlide();
+        if(signal === true){
+            movingSlide();
+        }
     },[currentValue]);
 
-
+    //zmmiana state signal true/false
     useEffect(()=>{
-        const slider = document.querySelector('.carousel-content');
-        const lastId = document.querySelector('.carousel-content').lastChild.id;
-        slider.addEventListener('transitionend',()=>{
-            if(currentValue === slider.length -1){
-                lastId.style.transition = 'none';
-                slider.style.transform = `translateX(` +(0) + `px)`;
-            }
-        })
-    },[currentValue])
-    console.log(slide)
+        setTimeout(()=>{
+            setSignal(true);
+        },4000)
+    },[]);
 
     return ( 
         <>
             <div className='carousel'>
-                <div className='navBtnContent'>
+                {signal ? <div className='navBtnContent'>
                     {createNavBtn}
-                </div>
+                </div> : null}
                 <button onClick={nextSlide} className='nextBtn'></button>
                 <button onClick={prevSlide} className='prevBtn'></button>
                 <div className='carousel-content' ref={carouselRef}>
-                    {props.render(slide)}
+                    {signal ? props.render(slide) :
+                        <div className='carousel-element' style={{background:`url(${SignalImg})`,backgroundSize:"cover"}}></div>    
+                    }
                 </div>
                 <div className='carousel-tv'><p>KOSZULKA TV</p></div>
             </div>

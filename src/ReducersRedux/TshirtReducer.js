@@ -129,8 +129,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             });
 
             const mapSize = filterSizesPerColor.map(size => size.size);
-            console.log(sizesPerColor)
-            console.log(action.id)
             return{
                 ...state,
                 choosenSize:mapSize
