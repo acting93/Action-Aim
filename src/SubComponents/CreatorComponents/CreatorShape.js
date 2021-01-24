@@ -1,7 +1,8 @@
-import React,{useState,useRef} from 'react';
-import {useSelector} from 'react-redux';
+import React,{useState,useRef, useEffect} from 'react';
+import {useSelector,useDispatch} from 'react-redux';
 
 const CreatorShape = (props) => {
+    const dispatch = useDispatch();
     const activeColor = useSelector(state => state.tshirtReducer.activeColor);//pobieranie koloru koszulki po kliknięciu z listy kolorów
     const tshirtPattern = useSelector(state => state.tshirtReducer.tshirtPattern); // pobieranie wzoru koszuki po kliknięciu z listy wzorów
     const tshirtRef = useRef(null);
@@ -31,6 +32,7 @@ const CreatorShape = (props) => {
             setPosY(1);
             setMouseDown(false);
         }
+
     };
 
     const positionTouch =(event)=>{
@@ -80,6 +82,11 @@ const CreatorShape = (props) => {
         document.querySelector('body').style.overflow= 'auto'; //zmieniamy overflow onTouchDown
         setTouchDown(false);
     };
+
+    useEffect(()=>{
+        const percentPosiionPattern = ((posY * 100) / tshirtRef.current.offsetHeight);
+        dispatch({type:'POSITION_PATTERN',positionPattern:percentPosiionPattern});
+    },[posY])
 
     return ( 
         <>

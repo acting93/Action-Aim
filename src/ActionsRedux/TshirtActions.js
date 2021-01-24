@@ -60,3 +60,8 @@ export const ShowPatternClick =(show)=>({
 export const ResetAll =()=>({
     type:'RESET_ALL'
 });
+
+export const positionPattern =(postionPattern)=>({
+    type:'POSITION_PATTERN',
+    postionPattern
+});

@@ -18,13 +18,14 @@ const tshirtState ={
     activeColor: 'white', //domyślny kolor biały przy pierwszym załadowaniu strony
     dataPattern:patternArray,//wzory z JSON
     activePattern:randomPattern,//losowa grupa wzorów przy załadowaniu kreatora
-    tshirtPattern:null,//aktywny wzór na koszulce
+    tshirtPattern:'kdst.png',//aktywny wzór na koszulce
     tshirtActive:true,
     colors:colorsSizes,
     isSize:true,
     activeSizePerColor: [colorsSizes[0]], //domyślny przypisany rozmiar do pierwszego koloru w tablicy 'white' - state.activeColor
     showPattern: null,//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
-    choosenSize: null //wybrany rozmiar koszulki przez klienta 
+    choosenSize: null, //wybrany rozmiar koszulki przez klienta 
+    topPositionPattern:0 //pozycja wzoru na koszulce
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -139,6 +140,13 @@ const TshirtReducer =(state=tshirtState,action)=>{
             return{
                 ...state,
                 showPattern: action.show
+            }
+
+//akcja przekazuje pozycję wzoru do podsumowania
+        case 'POSITION_PATTERN':
+            return{
+                ...state,
+                topPositionPattern:action.positionPattern
             }
 
 //akcja resetująca wszystko na koszulce 

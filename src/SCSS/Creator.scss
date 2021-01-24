@@ -283,29 +283,29 @@
                 background-position: center;
                 border-radius: 50px;
                 box-shadow: 0 5px 0 rgb(105, 105, 105);
-                @media(max-width:1100px){
-                    @include maxWidthmaxHeight(450px,550px);
-                }
-                @media(max-width:800px){
-                    @include maxWidthmaxHeight(450,550px);
-                    position: relative;
-                    margin-top:2%;
-                    transform: translateY(-2%);
-                    left:50%;
-                    transform: translateX(-50%);
-                }
-                @media(max-width:576px){
-                    @include maxWidthmaxHeight(90%,600px);
-                }
-                @media(max-width:450px){
-                    @include maxWidthmaxHeight(100%,500px);
-                }
-                @media(max-width:350px){
-                    @include maxWidthmaxHeight(95%,400px);
-                }
-                @media(max-width:300px){
-                    @include maxWidthmaxHeight(100%,350px);
-                }
+                    @media(max-width:1100px){
+                        @include maxWidthmaxHeight(450px,550px);
+                    }
+                    @media(max-width:800px){
+                        @include maxWidthmaxHeight(450,550px);
+                        position: relative;
+                        margin-top:2%;
+                        transform: translateY(-2%);
+                        left:50%;
+                        transform: translateX(-50%);
+                    }
+                    @media(max-width:576px){
+                        @include maxWidthmaxHeight(90%,600px);
+                    }
+                    @media(max-width:450px){
+                        @include maxWidthmaxHeight(100%,500px);
+                    }
+                    @media(max-width:350px){
+                        @include maxWidthmaxHeight(95%,400px);
+                    }
+                    @media(max-width:300px){
+                        @include maxWidthmaxHeight(100%,350px);
+                    }
                 .tshirt-content{
                     position: absolute;
                     width: 40%;
@@ -313,6 +313,7 @@
                     margin-top: 20%;
                     margin-left:50%;
                     transform: translateX(-50%);
+                    border:1px solid black;
                     @media(max-width:576px){
                         width: 42%;
                     }
@@ -498,70 +499,165 @@
     .summary{
         padding: 0;
         position: absolute;
-        height:700px;
-        background: rgb(250, 250, 250);
-        top:0%;
+        height:500px;
+        top:10%;
         left:50%;
         transform: translateX(-50%);
-        background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
+        //background: url('../img/summary.jpg');
+        background: rgb(255, 255, 255);
+        background-size:cover;
+        overflow: hidden;
+        @media(max-width:768px){
+            height:450px;
+        }
         .summary-title{
-            @include maxWidthmaxHeight(100%,20%);
+            @include maxWidthmaxHeight(100%,auto);
             position: relative;
+            background: radial-gradient(black,rgb(35, 2, 78));
+            text-align: center;
             p{
-                text-align: center;
-                color:white;
-                @include top50;
+                @include paddingMargin(20px,0);
+                color:rgb(212, 212, 212);
             }
         }
         .summary-content{
             @include paddingMargin(0,0);
-            @include maxWidthmaxHeight(100%,80%);
+            @include maxWidthmaxHeight(100%,90%);
             @include displayFlex(row);
             position: relative;
+            @media(max-width:500px){
+                @include displayFlex(column); 
+            }
             .summary-content-element{
                 @include maxWidthmaxHeight(50%,100%);
+                @include paddingMargin(0,0);
                 overflow: hidden;
-                &:last-child{
-                    border-radius: 20% 0 0 20%;
-                    border-left:10px solid rgb(192, 192, 192);
+                display: block;
+                background: none;
+                &:first-child{
+                    @media(max-width:500px){
+                        @include maxWidthmaxHeight(100%,45%);
+                    }
                 }
-               .element-info{
-                    @include maxWidthmaxHeight(100%,30%); 
-                    display: block;
-                    border-bottom: 2px solid rgb(163, 163, 163);
-                    border-radius: 0 0 20% 20%;
-                    p{
-                        margin-top: 5px;
-                        text-align: center;
-                        color:rgb(202, 202, 202);
-                        font-size: 1.5rem;
+                &:last-child{
+                    background: radial-gradient(black,rgb(35, 2, 78));
+                    box-shadow: -10px 0px 5px rgb(121, 121, 121);
+                    @media(max-width:500px){
+                        @include maxWidthmaxHeight(100%,55%);
                     }
-                    .summary-color{
-                        @include maxWidthmaxHeight(80px,80px); 
+                }
+                .tshirt-summary{
+                    border: 1px solid black;
+                    @include paddingMargin(0,0 auto);
+                    @include maxWidthmaxHeight(350px,400px);
+                    background: url('../img/tshirt.png');
+                    background-size: cover;
+                    position: relative;
+                    top:40%;
+                    transform: translateY(-40%);
+                    border: 1px solid white;
+                    @media(max-width:768px){
+                        @include maxWidthmaxHeight(300px,350px);  
+                    }
+                    @media(max-width:576px){
+                        @include maxWidthmaxHeight(250px,300px);  
+                    }
+                    @media(max-width:500px){
+                        @include maxWidthmaxHeight(150px,200px);
+                    }
+                    .tshirt-summary-pattern{
+                        @include maxWidthmaxHeight(40%,60%);
+                        margin-top:20%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border: 1px solid rgb(138, 0, 0);
+                        img{
+                            position: relative;
+                            width:8rem;
+                            left:50%;
+                            transform:  translateX(-50%);
+                        }
+                    }
+                }
+                .summary-logo{
+                    @include maxWidthmaxHeight(100%,auto);
+                    @include paddingMargin(0,0 auto);
+                    position: relative;
+                    text-align: center;
+                    margin-bottom: none !important;
+                    @media(max-width:500px){
+                        display: none;
+                    }
+                    img{
+                        width: 10rem;
+                    }
+                }
+                table{
+                    @include maxWidthmaxHeight(80%,auto);
+                    position: relative;
+                    @include maxWidthmaxHeight(80%,auto);
+                    @include paddingMargin(0,0 auto);
+                    tr{
+                        @include maxWidthmaxHeight(100%,80px); 
+                        @include paddingMargin(0,0);
+                        font-size: 1.2rem;
+                        @media(max-width:768px){
+                            @include maxWidthmaxHeight(50%,70px);
+                            font-size: 0.8rem; 
+                        }
+                        @media(max-width:500px){
+                            @include maxWidthmaxHeight(50%,50px); 
+                        }
+                        td{
+                            @include paddingMargin(5px,0);
+                            border-bottom: 1px solid silver;
+                            text-align: left;
+                            color:rgb(207, 207, 207);
+                            &:first-child{
+                                font-weight: 600;
+                            }
+                            &:last-child{
+                                text-align: right;
+                                position: relative;
+                                right:20px;
+                            }
+                        }
+                        .summary-color{
+                            @include maxWidthmaxHeight(50px,50px);
+                            position:absolute;
+                            right: 0;
+                            top:50;
+                            transform: translateY(-50%);
+                            border: 1px solid rgb(255, 255, 255);
+                            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                            @media(max-width:768px){
+                                @include maxWidthmaxHeight(30px,30px); 
+                            }
+                        }
+                    }
+                }
+                .summary-buttons{
+                    @include maxWidthmaxHeight(100%,auto);
+                    padding: 0;
+                    margin-top: 5px;
+                    text-align: center;
+                    button{
                         @include paddingMargin(0,0 auto);
-                        border:1px solid black;
-                        border-radius: 10%;
-                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-                    }
-                    .summary-size{
-                        text-align: center;
-                        @include maxWidthmaxHeight(80px,80px); 
-                        @include paddingMargin(0,0 auto);
-                        font-size: 3rem;
-                        color:rgb(78, 78, 78);
-                        background-color: white;
-                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-                    }
-                    .summary-quantity{
-                        text-align: center;
-                        @include maxWidthmaxHeight(80px,80px); 
-                        @include paddingMargin(0,0 auto);
-                        font-size: 3rem;
-                        color:rgb(78, 78, 78);
-                        background-color: white;
-                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-                    }
-               }
+                        @include maxWidthmaxHeight(50%,50px); 
+                        text-transform: uppercase; 
+                        outline: none;
+                        border: none;
+                        background: none;
+                        font-size: 0.8rem;
+                        color:white;
+                        @media(max-width:450px){
+                            font-size: 0.6rem;
+                        }
+                        &:hover{
+                            color:rgb(11, 130, 146);
+                        }
+                    } 
+                }
             }
         }
     }

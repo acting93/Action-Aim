@@ -32,8 +32,9 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  background: black;
-  border-bottom: 2px solid white;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#073264));
+  background: linear-gradient(to right, black, #073264);
+  border-bottom: 2px solid #888888;
 }
 
 @media (max-width: 768px) {
@@ -281,6 +282,13 @@
   border: none;
 }
 
+@media (max-width: 768px) {
+  .carousel .nextBtn {
+    width: 50% !important;
+    height: 100% !important;
+  }
+}
+
 .carousel .nextBtn:hover {
   cursor: url("../cursors/cursorRight.png"), auto;
 }
@@ -295,6 +303,13 @@
   background: none;
   outline: none;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .carousel .prevBtn {
+    width: 50% !important;
+    height: 100% !important;
+  }
 }
 
 .carousel .prevBtn:hover {
@@ -1400,7 +1415,7 @@ html body {
 main {
   width: 100% !important;
   height: 100% !important;
-  background: url("../img/wall.jpg") no-repeat top;
+  background: url("../img/desks.jpg") no-repeat top;
   background-size: contain;
 }
 
@@ -1419,8 +1434,9 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-top: 10px solid white;
-  background: #5c0000;
+  border-top: 10px solid #555555;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#073264));
+  background: linear-gradient(to right, black, #073264);
 }
 
 .footer .footer-element-logo {
@@ -1437,6 +1453,7 @@ main {
 }
 
 .footer .footer-element {
+  border-top: 2px solid #3b3b3b;
   width: 100% !important;
   height: auto !important;
   display: -webkit-box;
@@ -1470,11 +1487,11 @@ main {
 }
 
 .footer .footer-element .footer-element-info {
-  padding: 5px !important;
+  padding: 2px !important;
   margin: 0 !important;
-  width: 40% !important;
+  width: 45% !important;
   height: 100% !important;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -1502,20 +1519,14 @@ main {
 }
 
 .footer .footer-element .footer-element-info p {
+  font-size: 1rem;
   padding-top: 10px;
   width: 50%;
   margin: 10px auto;
-  color: #cfcfcf;
+  color: #6e6e6e;
 }
 
-@media (max-width: 992px) {
-  .footer .footer-element .footer-element-info p {
-    font-size: 0.9rem;
-    padding-top: 5px;
-  }
-}
-
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .footer .footer-element .footer-element-info p {
     font-size: 0.8rem;
     text-align: center;
@@ -1540,7 +1551,7 @@ main {
 .footer .footer-element .footer-element-info ul li {
   width: 100% !important;
   height: auto !important;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
   display: block;
   text-decoration: none;
@@ -1571,7 +1582,7 @@ main {
   font-size: 0.9rem;
   position: relative;
   text-decoration: none;
-  color: #e6e6e6;
+  color: #6e6e6e;
 }
 
 .footer .footer-element .footer-element-info ul li a:hover {
