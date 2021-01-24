@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d630fcbce7d8141ca518da988019ab9c",
+    "revision": "a0846e6fb95698fba809c19772a61876",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "37b69da0fa1391f66828",
+    "revision": "6393a293cbe42e66e32d",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "6e551b32a26259ffd5c5",
-    "url": "/Action-Aim/static/css/main.d3e78eab.chunk.css"
+    "revision": "217c3fd2b9dbe493861d",
+    "url": "/Action-Aim/static/css/main.44a8cfca.chunk.css"
   },
   {
-    "revision": "37b69da0fa1391f66828",
-    "url": "/Action-Aim/static/js/2.c61a1436.chunk.js"
+    "revision": "6393a293cbe42e66e32d",
+    "url": "/Action-Aim/static/js/2.d82371cd.chunk.js"
   },
   {
-    "revision": "6e551b32a26259ffd5c5",
-    "url": "/Action-Aim/static/js/main.3ae05498.chunk.js"
+    "revision": "217c3fd2b9dbe493861d",
+    "url": "/Action-Aim/static/js/main.02f84e7b.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
@@ -126,6 +126,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "286db7e2164a17ce7fc8004855fceb3f",
     "url": "/Action-Aim/static/media/sport3.286db7e2.png"
+  },
+  {
+    "revision": "a0b3d7c9dafc377d7f45e3ae72a5cba3",
+    "url": "/Action-Aim/static/media/summary.a0b3d7c9.jpg"
   },
   {
     "revision": "a0fbf0f449098b56d7aafcd2be2d6e62",

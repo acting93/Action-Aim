@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.d3e78eab.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.3ae05498.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.3ae05498.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.44a8cfca.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.02f84e7b.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.02f84e7b.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.c61a1436.chunk.js": "/Action-Aim/static/js/2.c61a1436.chunk.js",
-    "static/js/2.c61a1436.chunk.js.map": "/Action-Aim/static/js/2.c61a1436.chunk.js.map",
+    "static/js/2.d82371cd.chunk.js": "/Action-Aim/static/js/2.d82371cd.chunk.js",
+    "static/js/2.d82371cd.chunk.js.map": "/Action-Aim/static/js/2.d82371cd.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.c7a47aaa7894efe34cd0a2f6a3305126.js": "/Action-Aim/precache-manifest.c7a47aaa7894efe34cd0a2f6a3305126.js",
+    "precache-manifest.0d012a419c26f20116065deb56ef6b2b.js": "/Action-Aim/precache-manifest.0d012a419c26f20116065deb56ef6b2b.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.d3e78eab.chunk.css.map": "/Action-Aim/static/css/main.d3e78eab.chunk.css.map",
+    "static/css/main.44a8cfca.chunk.css.map": "/Action-Aim/static/css/main.44a8cfca.chunk.css.map",
     "static/media/action.png": "/Action-Aim/static/media/action.b63a54b8.png",
     "static/media/action2.png": "/Action-Aim/static/media/action2.3d0157d7.png",
     "static/media/action3.png": "/Action-Aim/static/media/action3.0bd50f0b.png",
@@ -39,6 +39,7 @@
     "static/media/sport.jpg": "/Action-Aim/static/media/sport.1e0c44e3.jpg",
     "static/media/sport2.png": "/Action-Aim/static/media/sport2.ec351c93.png",
     "static/media/sport3.png": "/Action-Aim/static/media/sport3.286db7e2.png",
+    "static/media/summary.jpg": "/Action-Aim/static/media/summary.a0b3d7c9.jpg",
     "static/media/travel.jpg": "/Action-Aim/static/media/travel.a0fbf0f4.jpg",
     "static/media/tshirt2.jpg": "/Action-Aim/static/media/tshirt2.0b02e7d7.jpg",
     "static/media/tshirt3.png": "/Action-Aim/static/media/tshirt3.b2eeb89d.png",
@@ -47,8 +48,8 @@
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.c61a1436.chunk.js",
-    "static/css/main.d3e78eab.chunk.css",
-    "static/js/main.3ae05498.chunk.js"
+    "static/js/2.d82371cd.chunk.js",
+    "static/css/main.44a8cfca.chunk.css",
+    "static/js/main.02f84e7b.chunk.js"
   ]
 }
