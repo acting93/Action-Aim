@@ -65,3 +65,14 @@ export const positionPattern =(postionPattern)=>({
     type:'POSITION_PATTERN',
     postionPattern
 });
+
+export const showHideSummary =(summary)=>({
+    type:'SHOW_HIDE_SUMMARY',
+    summary
+});
+
+export const quantityPrice =(quantity,price)=>({
+    type:'QUANTITY_PRICE',
+    quantity,
+    price
+});

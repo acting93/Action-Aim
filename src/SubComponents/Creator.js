@@ -1,4 +1,5 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import '../SCSS/Creator.scss';
 import CreatorPattern from './CreatorComponents/CreatorPattern';
 import CreatorShape from './CreatorComponents/CreatorShape';
@@ -8,10 +9,13 @@ import Summary from './CreatorComponents/Summary';
 
 const Creator = (props) => {
     
+    const summary = useSelector(state => state.tshirtReducer.summary);
+
     return ( 
         <>
             <section className='creator col-12'>
-                <div className='creator-title'><p>Kreator koszulek</p>
+                <div className='creator-title'>
+                    <p>Kreator koszulek</p>
                     <div className='creator-list'>
                         <ul>
                             <li onClick={()=>{props.sport();props.showMobilePattern()}}><p>SPORT</p></li>
@@ -20,7 +24,7 @@ const Creator = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content'>
+                <div className='creator-content' style={summary ? {filter:'blur(5px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
@@ -31,7 +35,7 @@ const Creator = (props) => {
                         <CreatorSettings />
                     </div>
                 </div>
-                <Summary />
+                {summary ? <Summary /> : null}
             </section>
         </>
      );

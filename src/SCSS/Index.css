@@ -3,5 +3,7 @@ html body {
   margin: none !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-animation: body 0.2s linear;
+          animation: body 0.2s linear;
 }
 /*# sourceMappingURL=Index.css.map */

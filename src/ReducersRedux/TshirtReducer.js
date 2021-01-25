@@ -24,8 +24,11 @@ const tshirtState ={
     isSize:true,
     activeSizePerColor: [colorsSizes[0]], //domyślny przypisany rozmiar do pierwszego koloru w tablicy 'white' - state.activeColor
     showPattern: null,//pokazuje wzory po kliknięciu na rodzaj na urządzeniach mobilnych
-    choosenSize: null, //wybrany rozmiar koszulki przez klienta 
-    topPositionPattern:0 //pozycja wzoru na koszulce
+    choosenSize: 'L', //wybrany rozmiar koszulki przez klienta 
+    topPositionPattern:0, //pozycja wzoru na koszulce
+    summary: false, //pokaż podsumowanie po kliknięciu buttona 'kup'
+    quantity:0, //ilość koszulek
+    priceTshirt: 0 //cena koszulki
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -147,6 +150,23 @@ const TshirtReducer =(state=tshirtState,action)=>{
             return{
                 ...state,
                 topPositionPattern:action.positionPattern
+            }
+
+//akcja przekazuje ilość koszulek
+        
+        case 'QUANTITY_PRICE':
+            return{
+                ...state,
+                quantity:action.quantity,
+                priceTshirt:action.price
+            }
+        
+//akcja pokazuje/ukrywa podsumowanie
+
+        case 'SHOW_HIDE_SUMMARY':
+            return{
+                ...state,
+                summary:action.summary
             }
 
 //akcja resetująca wszystko na koszulce 

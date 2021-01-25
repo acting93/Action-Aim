@@ -17,7 +17,7 @@ const CreatorPatternColors = (props) => {
 
     const style = {
         background:color,
-        transform:active === true ? "skew(0deg)" : "skew(-20deg)"
+        transform:active === true ? "skewX(-20deg)" : "none"
     };
 
     return ( 

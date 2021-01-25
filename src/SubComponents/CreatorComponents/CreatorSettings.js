@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 
-const CreatorSettings = (props) => {
+const CreatorSettings = () => {
 
     const choosenColor = useSelector(state => state.tshirtReducer.activeColor);
     const pickedSize = useSelector(state => state.tshirtReducer.choosenSize);
@@ -23,6 +23,10 @@ const CreatorSettings = (props) => {
         setPrice(value*15);
     };
 
+    const showSummary =()=>{
+        dispatch({type:'SHOW_HIDE_SUMMARY',summary:true});
+        dispatch({type:'QUANTITY_PRICE',quantity:piece,price:price});
+    };
 
     return ( 
         <>
@@ -55,10 +59,10 @@ const CreatorSettings = (props) => {
                 </div>
                 <div className='summary-element'>
                     <p>Suma:</p>
-                    <p className='price'>{price},00 zł</p>
+                    <p className='price'>{price},00 pln</p>
                 </div>
             </div>
-            <button className='buy' onClick={props.console}>Kup</button>
+            <button className='buy' onClick={showSummary}>Dodaj do koszyka</button>
         </>
      );
 }

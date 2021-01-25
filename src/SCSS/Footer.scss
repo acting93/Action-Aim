@@ -4,7 +4,7 @@
     @include maxWidthmaxHeight(100%,auto);
     @include paddingMargin(0,0);
     @include displayFlex(column);
-    border-top: 10px solid rgb(85, 85, 85);
+    border-top: 10px solid rgb(235, 235, 235);
     background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
     .footer-element-logo{
         @include maxWidthmaxHeight(100%,auto);

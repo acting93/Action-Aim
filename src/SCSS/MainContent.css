@@ -1,7 +1,6 @@
 main {
   width: 100% !important;
   height: 100% !important;
-  background: url("../img/desks.jpg") no-repeat top;
-  background-size: contain;
+  background: #cacaca;
 }
 /*# sourceMappingURL=MainContent.css.map */

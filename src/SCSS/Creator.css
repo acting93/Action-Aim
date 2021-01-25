@@ -2,8 +2,29 @@
   height: auto;
   padding: 0 !important;
   margin: 0 !important;
-  background: url("../img/desks.jpg");
+  background: radial-gradient(#053f96, black);
   background-position: top;
+  background-size: cover;
+  -webkit-animation: creator 0.8s linear;
+          animation: creator 0.8s linear;
+}
+
+@-webkit-keyframes creator {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes creator {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .creator .creator-title {
@@ -21,7 +42,6 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background: black;
 }
 
 @media (max-width: 1200px) {
@@ -86,7 +106,6 @@
   position: relative;
   width: 70% !important;
   height: 100% !important;
-  background: black;
 }
 
 @media (max-width: 768px) {
@@ -119,7 +138,6 @@
   width: auto !important;
   height: 100% !important;
   padding: 10px;
-  background: black;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -164,9 +182,8 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow: hidden;
-  border: 2px solid #615700;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(58, 58, 58, 0.384)), to(black));
-  background: linear-gradient(to top, rgba(58, 58, 58, 0.384), black);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(58, 58, 58, 0)), to(rgba(0, 0, 0, 0.247)));
+  background: linear-gradient(to left, rgba(58, 58, 58, 0), rgba(0, 0, 0, 0.247));
 }
 
 @media (max-width: 1300px) {
@@ -280,10 +297,10 @@
   height: 40px !important;
   margin: 2px;
   cursor: pointer;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-box-shadow: 0 0 2px white;
+          box-shadow: 0 0 2px white;
 }
 
 @media (max-width: 1200px) {
@@ -371,7 +388,7 @@
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul li:hover {
   cursor: pointer;
-  background-color: #b1b1b1;
+  background-color: #0b3257;
 }
 
 @media (max-width: 992px) {
@@ -623,6 +640,9 @@
 .creator .creator-content .creator-settings {
   position: relative;
   height: auto;
+  border: 2px solid #06325c;
+  -webkit-box-shadow: 0 0 10px #06325c;
+          box-shadow: 0 0 10px #06325c;
 }
 
 @media (max-width: 1200px) {
@@ -688,11 +708,17 @@
   border: none;
   font-size: 0.8rem;
   background: none;
-  border: 1px solid silver;
-  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
-@media (max-width: 1400px) {
+.creator .creator-content .creator-settings .creator-sett-content button:hover {
+  border: 1px solid #0d6892;
+}
+
+@media (max-width: 1500px) {
   .creator .creator-content .creator-settings .creator-sett-content button {
     width: 60px !important;
     height: 60px !important;
@@ -920,7 +946,7 @@
 .creator .creator-content .creator-settings .creator-summary .summary-element .price {
   text-align: center;
   font-size: 1.2rem;
-  color: #949494;
+  color: aliceblue;
 }
 
 @media (max-width: 1200px) {
@@ -935,30 +961,55 @@
 
 .creator .creator-content .creator-settings .buy {
   position: relative;
-  width: 100px !important;
-  height: 50px !important;
-  padding: 0 !important;
+  width: 150px !important;
+  height: auto !important;
+  padding: 1rem !important;
   margin: 10px 50% !important;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  border-top: 1px solid #686868;
-  border-left: 1px solid #686868;
   outline: none;
   background: none;
   color: #f0f0f0;
+  font-size: 0.8rem;
+  border: 1px solid #074374;
+}
+
+.creator .creator-content .creator-settings .buy:hover {
+  color: #0b8292;
 }
 
 .creator .summary {
-  padding: 0;
   position: absolute;
+  padding: 0 !important;
   height: 500px;
-  top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 10%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
   background: white;
   background-size: cover;
   overflow: hidden;
+  -webkit-animation: summary 0.8s linear;
+          animation: summary 0.8s linear;
+  z-index: 100;
+}
+
+@-webkit-keyframes summary {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes summary {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -971,14 +1022,14 @@
   width: 100% !important;
   height: auto !important;
   position: relative;
-  background: radial-gradient(black, #23024e);
+  background: white;
   text-align: center;
 }
 
 .creator .summary .summary-title p {
   padding: 20px !important;
   margin: 0 !important;
-  color: #d4d4d4;
+  color: #242424;
 }
 
 .creator .summary .summary-content {
@@ -1032,9 +1083,9 @@
 }
 
 .creator .summary .summary-content .summary-content-element:last-child {
-  background: radial-gradient(black, #23024e);
-  -webkit-box-shadow: -10px 0px 5px #797979;
-          box-shadow: -10px 0px 5px #797979;
+  background: radial-gradient(black, #02224d);
+  -webkit-box-shadow: -5px 0px 5px #726a6a;
+          box-shadow: -5px 0px 5px #726a6a;
 }
 
 @media (max-width: 500px) {
@@ -1129,7 +1180,7 @@
 
 .creator .summary .summary-content .summary-content-element table tr {
   width: 100% !important;
-  height: 80px !important;
+  height: 60px !important;
   padding: 0 !important;
   margin: 0 !important;
   font-size: 1.2rem;
@@ -1138,7 +1189,7 @@
 @media (max-width: 768px) {
   .creator .summary .summary-content .summary-content-element table tr {
     width: 50% !important;
-    height: 70px !important;
+    height: 50px !important;
     font-size: 0.8rem;
   }
 }
@@ -1146,7 +1197,7 @@
 @media (max-width: 500px) {
   .creator .summary .summary-content .summary-content-element table tr {
     width: 50% !important;
-    height: 50px !important;
+    height: 40px !important;
   }
 }
 
@@ -1159,7 +1210,7 @@
 }
 
 .creator .summary .summary-content .summary-content-element table tr td:first-child {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .creator .summary .summary-content .summary-content-element table tr td:last-child {
@@ -1169,14 +1220,13 @@
 }
 
 .creator .summary .summary-content .summary-content-element table tr .summary-color {
-  width: 50px !important;
-  height: 50px !important;
+  width: 40px !important;
+  height: 40px !important;
   position: absolute;
   right: 0;
   top: 50;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  border: 1px solid white;
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
