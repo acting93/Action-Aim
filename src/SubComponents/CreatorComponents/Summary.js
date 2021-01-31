@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import Logo from '../../img/action3.png';
 
@@ -11,9 +11,24 @@ const Summary = () => {
     const pattern = useSelector(state => state.tshirtReducer.tshirtPattern);
     const topPositionPattern = useSelector(state => state.tshirtReducer.topPositionPattern);
     const price = useSelector(state => state.tshirtReducer.priceTshirt);
+    const idBasketElement = useSelector(state => state.mainReducer.idBasketElement);
 
     const showSummary =()=>{
         dispatch({type:'SHOW_HIDE_SUMMARY',summary:false});
+    };
+
+    const putBasket =()=>{
+
+        const arrayBasket = [{
+            'id': idBasketElement,
+            'quantity':quantity,
+            'colorTshirt':colorTshirt,
+            'size':size,
+            'price':price,
+            'position': topPositionPattern 
+        }];
+        dispatch({type:'PUT_BASKET',basketContent:arrayBasket});
+        dispatch({type:'ID_BASKET_ELEMENT'});
     };
 
     return ( 
@@ -51,7 +66,7 @@ const Summary = () => {
                             </tbody>
                         </table>
                         <div className='summary-buttons'>
-                            <button>Dodaj do koszyka</button>
+                            <button onClick={()=>{showSummary();putBasket()}}>Dodaj do koszyka</button>
                             <button onClick={showSummary}>Anuluj</button>
                         </div>
                     </div>

@@ -207,4 +207,20 @@
   text-decoration: none;
   color: #727272;
 }
+
+.header-col .header-contents .menu span {
+  width: auto !important;
+  height: auto !important;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header-col .header-contents .menu span i {
+  color: #fdfdfd;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=Header.css.map */

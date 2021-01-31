@@ -10,7 +10,8 @@ import Summary from './CreatorComponents/Summary';
 const Creator = (props) => {
     
     const summary = useSelector(state => state.tshirtReducer.summary);
-
+    const basket = useSelector(state => state.mainReducer.isBasket);
+    
     return ( 
         <>
             <section className='creator col-12'>
@@ -24,14 +25,14 @@ const Creator = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content' style={summary ? {filter:'blur(5px)',pointerEvents:"none"} : null}>
+                <div className='creator-content' style={summary || basket ? {filter:'blur(5px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
                     <div className='creator-draw col-12 col-lg-8 col-xl-6'>
                         <CreatorShape />
                     </div>
-                    <div className='creator-settings col-12 col-md-10 col-xl-3'>
+                    <div className='creator-settings col-12 col-xl-3'>
                         <CreatorSettings />
                     </div>
                 </div>

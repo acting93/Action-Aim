@@ -829,7 +829,7 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: auto !important;
-    height: 250px !important;
+    height: 200px !important;
   }
 }
 
@@ -888,7 +888,6 @@
   padding: 0 !important;
   margin: 0 auto !important;
   border: 1px solid silver;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -925,7 +924,6 @@
   text-align: center;
   background: none;
   border: 1px solid silver;
-  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {

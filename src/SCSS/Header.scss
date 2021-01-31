@@ -118,6 +118,18 @@
                     }
                 }
             }
+            span{
+                @include maxWidthmaxHeight(auto,auto);
+                position: absolute;
+                right: 20%;
+                top:50%;
+                transform:translateY(-50%);
+                cursor: pointer;
+                i{
+                    color:rgb(253, 253, 253);
+                    font-size: 2rem;
+                }
+            }
             
         }
     }

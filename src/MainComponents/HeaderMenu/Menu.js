@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom'
 import Toggler from './Toggler';
 import composedRenderPropsToggler from './RenderPropsToggler';
@@ -27,6 +27,10 @@ const Menu = (props) => {
         }
     };
 
+    const showBasket =()=>{
+        dispatch({type:'SHOW_BASKET',isBasket:true});
+    };
+
     return ( 
         <>
             <div className='menu'>
@@ -38,6 +42,7 @@ const Menu = (props) => {
                         <NavLink to="/contact" onClick={hideMenuMobile}>KONTAKT</NavLink>
                     </div>
                 : null}
+                <span onClick={showBasket}><i className="fas fa-shopping-basket"></i></span>
             </div>
         </>
      );

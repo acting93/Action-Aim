@@ -1,7 +1,10 @@
 const mainState={
     isMenu:false,
     formResponseStatus:null,
-    formSpinner:false
+    formSpinner:false,
+    isBasket:false,
+    basketContent:[],
+    idBasketElement:1 
 }
 
 const MainReducer =(state=mainState,action)=>{
@@ -34,6 +37,46 @@ const MainReducer =(state=mainState,action)=>{
             return{
                 ...state,
                 formSpinner:action.spinner
+            }
+
+        case 'SHOW_BASKET':
+            return{
+                ...state,
+                isBasket: action.isBasket
+            }
+
+        case 'PUT_BASKET':
+            return{
+                ...state,
+                basketContent: state.basketContent.concat(action.basketContent)
+            }
+
+        case 'RESET_BASKET':
+            return{
+                ...state,
+                basketContent: []
+            }
+
+        case 'ID_BASKET_ELEMENT':
+            return{
+                ...state,
+                idBasketElement: state.idBasketElement + 1 
+            }
+        
+        case 'REMOVE_BASKET_ELEMENT':
+            
+            let basketContentCopy = [...state.basketContent];
+
+            const indexElement = basketContentCopy.findIndex(item => {
+                if(item.id === action.id){
+                    return item
+                }
+            });
+
+            console.log(indexElement)
+            return{
+                ...state,
+                basketContent: basketContentCopy.slice(indexElement,1)
             }
 
         default: return state

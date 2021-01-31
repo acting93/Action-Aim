@@ -413,7 +413,7 @@
                     @include displayFlex(row);
                     @media(max-width:1200px){
                         @include displayFlex(column);
-                        @include maxWidthmaxHeight(auto,250px);
+                        @include maxWidthmaxHeight(auto,200px);
                     }
                     @media(max-width:576px){
                         @include maxWidthmaxHeight(30%,200px);
@@ -443,7 +443,6 @@
                         @include top50;
                         @include paddingMargin(0,0 auto);
                         border: 1px solid silver;
-                        border-radius: 10px;
                         overflow: hidden;
                         @media(max-width:1200px){
                           top:20%;
@@ -468,7 +467,6 @@
                         text-align: center;
                         background: none;
                         border: 1px solid silver;
-                        border-radius: 10px;
                         @media(max-width:1200px){
                             top:20%;
                             transform: translateY(-20%);

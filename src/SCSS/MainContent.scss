@@ -2,5 +2,109 @@
 
 main{
     @include maxWidthmaxHeight(100%,100%);
-    background: rgb(202, 202, 202);
+    .basket{
+        @include maxWidthmaxHeight(700px,auto);
+        @include displayFlex(column);
+        padding: 0;
+        right: 50%;
+        transform: translateX(50%);
+        position: absolute;
+        background: white;
+        z-index: 300;
+        box-shadow: 0 0 10px silver;
+        .basket-title{
+            @include maxWidthmaxHeight(100%,80px); 
+            border-bottom: 2px solid black;
+            background: rgb(59, 2, 73);
+            p{
+                @include top50;
+                left:10%;
+                text-transform: uppercase;
+                color:white;
+            }
+        }
+        .empty-basket{
+            @include maxWidthmaxHeight(100%,300px); 
+            background: radial-gradient(rgb(5, 66, 145),black);
+            p{
+                @include top50;
+                text-align: center;
+                color:rgb(228, 228, 228);
+                font-size: 2rem
+            }
+        }
+        .basket-content{
+            @include maxWidthmaxHeight(100%,300px); 
+            .content-element{
+                @include maxWidthmaxHeight(50%,100%); 
+                display: inline-block;
+                .basket-tshirt{
+                    @include maxWidthmaxHeight(150px,200px);  
+                    @include top50;
+                    @include paddingMargin(0, 0 auto);
+                    background: #000;
+                }
+                span{
+                    @include maxWidthmaxHeight(auto,40px); 
+                    @include displayFlex(row);
+                    @include paddingMargin(5px,5px);
+                    right:5%;
+                    position: absolute;
+                    cursor: pointer;
+                    text-align: center;
+                    &:hover{
+                        box-shadow: 0 0 5px silver;
+                    }
+                    p{
+                        @include top50;
+                        font-size: 0.8rem;
+                        margin-right: 5px;
+                    }
+                    .fas{
+                        position: relative;
+                        top:10%;
+                        color:red;
+                        font-size: 1.5rem;
+                    }
+                }
+                
+                table{
+                    @include top50;
+                    @include maxWidthmaxHeight(100%,50%); 
+                    tr{
+                        @include maxWidthmaxHeight(100%,auto);
+                        td{
+                            border-bottom: 2px solid silver;
+                            color:rgb(92, 92, 92);
+                            p{
+                                @include top50;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .basket-button{
+            @include maxWidthmaxHeight(100%,80px);
+            background: rgb(255, 255, 255); 
+            text-align: center;
+            button{
+                @include maxWidthmaxHeight(200px,60%);
+                @include top50;
+                @include paddingMargin(0,0 10px);
+                background: rgb(255, 255, 255);
+                box-shadow: 0 0 5px rgb(139, 139, 139);
+                outline: none;
+                border:none;
+                &:hover{
+                    background: rgb(5, 105, 109);
+                    color:white;
+                }
+            }
+            .exit-basket{
+                background: rgb(255, 104, 104);
+            }
+        }
+    }
 }
