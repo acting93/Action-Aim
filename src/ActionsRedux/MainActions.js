@@ -36,12 +36,25 @@ export const resetBasket =()=>({
     type:'RESET_BASKET'
 });
 
-export const idbasketElement =()=>({
-    type:'ID_BASKET_ELEMENT'
+export const addIdbasketElement =()=>({
+    type:'ADD_ID_BASKET_ELEMENT'
+});
+
+export const removeIdbasketElement =()=>({
+    type:'REMOVE_ID_BASKET_ELEMENT'
 });
 
 export const removebasketElement =(id)=>({
     type:'REMOVE_BASKET_ELEMENT',
     id
+});
+
+export const totalBasket =(total)=>({
+    type:'TOTAL_BASKET',
+    total
+});
+
+export const resetTotalBasket =()=>({
+    type:'RESET_TOTAL_BASKET'
 });
 

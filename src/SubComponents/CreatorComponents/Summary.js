@@ -17,6 +17,7 @@ const Summary = () => {
         dispatch({type:'SHOW_HIDE_SUMMARY',summary:false});
     };
 
+
     const putBasket =()=>{
 
         const arrayBasket = [{
@@ -25,10 +26,11 @@ const Summary = () => {
             'colorTshirt':colorTshirt,
             'size':size,
             'price':price,
-            'position': topPositionPattern 
+            'position': topPositionPattern,
         }];
         dispatch({type:'PUT_BASKET',basketContent:arrayBasket});
-        dispatch({type:'ID_BASKET_ELEMENT'});
+        dispatch({type:'TOTAL_BASKET',total:price});
+        dispatch({type:'ADD_ID_BASKET_ELEMENT'});
     };
 
     return ( 

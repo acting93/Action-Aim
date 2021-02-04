@@ -4,8 +4,9 @@ const mainState={
     formSpinner:false,
     isBasket:false,
     basketContent:[],
-    idBasketElement:1 
-}
+    idBasketElement:0,
+    total:0
+};
 
 const MainReducer =(state=mainState,action)=>{
     switch(action.type){
@@ -48,8 +49,20 @@ const MainReducer =(state=mainState,action)=>{
         case 'PUT_BASKET':
             return{
                 ...state,
-                basketContent: state.basketContent.concat(action.basketContent)
+                basketContent: state.basketContent.concat(action.basketContent),
             }
+        
+        case 'TOTAL_BASKET':
+            return{
+                ...state,
+                total: state.total + action.total
+            }
+
+        case 'RESET_TOTAL_BASKET':
+            return{
+                ...state,
+                total: 0
+            }    
 
         case 'RESET_BASKET':
             return{
@@ -57,30 +70,39 @@ const MainReducer =(state=mainState,action)=>{
                 basketContent: []
             }
 
-        case 'ID_BASKET_ELEMENT':
+        case 'ADD_ID_BASKET_ELEMENT':
             return{
                 ...state,
                 idBasketElement: state.idBasketElement + 1 
+            }
+        
+        case 'REMOVE_ID_BASKET_ELEMENT':
+            return{
+                ...state,
+                idBasketElement: state.idBasketElement - 1 
             }
         
         case 'REMOVE_BASKET_ELEMENT':
             
             let basketContentCopy = [...state.basketContent];
 
-            const indexElement = basketContentCopy.findIndex(item => {
+            const removedElementId = basketContentCopy.map(item => {
                 if(item.id === action.id){
                     return item
                 }
             });
 
-            console.log(indexElement)
+            const indexElement = removedElementId.findIndex(item => item);
+
+            basketContentCopy.splice(indexElement,1);
+
             return{
                 ...state,
-                basketContent: basketContentCopy.slice(indexElement,1)
+                basketContent: basketContentCopy
             }
 
         default: return state
     }
-}
+};
 
 export default MainReducer;

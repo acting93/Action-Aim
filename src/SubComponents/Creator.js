@@ -6,6 +6,7 @@ import CreatorShape from './CreatorComponents/CreatorShape';
 import CreatorSettings from './CreatorComponents/CreatorSettings';
 import composedHOCPatterns from './HomePageSub/FunctionsPatterns/HOCPatterns';
 import Summary from './CreatorComponents/Summary';
+import InstructionMove from './CreatorComponents/InstructionMove';
 
 const Creator = (props) => {
     
@@ -37,6 +38,7 @@ const Creator = (props) => {
                     </div>
                 </div>
                 {summary ? <Summary /> : null}
+                <InstructionMove />
             </section>
         </>
      );

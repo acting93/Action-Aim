@@ -601,6 +601,14 @@
   }
 }
 
+.creator .creator-content .creator-draw .tshirt .fas {
+  position: absolute;
+  color: green;
+  font-size: 5rem;
+  top: 50%;
+  left: 2%;
+}
+
 .creator .creator-content .creator-draw .tshirt .tshirt-content {
   position: absolute;
   width: 40%;
@@ -1082,8 +1090,6 @@
 
 .creator .summary .summary-content .summary-content-element:last-child {
   background: radial-gradient(black, #02224d);
-  -webkit-box-shadow: -5px 0px 5px #726a6a;
-          box-shadow: -5px 0px 5px #726a6a;
 }
 
 @media (max-width: 500px) {
@@ -1094,18 +1100,13 @@
 }
 
 .creator .summary .summary-content .summary-content-element .tshirt-summary {
-  border: 1px solid black;
   padding: 0 !important;
   margin: 0 auto !important;
   width: 350px !important;
   height: 400px !important;
   background: url("../img/tshirt.png");
   background-size: cover;
-  position: relative;
-  top: 40%;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
-  border: 1px solid white;
+  border: 1px solid #a8a8a8;
 }
 
 @media (max-width: 768px) {
@@ -1135,7 +1136,6 @@
   margin-top: 20%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #8a0000;
 }
 
 .creator .summary .summary-content .summary-content-element .tshirt-summary .tshirt-summary-pattern img {
@@ -1265,5 +1265,60 @@
 
 .creator .summary .summary-content .summary-content-element .summary-buttons button:hover {
   color: #0b8292;
+}
+
+.creator .instruction {
+  width: 700px !important;
+  height: auto !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  background: radial-gradient(#990000, black);
+}
+
+.creator .instruction .instruction-tshirt {
+  width: 55% !important;
+  height: 500px !important;
+  border: 1px solid black;
+  background: url("../img/tshirt.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.creator .instruction .instruction-tshirt .fa-arrows-alt-v {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: relative;
+  font-size: 6rem;
+  color: #dbdbdb;
+}
+
+.creator .instruction .instruction-tshirt .fa-arrows-alt {
+  position: relative;
+  font-size: 5rem;
+  color: #dbdbdb;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  left: 50%;
+  top: 20%;
+}
+
+.creator .instruction .instruction-tshirt-info {
+  width: 45% !important;
+  height: 500px !important;
 }
 /*# sourceMappingURL=Creator.css.map */

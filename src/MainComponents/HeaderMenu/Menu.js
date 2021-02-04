@@ -9,6 +9,8 @@ const Menu = (props) => {
     const dispatch = useDispatch();
     const menu = useSelector(state => state.mainReducer.isMenu);
     const isSticky = useSelector(state => state.mainReducer.isSticky);
+    const basketContent = useSelector(state => state.mainReducer.basketContent);
+    const basketContentLength = basketContent.length;
     const {less768px} = props;
 
     const styleMenuSticky = {
@@ -16,7 +18,7 @@ const Menu = (props) => {
         width:'100vw',
         left:'-100%'
     };
-    
+
     //funkcja, która chowa menu na urz. mobilnych pokliknięciu na element
     const hideMenuMobile =()=>{
         const widthScreen = window.innerWidth;
@@ -42,7 +44,12 @@ const Menu = (props) => {
                         <NavLink to="/contact" onClick={hideMenuMobile}>KONTAKT</NavLink>
                     </div>
                 : null}
-                <span onClick={showBasket}><i className="fas fa-shopping-basket"></i></span>
+                <div className='basket-icon' onClick={showBasket} style={isSticky === true && less768px === true ? {right:"50%"} : null}> 
+                    <i className="fas fa-shopping-basket"></i>
+                    <span>
+                        <p>{basketContentLength}</p>
+                    </span>
+                </div>
             </div>
         </>
      );

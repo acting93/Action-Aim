@@ -11,7 +11,7 @@ const Header = () => {
     const headerRef = useRef(null);
     const dispatch = useDispatch();
     const isSticky = useSelector(state => state.mainReducer.isSticky);
-    
+
     const styleStickyHeader = {
         height:'80px',
         position:'fixed',
@@ -19,7 +19,7 @@ const Header = () => {
         background:'black',
         display:'flex',
         flexDirection:'row'
-    }
+    };
 
     const headerSticky =()=>{
         const topWindow = window.pageYOffset;

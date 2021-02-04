@@ -309,6 +309,13 @@
                     @media(max-width:300px){
                         @include maxWidthmaxHeight(100%,350px);
                     }
+                .fas{
+                    position: absolute;
+                    color: green;
+                    font-size: 5rem;
+                    top:50%;
+                    left:2%;
+                }
                 .tshirt-content{
                     position: absolute;
                     width: 40%;
@@ -559,21 +566,16 @@
                 }
                 &:last-child{
                     background: radial-gradient(black,rgb(2, 34, 77));
-                    box-shadow: -5px 0px 5px rgb(114, 106, 106);
                     @media(max-width:500px){
                         @include maxWidthmaxHeight(100%,55%);
                     }
                 }
                 .tshirt-summary{
-                    border: 1px solid black;
                     @include paddingMargin(0,0 auto);
                     @include maxWidthmaxHeight(350px,400px);
                     background: url('../img/tshirt.png');
                     background-size: cover;
-                    position: relative;
-                    top:40%;
-                    transform: translateY(-40%);
-                    border: 1px solid white;
+                    border:1px solid rgb(168, 168, 168);
                     @media(max-width:768px){
                         @include maxWidthmaxHeight(300px,350px);  
                     }
@@ -588,7 +590,6 @@
                         margin-top:20%;
                         margin-left: auto;
                         margin-right: auto;
-                        border: 1px solid rgb(138, 0, 0);
                         img{
                             position: relative;
                             width:8rem;
@@ -676,6 +677,42 @@
                     } 
                 }
             }
+        }
+    }
+    .instruction{
+        @include maxWidthmaxHeight(700px,auto);
+        @include displayFlex(row);
+        top:0%;
+        left:50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: radial-gradient(rgb(153, 0, 0),rgb(0, 0, 0));
+        .instruction-tshirt{
+            @include maxWidthmaxHeight(55%,500px);
+            border:1px solid black; 
+            background: url('../img/tshirt.png');
+            background-size:cover;
+            background-position:center;
+            .fa-arrows-alt-v{
+                transform: translate(-50%,-50%);
+                left:50%;
+                top:50%;
+                position: relative;
+                font-size: 6rem;
+                color:rgb(219, 219, 219);
+            }
+            .fa-arrows-alt{
+                position: relative;
+                font-size: 5rem;
+                color:rgb(219, 219, 219);
+                transform: translate(-50%,-20%);
+                left:50%;
+                top:20%;
+            }
+        }
+        .instruction-tshirt-info{
+            @include maxWidthmaxHeight(45%,500px);
+
         }
     }
 }

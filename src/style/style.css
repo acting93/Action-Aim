@@ -228,20 +228,79 @@
   color: #727272;
 }
 
-.header-col .header-contents .menu span {
+.header-col .header-contents .menu .basket-icon {
   width: auto !important;
-  height: auto !important;
+  height: 60px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   position: absolute;
-  right: 20%;
+  right: 5%;
+  top: 0%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header-col .header-contents .menu .basket-icon i {
+  width: 50% !important;
+  height: 60% !important;
+  position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.header-col .header-contents .menu span i {
   color: #fdfdfd;
   font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .header-col .header-contents .menu .basket-icon i {
+    font-size: 1.5rem;
+  }
+}
+
+.header-col .header-contents .menu .basket-icon i:hover {
+  color: #107b96;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.header-col .header-contents .menu .basket-icon span {
+  width: 30px !important;
+  height: 30px !important;
+  background: white;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+@media (max-width: 450px) {
+  .header-col .header-contents .menu .basket-icon span {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+.header-col .header-contents .menu .basket-icon span p {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+}
+
+@media (max-width: 450px) {
+  .header-col .header-contents .menu .basket-icon span p {
+    font-size: 0.8rem;
+  }
 }
 
 .carousel {
@@ -1455,15 +1514,13 @@ main .basket {
   position: absolute;
   background: white;
   z-index: 300;
-  -webkit-box-shadow: 0 0 10px silver;
-          box-shadow: 0 0 10px silver;
 }
 
 main .basket .basket-title {
   width: 100% !important;
   height: 80px !important;
   border-bottom: 2px solid black;
-  background: #3b0249;
+  background: #750303;
 }
 
 main .basket .basket-title p {
@@ -1474,6 +1531,22 @@ main .basket .basket-title p {
   left: 10%;
   text-transform: uppercase;
   color: white;
+}
+
+main .basket .empty-basket {
+  width: 100% !important;
+  height: 300px !important;
+  background: white;
+}
+
+main .basket .empty-basket p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  color: #272727;
+  font-size: 2rem;
 }
 
 main .basket .basket-content {
@@ -1497,6 +1570,48 @@ main .basket .basket-content .content-element .basket-tshirt {
   padding: 0 !important;
   margin: 0 auto !important;
   background: #000;
+}
+
+main .basket .basket-content .content-element span {
+  width: auto !important;
+  height: 40px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 5px !important;
+  margin: 5px !important;
+  right: 5%;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+main .basket .basket-content .content-element span:hover {
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+}
+
+main .basket .basket-content .content-element span p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+main .basket .basket-content .content-element span .fas {
+  position: relative;
+  top: 10%;
+  color: red;
+  font-size: 1.5rem;
 }
 
 main .basket .basket-content .content-element table {
@@ -1552,6 +1667,10 @@ main .basket .basket-button button {
 main .basket .basket-button button:hover {
   background: #05696d;
   color: white;
+}
+
+main .basket .basket-button .exit-basket {
+  background: #ff6868;
 }
 
 .footer {
