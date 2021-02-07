@@ -1,6 +1,5 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import Tshirt from '../../img/tshirt.png';
 
 
 const BasketContent = (props) => {
@@ -10,6 +9,7 @@ const BasketContent = (props) => {
 
     const removeElement =()=>{
         dispatch({type:'REMOVE_BASKET_ELEMENT',id:id});
+        dispatch({type:'DELETE_ELEMENT_PRICE',price:price});
     };
     
     return ( 

@@ -58,6 +58,12 @@ const MainReducer =(state=mainState,action)=>{
                 total: state.total + action.total
             }
 
+        case 'DELETE_ELEMENT_PRICE':
+            return{
+                ...state,
+                total: state.total - action.price
+            }
+
         case 'RESET_TOTAL_BASKET':
             return{
                 ...state,

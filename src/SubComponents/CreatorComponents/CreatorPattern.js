@@ -44,7 +44,9 @@ const CreatorPattern = () => {
                 <p>Dostępne rozmiary:</p>
                 {isSize === true ? <SizesAvailable sizes={sizes} /> : null}
             </div>
-            <div className='theme-pattern-button'><button onClick={showHide}>{showPattern === true ? 'ukryj wzory' : 'pokaż wzory'}</button></div>
+            <div className='theme-pattern-button'>
+                <button onClick={showHide}>{showPattern === true ? 'ukryj wzory' : 'pokaż wzory'}</button>
+            </div>
             <TshirtPattern pattern={pattern} show={showPattern}/>
         </>
      );

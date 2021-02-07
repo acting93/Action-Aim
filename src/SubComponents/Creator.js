@@ -12,7 +12,8 @@ const Creator = (props) => {
     
     const summary = useSelector(state => state.tshirtReducer.summary);
     const basket = useSelector(state => state.mainReducer.isBasket);
-    
+    const tshirtInstruction = useSelector(state => state.tshirtReducer.tshirtInstruction);
+
     return ( 
         <>
             <section className='creator col-12'>
@@ -38,7 +39,7 @@ const Creator = (props) => {
                     </div>
                 </div>
                 {summary ? <Summary /> : null}
-                <InstructionMove />
+                {tshirtInstruction ? <InstructionMove /> : null}
             </section>
         </>
      );

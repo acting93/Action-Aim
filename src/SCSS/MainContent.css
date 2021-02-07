@@ -208,7 +208,6 @@ main .basket .basket-button {
   padding: 5px !important;
   margin: 0 !important;
   text-align: center;
-  background: #000;
 }
 
 main .basket .basket-button button {
@@ -224,7 +223,7 @@ main .basket .basket-button button {
 }
 
 main .basket .basket-button button:hover {
-  background: #05696d;
+  background: #025153;
   color: white;
 }
 

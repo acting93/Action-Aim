@@ -58,3 +58,8 @@ export const resetTotalBasket =()=>({
     type:'RESET_TOTAL_BASKET'
 });
 
+export const deleteElementPrice =(price)=> ({
+    type:'DELETE_ELEMENT_PRICE',
+    price
+});
+

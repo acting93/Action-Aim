@@ -76,3 +76,7 @@ export const quantityPrice =(quantity,price)=>({
     quantity,
     price
 });
+
+export const hideInstruction =()=>({
+    type:'HIDE_INSTRUCTION'
+});

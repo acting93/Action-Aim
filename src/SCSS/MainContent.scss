@@ -129,7 +129,6 @@ main{
             @include maxWidthmaxHeight(100%,auto);
             @include paddingMargin(5px,0);
             text-align: center;
-            background: #000;
             button{
                 @include maxWidthmaxHeight(200px,50px);
                 @include paddingMargin(0,0 10px);
@@ -138,7 +137,7 @@ main{
                 outline: none;
                 border:none;
                 &:hover{
-                    background: rgb(5, 105, 109);
+                    background: rgb(2, 81, 83);
                     color:white;
                 }
             }

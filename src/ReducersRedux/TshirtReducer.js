@@ -28,7 +28,8 @@ const tshirtState ={
     topPositionPattern:0, //pozycja wzoru na koszulce
     summary: false, //pokaż podsumowanie po kliknięciu buttona 'kup'
     quantity:0, //ilość koszulek
-    priceTshirt: 0 //cena koszulki
+    priceTshirt: 0, //cena koszulki
+    tshirtInstruction:true //pokaż/ukryj instrukcje do przesuwania wzoru
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -167,6 +168,14 @@ const TshirtReducer =(state=tshirtState,action)=>{
             return{
                 ...state,
                 summary:action.summary
+            }
+
+//akcja ukrywa instrukcje
+        
+        case 'HIDE_INSTRUCTION':
+            return{
+                ...state,
+                tshirtInstruction:false
             }
 
 //akcja resetująca wszystko na koszulce 
