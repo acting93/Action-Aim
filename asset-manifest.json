@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.28da9ee7.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.dc308288.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.dc308288.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.1b760469.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.1720e8cf.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.1720e8cf.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.2a05e55a.chunk.js": "/Action-Aim/static/js/2.2a05e55a.chunk.js",
-    "static/js/2.2a05e55a.chunk.js.map": "/Action-Aim/static/js/2.2a05e55a.chunk.js.map",
+    "static/js/2.d7163c38.chunk.js": "/Action-Aim/static/js/2.d7163c38.chunk.js",
+    "static/js/2.d7163c38.chunk.js.map": "/Action-Aim/static/js/2.d7163c38.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.62570ad5c18a2600822ed8a299917b2e.js": "/Action-Aim/precache-manifest.62570ad5c18a2600822ed8a299917b2e.js",
+    "precache-manifest.b75eb80d9382d94bae22c515472fced7.js": "/Action-Aim/precache-manifest.b75eb80d9382d94bae22c515472fced7.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.28da9ee7.chunk.css.map": "/Action-Aim/static/css/main.28da9ee7.chunk.css.map",
+    "static/css/main.1b760469.chunk.css.map": "/Action-Aim/static/css/main.1b760469.chunk.css.map",
     "static/media/action.png": "/Action-Aim/static/media/action.b63a54b8.png",
     "static/media/action2.png": "/Action-Aim/static/media/action2.3d0157d7.png",
     "static/media/action3.png": "/Action-Aim/static/media/action3.0bd50f0b.png",
@@ -42,15 +42,13 @@
     "static/media/summary.jpg": "/Action-Aim/static/media/summary.a0b3d7c9.jpg",
     "static/media/travel.jpg": "/Action-Aim/static/media/travel.a0fbf0f4.jpg",
     "static/media/Creator.scss": "/Action-Aim/static/media/tshirt.475df4a0.png",
-    "static/media/tshirt2.jpg": "/Action-Aim/static/media/tshirt2.0b02e7d7.jpg",
-    "static/media/tshirt3.png": "/Action-Aim/static/media/tshirt3.b2eeb89d.png",
-    "static/media/wall.jpg": "/Action-Aim/static/media/wall.6a172ad2.jpg"
+    "static/media/tshirtIntro.png": "/Action-Aim/static/media/tshirtIntro.4b73730e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.2a05e55a.chunk.js",
-    "static/css/main.28da9ee7.chunk.css",
-    "static/js/main.dc308288.chunk.js"
+    "static/js/2.d7163c38.chunk.js",
+    "static/css/main.1b760469.chunk.css",
+    "static/js/main.1720e8cf.chunk.js"
   ]
 }
