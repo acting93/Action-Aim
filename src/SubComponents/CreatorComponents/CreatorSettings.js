@@ -43,11 +43,11 @@ const CreatorSettings = () => {
             <div className='creator-summary'>
                 <div className='summary-element'>
                     <div className='element-title'><p>Kolor:</p></div>
-                    <div className='element-content' style={{backgroundColor:choosenColor}}></div>
+                    <div className='element-content'><div id='picked-color' style={{backgroundColor:choosenColor}}></div></div>
                 </div>
                 <div className='summary-element'>
                     <div className='element-title'><p>Rozmiar:</p></div>
-                    <div className='element-content'><div id='pickedSize'><p>{pickedSize}</p></div></div>
+                    <div className='element-content'><div id='picked-size'><p>{pickedSize}</p></div></div>
                 </div>
                 <div className='summary-element'>
                     <div className='element-title'><p>Ilość sztuk:</p></div>

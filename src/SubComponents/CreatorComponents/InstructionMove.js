@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
+import TshirtIntro from '../../img/tshirtIntro.png';
 
 const InstructionMove = () => {
 
@@ -12,8 +13,9 @@ const InstructionMove = () => {
     return ( 
         <section className='instruction'>
             <div className='instruction-tshirt'>
-                <i className="fas fa-arrows-alt-v"></i>
-                <i className="fas fa-arrows-alt"></i>
+                <img src={TshirtIntro} alt=''/>
+                {/*<i className="fas fa-arrows-alt-v"></i>
+                <i className="fas fa-arrows-alt"></i>*/}
             </div>
             <div className='instruction-tshirt-info'>
                 <button onClick={hideInstruction}><i className="fas fa-times"></i></button>

@@ -3,7 +3,7 @@
 .creator{
     height:auto;
     @include paddingMargin(0,0);
-    background: radial-gradient(rgb(5, 63, 150),black);
+    background: linear-gradient(rgb(25, 96, 201),black);
     background-position: top;
     background-size: cover;
     animation: creator 0.8s linear;
@@ -16,7 +16,7 @@
             }
         }
     .creator-title{
-        @include maxWidthmaxHeight(85%,100px);
+        @include maxWidthmaxHeight(85%,80px);
         @include paddingMargin(0,10px auto);
         @include displayFlex(row);
         @media(max-width:1200px){
@@ -24,7 +24,7 @@
         }
         @media(max-width:768px){
             @include displayFlex(column);
-            @include maxWidthmaxHeight(100%,150px);
+            @include maxWidthmaxHeight(100%,120px);
         }
         p{
             position: relative;
@@ -37,9 +37,9 @@
             text-align: center;
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
+                @include paddingMargin(10px,0);
                 top:0%;
                 transform: translateY(0);
-                @include paddingMargin(10px,0);
             }
             @media(max-width:300px){
                 font-size: 0.9rem;
@@ -48,6 +48,7 @@
         .creator-list{
             position: relative;
             @include maxWidthmaxHeight(70%,100%);
+            background: rgb(24, 107, 185);
             @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,50%);
             }
@@ -56,13 +57,11 @@
                 @include displayFlex(row);
                 list-style-type: none;
                 justify-content: center;
-                background: rgb(146, 24, 24);
                 li{
                     @include maxWidthmaxHeight(auto,100%);
                     padding: 5px;
                     margin-left:10px;
                     margin-right:10px;
-                    background: rgb(133, 130, 130);
                         @media(max-width:576px){
                             margin-left:0px;
                             margin-right:0px;
@@ -88,11 +87,14 @@
         }
     }
     .creator-content{
-        @include maxWidthmaxHeight(85%,auto);
+        @include maxWidthmaxHeight(80%,auto);
         @include paddingMargin(0,0 auto);
         @include displayFlex(row);
         overflow: hidden;
         background: linear-gradient(to left,rgba(58, 58, 58, 0),rgba(0, 0, 0, 0.247));
+            @media(max-width: 1500px){
+                @include maxWidthmaxHeight(95%,auto);
+            }
             @media(max-width: 1300px){
                 @include maxWidthmaxHeight(100%,auto);
             }
@@ -100,14 +102,15 @@
                 flex-wrap: wrap;
             }
         .creator-pattern{
+            @include paddingMargin(0,0);
             position: relative;
             height: auto;
-            @include paddingMargin(0,0);
+            box-shadow: 0 0 5px black;
             .color-pattern{
                 @include maxWidthmaxHeight(100%,150px);
                 @include displayFlex(column);
                 justify-content: center;
-                box-shadow: 0 0 5px silver;
+                border-bottom:2px solid rgb(192, 192, 192);
                 @media(max-width:992px){
                     @include maxWidthmaxHeight(50%,150px);
                     float: left;
@@ -143,9 +146,11 @@
                         margin: 2px;
                         cursor: pointer;
                         transition: all 0.2s;
-                        box-shadow: 0 0 2px white;
                         @media(max-width:1200px){
                             @include maxWidthmaxHeight(35px,35px);
+                        }
+                        @media(max-width:250px){
+                            @include maxWidthmaxHeight(25px,25px);
                         }
                     }
                 }
@@ -154,7 +159,7 @@
                 @include maxWidthmaxHeight(100%,150px);
                 @include paddingMargin(0,0);
                 position: relative;
-                box-shadow: 0 0 5px silver;
+                border-bottom:2px solid rgb(192, 192, 192);
                 @media(max-width:992px){
                     @include maxWidthmaxHeight(50%,150px);
                     float: left;
@@ -186,20 +191,20 @@
                         position: relative;
                         top:50%;
                         transform: translateY(-50%);
-                        width:60px;
-                        height:50px;
-                        border-bottom: 2px solid rgb(119, 119, 119);
-                        border-left: 2px solid rgb(119, 119, 119);
-                        border-radius: 0 0 0 10px;
+                        width:50px;
+                        height:70px;
+                        box-shadow: 0 0 5px rgb(0, 0, 0);
                         &:hover{
                           cursor:pointer;
-                          background-color: rgb(11, 50, 87);
+                          box-shadow: 0 0 5px rgb(241, 241, 241);
                         }
                         @media(max-width: 992px){
                             @include maxWidthmaxHeight(50px,50px);  
                         }
+                        @media(max-width:400px){
+                            @include maxWidthmaxHeight(45px,45px);
+                        }
                         p{  
-                            background: none;
                             @include maxWidthmaxHeight(100%,100%);
                             color:rgb(53, 53, 53);
                             padding: 10px;
@@ -212,19 +217,22 @@
                 }
             }
             .theme-pattern-button{
-                @include maxWidthmaxHeight(100%,60px);
-                background: rgb(230, 230, 230);
+                @include maxWidthmaxHeight(100%,auto);
+                padding: 10px;
+                    @media(max-width: 992px){
+                        float: right;
+                    }
                 button{
-                    @include maxWidthmaxHeight(130px,60px);
-                    @include paddingMargin(0,0 auto);
-                    border-left: 1px solid silver;
-                    border-top: 1px solid silver;
+                    @include maxWidthmaxHeight(120px,50px);
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
                     color:silver;
                     outline: none;
                     text-transform: uppercase;
-                    display: none;
                     background: none;
                     font-size: 0.8rem;
+                    border: none;
                     @media(max-width: 768px){
                         @include maxWidthmaxHeight(130px,60px);
                     }
@@ -359,14 +367,13 @@
             @include paddingMargin(0,0);
             position: relative;
             height:auto;
-            border: 2px solid rgb(6, 50, 92);
-            box-shadow: 0 0 10px rgb(6, 50, 92);
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            color:white;
                 @media(max-width:1200px){
                     @include paddingMargin(0,0 auto);
                 }
             p{
                 @include maxWidthmaxHeight(100%,auto);
-                @include colorFont;
                 @include paddingMargin(10px,0px);
                 text-align: center;
                 @media(max-width:576px){
@@ -376,7 +383,6 @@
             .creator-sett-content{
                 @include maxWidthmaxHeight(100%,100px);
                 @include displayFlex(row);
-                background: #000;
                 justify-content: center;
                 flex-wrap: wrap;
                     @media(max-width:992px){
@@ -391,13 +397,13 @@
                     @include maxWidthmaxHeight(90px,80px);
                     @include paddingMargin(0,5px);
                     @include top50;
-                    @include colorFont;
                     border:none;
                     font-size: 0.8rem;
                     background: none;
-                    border: 1px solid rgb(199, 199, 199);
+                    border: 1px dashed rgb(139, 139, 139);
                     border-radius: 2px;
                     transition: 0.2s linear;
+                    color:white;
                     &:hover{
                         border: 1px solid rgb(13, 104, 146);
                     }
@@ -436,8 +442,6 @@
                 .summary-element{
                     @include maxWidthmaxHeight(100%,80px);
                     @include displayFlex(row);
-                    border: 1px solid greenyellow;
-                    background: #000;
                     border-bottom: 1px solid white;
                         @media(max-width:1199px){
                             @include displayFlex(column);
@@ -468,11 +472,17 @@
                     }
                     .element-content{
                         @include maxWidthmaxHeight(50%,100%);
-                        background: rgb(133, 133, 133);
                             @media(max-width:1199px){
                                 @include maxWidthmaxHeight(100%,50%);
                             }
-                        #pickedSize{
+                        #picked-color{
+                            @include maxWidthmaxHeight(50px,50px);
+                            @include top50;
+                            border: 1px solid white; 
+                            left:50%;
+                            transform: translate(-50%,-50%);
+                        }
+                        #picked-size{
                             @include maxWidthmaxHeight(50px,50px);
                             @include paddingMargin(0,0 auto);
                             @include top50;
@@ -496,6 +506,7 @@
                         }
                         #price{
                             @include top50;
+                            font-size: 1.5rem;
                         }  
                     }
                     
@@ -570,7 +581,7 @@
                     }
                 }
                 &:last-child{
-                    background: linear-gradient(rgb(36, 4, 112),rgb(0, 0, 0));
+                    background: linear-gradient(rgb(25, 96, 201),black);
                     @media(max-width:500px){
                         @include maxWidthmaxHeight(100%,55%);
                     }
@@ -686,39 +697,66 @@
         }
     }
     .instruction{
-        @include maxWidthmaxHeight(700px,auto);
+        @include maxWidthmaxHeight(700px,350px);
         @include displayFlex(row);
         top:0%;
         left:50%;
         transform: translateX(-50%);
         position: absolute;
-        background: rgb(87, 5, 5);
+        background: rgb(255, 255, 255);
+        @media(max-width:768px){
+            @include maxWidthmaxHeight(100%,300px);
+        }
+        @media(max-width:450px){
+            @include displayFlex(column);
+        }
         .instruction-tshirt{
-            @include maxWidthmaxHeight(50%,400px);
-            background: url('../img/tshirt.png');
-            background-size:contain;
-            background-position:center;
-            .fa-arrows-alt-v{
-                transform: translate(-50%,-50%);
-                left:50%;
-                top:50%;
+            @include maxWidthmaxHeight(50%,100%);
+            @media(max-width:450px){
+                @include maxWidthmaxHeight(100%,60%);
+            }
+            img{
                 position: relative;
+                left:50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width:20rem;
+                box-shadow: 0 0 5px rgb(158, 158, 158);
+                @media(max-width:768px){
+                    width:18rem;  
+                }
+                @media(max-width:576px){
+                    width:13rem;  
+                }
+                @media(max-width:450px){
+                    width:10rem;  
+                }
+            }
+            /*.fa-arrows-alt-v{
+                position: absolute;
+                left:20%;
                 font-size: 4rem;
                 color:rgb(219, 219, 219);
             }
             .fa-arrows-alt{
-                position: relative;
+                position: absolute;
                 font-size: 4rem;
                 color:rgb(219, 219, 219);
                 transform: translate(-40%,-25%);
                 left:40%;
                 top:25%;
-            }
+            }*/
         }
         .instruction-tshirt-info{
             @include maxWidthmaxHeight(50%,auto);
             @include paddingMargin(0,0 auto);
             background: rgb(0, 49, 68);
+            @media(max-width:576px){
+                font-size: 0.8rem;  
+            }
+            @media(max-width:450px){
+                @include maxWidthmaxHeight(100%,40%);
+            }
             button{
                 position: absolute;
                 border:none;
@@ -731,7 +769,10 @@
                 }
                 i{
                     color:rgb(255, 255, 255);
-                    font-size: 2.5rem
+                    font-size: 2.5rem;
+                    @media(max-width:450px){
+                        color:rgb(0, 49, 68);
+                    }
                 }
             }
             p{
