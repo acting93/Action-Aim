@@ -59,7 +59,7 @@ const Summary = () => {
                                 </tr>
                                 <tr>
                                     <td>Kolor</td>
-                                    <td><div className='summary-color' style={{background:colorTshirt}}></div></td>
+                                    <td><div id='summary-color' style={{background:colorTshirt}}></div></td>
                                 </tr>
                                 <tr>
                                     <td>Suma</td>

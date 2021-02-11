@@ -371,8 +371,6 @@
 .homePageInfo-col {
   padding: 0 !important;
   height: auto;
-  -webkit-box-shadow: 0 -20px 10px black;
-          box-shadow: 0 -20px 10px black;
   background: #e7e7e7;
 }
 

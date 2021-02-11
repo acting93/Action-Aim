@@ -1,6 +1,7 @@
 main {
   width: 100% !important;
   height: 100% !important;
+  background: url("../img/bg6.jpg");
 }
 
 main .basket {
@@ -20,8 +21,14 @@ main .basket {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   position: absolute;
-  background: white;
   z-index: 300;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  main .basket {
+    width: 100%;
+  }
 }
 
 main .basket::-webkit-scrollbar {
@@ -50,17 +57,35 @@ main .basket .basket-title p {
   text-transform: uppercase;
   color: white;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-title p {
+    font-size: 0.8rem;
+  }
 }
 
 main .basket .basket-title p:first-child {
   padding-left: 10%;
 }
 
+@media (max-width: 450px) {
+  main .basket .basket-title p:first-child {
+    padding-left: 5%;
+  }
+}
+
 main .basket .basket-title p:last-child {
   text-align: right;
   position: relative;
   padding-right: 10%;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-title p:last-child {
+    padding-right: 5%;
+  }
 }
 
 main .basket .empty-basket {
@@ -81,8 +106,15 @@ main .basket .empty-basket p {
 
 main .basket .basket-content {
   width: 100% !important;
-  height: 250px !important;
+  height: 300px !important;
   border-bottom: 2px solid #cacaca;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-content {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 main .basket .basket-content .content-element {
@@ -91,9 +123,16 @@ main .basket .basket-content .content-element {
   display: inline-block;
 }
 
+@media (max-width: 450px) {
+  main .basket .basket-content .content-element {
+    width: 100% !important;
+    height: 250px !important;
+  }
+}
+
 main .basket .basket-content .content-element .basket-tshirt {
-  width: 160px !important;
-  height: 210px !important;
+  width: 220px !important;
+  height: 280px !important;
   padding: 0 !important;
   margin: 0 auto !important;
   position: relative;
@@ -107,6 +146,27 @@ main .basket .basket-content .content-element .basket-tshirt {
           box-shadow: 0 0 5px silver;
 }
 
+@media (max-width: 450px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 180px !important;
+    height: 240px !important;
+  }
+}
+
+@media (max-width: 200px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 150px !important;
+    height: 210px !important;
+  }
+}
+
+@media (max-width: 150px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 100px !important;
+    height: 160px !important;
+  }
+}
+
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern {
   width: 40% !important;
   height: 60% !important;
@@ -115,16 +175,16 @@ main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-patt
 }
 
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern .basket-pattern {
-  width: 100% !important;
-  height: 100% !important;
-  position: relative;
-  margin-top: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 40% !important;
+  height: 60% !important;
+  position: absolute;
+  margin-top: 20%;
   border: 1px solid black;
 }
 
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern .basket-pattern img {
+  width: 100% !important;
+  height: 50% !important;
   position: absolute;
   width: 4.5rem;
   left: 50%;
@@ -202,6 +262,12 @@ main .basket .basket-content .content-element table tr td p {
   text-transform: uppercase;
 }
 
+@media (max-width: 200px) {
+  main .basket .basket-content .content-element table tr td p {
+    font-size: 0.8rem;
+  }
+}
+
 main .basket .basket-button {
   width: 100% !important;
   height: auto !important;
@@ -220,6 +286,15 @@ main .basket .basket-button button {
           box-shadow: 0 0 5px #8b8b8b;
   outline: none;
   border: none;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-button button {
+    width: 90% !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 5px auto !important;
+  }
 }
 
 main .basket .basket-button button:hover {

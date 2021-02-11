@@ -2,6 +2,7 @@
 
 main{
     @include maxWidthmaxHeight(100%,100%);
+    background:url('../img/bg6.jpg');
     .basket{
         @include displayFlex(column);
         width:700px;
@@ -9,8 +10,11 @@ main{
         right: 50%;
         transform: translateX(50%);
         position: absolute;
-        background: white;
         z-index: 300;
+        background: rgb(255, 255, 255);
+        @media(max-width:768px){
+            width:100%; 
+        };
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -28,14 +32,23 @@ main{
                 text-transform: uppercase;
                 color:white;
                 display: inline-block;
-                font-size: 1.2rem;
+                font-size: 1rem;
+                @media(max-width:450px){
+                    font-size: 0.8rem;
+                }
                 &:first-child{
                     padding-left: 10%;
+                    @media(max-width:450px){
+                        padding-left: 5%;
+                    }
                 };
                 &:last-child{
                     text-align: right;
                     position: relative;
-                    padding-right: 10%
+                    padding-right: 10%;
+                    @media(max-width:450px){
+                        padding-right: 5%;
+                    }
                 };
             }
         }
@@ -50,31 +63,45 @@ main{
             }
         }
         .basket-content{
-            @include maxWidthmaxHeight(100%,250px); 
+            @include maxWidthmaxHeight(100%,300px); 
             border-bottom:2px solid rgb(202, 202, 202);
+            @media(max-width:450px){
+                @include maxWidthmaxHeight(100%,auto); 
+            }
             .content-element{
                 @include maxWidthmaxHeight(50%,100%); 
                 display: inline-block;
+                @media(max-width:450px){
+                    @include maxWidthmaxHeight(100%,250px); 
+                }
                 .basket-tshirt{
-                    @include maxWidthmaxHeight(160px,210px);  
+                    @include maxWidthmaxHeight(220px,280px);  
                     @include paddingMargin(0, 0 auto);
                     @include top50;
                     background: url('../img/tshirt.png');
                     background-size: cover;
                     background-position: center;
                     box-shadow: 0 0 5px silver;
+                    @media(max-width:450px){
+                        @include maxWidthmaxHeight(180px,240px);   
+                    }
+                    @media(max-width:200px){
+                        @include maxWidthmaxHeight(150px,210px);   
+                    }
+                    @media(max-width:150px){
+                        @include maxWidthmaxHeight(100px,160px);   
+                    }
                     .basket-tshirt-pattern{
                         @include maxWidthmaxHeight(40%,60%);
                         margin-left: auto;
                         margin-right: auto;
                         .basket-pattern{
-                            @include maxWidthmaxHeight(100%,100%);
-                            position: relative;
-                            margin-top:40%;
-                            margin-left: auto;
-                            margin-right: auto;
-                            border:1px solid black;
+                            @include maxWidthmaxHeight(40%,60%);
+                            position: absolute;
+                            margin-top: 20%;
+                            border: 1px solid black;
                             img{
+                                @include maxWidthmaxHeight(100%,50%);
                                 position: absolute;
                                 width: 4.5rem;
                                 left:50%;
@@ -109,7 +136,7 @@ main{
                 
                 table{
                     @include top50;
-                    @include maxWidthmaxHeight(100%,50%); 
+                    @include maxWidthmaxHeight(100%,50%);
                     tr{
                         @include maxWidthmaxHeight(100%,auto);
                         td{
@@ -119,6 +146,9 @@ main{
                                 @include top50;
                                 margin-left: 10px;
                                 text-transform: uppercase;
+                                @media(max-width:200px){
+                                    font-size: 0.8rem;
+                                }
                             }
                         }
                     }
@@ -136,6 +166,10 @@ main{
                 box-shadow: 0 0 5px rgb(139, 139, 139);
                 outline: none;
                 border:none;
+                @media(max-width:450px){
+                    @include maxWidthmaxHeight(90%,40px); 
+                    @include paddingMargin(0,5px auto);
+                }
                 &:hover{
                     background: rgb(2, 81, 83);
                     color:white;

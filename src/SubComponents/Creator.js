@@ -27,7 +27,7 @@ const Creator = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content' style={summary || basket || tshirtInstruction ? {filter:'blur(5px)',pointerEvents:"none"} : null}>
+                <div className='creator-content' style={summary || basket || tshirtInstruction ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>

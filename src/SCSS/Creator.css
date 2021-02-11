@@ -69,6 +69,13 @@
   }
 }
 
+@media (max-width: 300px) {
+  .creator .creator-title {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 .creator .creator-title p {
   position: relative;
   width: 30% !important;
@@ -100,14 +107,15 @@
 @media (max-width: 300px) {
   .creator .creator-title p {
     font-size: 0.9rem;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
 .creator .creator-title .creator-list {
-  position: relative;
   width: 70% !important;
   height: 100% !important;
-  background: #186bb9;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -117,37 +125,56 @@
   }
 }
 
+@media (max-width: 300px) {
+  .creator .creator-title .creator-list {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0%;
+    margin: 0%;
+  }
+}
+
 .creator .creator-title .creator-list ul {
   width: 100% !important;
   height: 100% !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  padding: 0 !important;
+  margin: 0 !important;
   list-style-type: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 300px) {
+  .creator .creator-title .creator-list ul {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
 
 .creator .creator-title .creator-list ul li {
   width: auto !important;
   height: 100% !important;
-  padding: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 0 !important;
+  margin: 0 10px !important;
+  position: relative;
+  display: inline-block;
 }
 
 @media (max-width: 576px) {
   .creator .creator-title .creator-list ul li {
     margin-left: 0px;
     margin-right: 0px;
+  }
+}
+
+@media (max-width: 300px) {
+  .creator .creator-title .creator-list ul li {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
   }
 }
 
@@ -167,6 +194,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 300px) {
+  .creator .creator-title .creator-list ul li P {
+    top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .creator .creator-title .creator-list ul li P {
     font-size: 0.8rem;
@@ -176,6 +209,8 @@
 @media (max-width: 300px) {
   .creator .creator-title .creator-list ul li P {
     font-size: 0.7rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -404,27 +439,22 @@
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul li {
   padding: 0 !important;
   margin: 2px !important;
+  width: 50px !important;
+  height: 50px !important;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 50px;
   height: 70px;
-  -webkit-box-shadow: 0 0 5px black;
-          box-shadow: 0 0 5px black;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
 }
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul li:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 5px #f1f1f1;
-          box-shadow: 0 0 5px #f1f1f1;
-}
-
-@media (max-width: 992px) {
-  .creator .creator-content .creator-pattern .creator-pattern-sizes ul li {
-    width: 50px !important;
-    height: 50px !important;
-  }
+  -webkit-box-shadow: 0 0 2px #f1f1f1;
+          box-shadow: 0 0 2px #f1f1f1;
 }
 
 @media (max-width: 400px) {
@@ -585,8 +615,8 @@
 
 .creator .creator-content .creator-draw .tshirt {
   position: relative;
-  width: 500px !important;
-  height: 600px !important;
+  width: 550px !important;
+  height: 650px !important;
   margin-top: 5%;
   -webkit-transform: translateY(-5%);
           transform: translateY(-5%);
@@ -597,23 +627,13 @@
   background-size: cover;
   background-position: center;
   border-radius: 50px;
-  -webkit-box-shadow: 0 5px 0 dimgray;
-          box-shadow: 0 5px 0 dimgray;
-}
-
-@media (max-width: 1100px) {
-  .creator .creator-content .creator-draw .tshirt {
-    width: 450px !important;
-    height: 550px !important;
-  }
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 @media (max-width: 800px) {
   .creator .creator-content .creator-draw .tshirt {
-    width: 450 !important;
-    height: 550px !important;
-    position: relative;
-    margin-top: 2%;
+    top: 2%;
     -webkit-transform: translateY(-2%);
             transform: translateY(-2%);
     left: 50%;
@@ -624,29 +644,43 @@
 
 @media (max-width: 576px) {
   .creator .creator-content .creator-draw .tshirt {
-    width: 90% !important;
-    height: 600px !important;
+    width: 420px !important;
+    height: 520px !important;
   }
 }
 
 @media (max-width: 450px) {
   .creator .creator-content .creator-draw .tshirt {
-    width: 100% !important;
-    height: 500px !important;
+    width: 350px !important;
+    height: 450px !important;
   }
 }
 
 @media (max-width: 350px) {
   .creator .creator-content .creator-draw .tshirt {
-    width: 95% !important;
+    width: 300px !important;
     height: 400px !important;
   }
 }
 
 @media (max-width: 300px) {
   .creator .creator-content .creator-draw .tshirt {
-    width: 100% !important;
+    width: 250px !important;
     height: 350px !important;
+  }
+}
+
+@media (max-width: 250px) {
+  .creator .creator-content .creator-draw .tshirt {
+    width: 200px !important;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 200px) {
+  .creator .creator-content .creator-draw .tshirt {
+    width: 150px !important;
+    height: 250px !important;
   }
 }
 
@@ -659,25 +693,20 @@
 }
 
 .creator .creator-content .creator-draw .tshirt .tshirt-content {
+  width: 40% !important;
+  height: 60% !important;
   position: absolute;
-  width: 40%;
-  height: 60%;
   margin-top: 20%;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border: 1px solid black;
+  border: 2px solid #afafaf;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 300px) {
   .creator .creator-content .creator-draw .tshirt .tshirt-content {
-    width: 42%;
-  }
-}
-
-@media (max-width: 350px) {
-  .creator .creator-content .creator-draw .tshirt .tshirt-content {
-    width: 45%;
+    width: 50% !important;
+    height: 60% !important;
   }
 }
 
@@ -691,7 +720,7 @@
 
 .creator .creator-content .creator-draw .tshirt .tshirt-content .tshirt-content-element img {
   width: 100% !important;
-  height: 5% !important;
+  height: 50% !important;
 }
 
 .creator .creator-content .creator-settings {
@@ -779,6 +808,16 @@
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   color: white;
+}
+
+@media (max-width: 250px) {
+  .creator .creator-content .creator-settings .creator-sett-content button {
+    width: 70px !important;
+    height: 60px !important;
+    position: relative;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 .creator .creator-content .creator-settings .creator-sett-content button:hover {
@@ -1018,10 +1057,12 @@
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   outline: none;
+  border: none;
   background: none;
   color: #f0f0f0;
   font-size: 0.8rem;
-  border: 1px solid #074374;
+  -webkit-box-shadow: 0 0 5px #030303;
+          box-shadow: 0 0 5px #030303;
 }
 
 .creator .creator-content .creator-settings .buy:hover {
@@ -1033,15 +1074,21 @@
   padding: 0 !important;
   height: 500px;
   left: 50%;
-  top: 10%;
-  -webkit-transform: translate(-50%, -10%);
-          transform: translate(-50%, -10%);
+  top: 0%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   background: white;
   background-size: cover;
   overflow: hidden;
   -webkit-animation: summary 0.8s linear;
           animation: summary 0.8s linear;
   z-index: 100;
+}
+
+@media (max-width: 700px) {
+  .creator .summary {
+    height: auto;
+  }
 }
 
 @-webkit-keyframes summary {
@@ -1062,17 +1109,10 @@
   }
 }
 
-@media (max-width: 768px) {
-  .creator .summary {
-    height: 450px;
-  }
-}
-
 .creator .summary .summary-title {
   width: 100% !important;
   height: auto !important;
   position: relative;
-  background: white;
   text-align: center;
 }
 
@@ -1080,6 +1120,13 @@
   padding: 20px !important;
   margin: 0 !important;
   color: #242424;
+}
+
+@media (max-width: 500px) {
+  .creator .summary .summary-title p {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
 }
 
 .creator .summary .summary-content {
@@ -1097,10 +1144,9 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .creator .summary .summary-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1121,26 +1167,24 @@
   padding: 0 !important;
   margin: 0 !important;
   overflow: hidden;
-  display: block;
   background: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .creator .summary .summary-content .summary-content-element:first-child {
     width: 100% !important;
-    height: 45% !important;
+    height: auto !important;
   }
 }
 
 .creator .summary .summary-content .summary-content-element:last-child {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1960c9), to(black));
-  background: linear-gradient(#1960c9, black);
+  background: #013558;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .creator .summary .summary-content .summary-content-element:last-child {
     width: 100% !important;
-    height: 55% !important;
+    height: auto !important;
   }
 }
 
@@ -1148,47 +1192,76 @@
   padding: 0 !important;
   margin: 0 auto !important;
   width: 350px !important;
-  height: 400px !important;
+  height: 450px !important;
   background: url("../img/tshirt.png");
   background-size: cover;
-  border: 1px solid #a8a8a8;
+  background-position: center;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+  position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .creator .summary .summary-content .summary-content-element .tshirt-summary {
-    width: 300px !important;
+    width: 450px !important;
+    height: 550px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .creator .summary .summary-content .summary-content-element .tshirt-summary {
+    width: 380px !important;
+    height: 480px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .creator .summary .summary-content .summary-content-element .tshirt-summary {
+    width: 250px !important;
     height: 350px !important;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 300px) {
   .creator .summary .summary-content .summary-content-element .tshirt-summary {
-    width: 250px !important;
-    height: 300px !important;
+    width: 210px !important;
+    height: 310px !important;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 210px) {
   .creator .summary .summary-content .summary-content-element .tshirt-summary {
-    width: 150px !important;
-    height: 200px !important;
+    width: 100% !important;
+    height: 250px !important;
   }
 }
 
 .creator .summary .summary-content .summary-content-element .tshirt-summary .tshirt-summary-pattern {
   width: 40% !important;
   height: 60% !important;
+  position: absolute;
   margin-top: 20%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 1px solid black;
+}
+
+@media (max-width: 380px) {
+  .creator .summary .summary-content .summary-content-element .tshirt-summary .tshirt-summary-pattern {
+    width: 42% !important;
+    height: 60% !important;
+  }
 }
 
 .creator .summary .summary-content .summary-content-element .tshirt-summary .tshirt-summary-pattern img {
+  width: 100% !important;
+  height: 50% !important;
   position: relative;
-  width: 8rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  border: 1px solid #8b0909;
 }
 
 .creator .summary .summary-content .summary-content-element .summary-logo {
@@ -1201,7 +1274,7 @@
   margin-bottom: none !important;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .creator .summary .summary-content .summary-content-element .summary-logo {
     display: none;
   }
@@ -1212,13 +1285,8 @@
 }
 
 .creator .summary .summary-content .summary-content-element table {
-  width: 80% !important;
+  width: 100% !important;
   height: auto !important;
-  position: relative;
-  width: 80% !important;
-  height: auto !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
 }
 
 .creator .summary .summary-content .summary-content-element table tr {
@@ -1227,13 +1295,14 @@
   padding: 0 !important;
   margin: 0 !important;
   font-size: 1.2rem;
+  border-bottom: 1px solid #c7c7c7;
 }
 
 @media (max-width: 768px) {
   .creator .summary .summary-content .summary-content-element table tr {
-    width: 50% !important;
+    width: 100% !important;
     height: 50px !important;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -1247,35 +1316,29 @@
 .creator .summary .summary-content .summary-content-element table tr td {
   padding: 5px !important;
   margin: 0 !important;
-  border-bottom: 1px solid silver;
   text-align: left;
   color: #cfcfcf;
+  text-align: center;
 }
 
 .creator .summary .summary-content .summary-content-element table tr td:first-child {
   font-weight: 500;
 }
 
-.creator .summary .summary-content .summary-content-element table tr td:last-child {
-  text-align: right;
-  position: relative;
-  right: 20px;
-}
-
-.creator .summary .summary-content .summary-content-element table tr .summary-color {
+.creator .summary .summary-content .summary-content-element table tr #summary-color {
   width: 40px !important;
   height: 40px !important;
-  position: absolute;
-  right: 0;
-  top: 50;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   border-radius: 20%;
   border: 1px solid #a1a1a1;
 }
 
 @media (max-width: 768px) {
-  .creator .summary .summary-content .summary-content-element table tr .summary-color {
+  .creator .summary .summary-content .summary-content-element table tr #summary-color {
     width: 30px !important;
     height: 30px !important;
   }
@@ -1287,6 +1350,12 @@
   padding: 0;
   margin-top: 5px;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .creator .summary .summary-content .summary-content-element .summary-buttons {
+    margin-top: 0;
+  }
 }
 
 .creator .summary .summary-content .summary-content-element .summary-buttons button {
@@ -1302,9 +1371,9 @@
   color: white;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .creator .summary .summary-content .summary-content-element .summary-buttons button {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -1314,7 +1383,7 @@
 
 .creator .instruction {
   width: 700px !important;
-  height: 350px !important;
+  height: 400px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1336,7 +1405,7 @@
 @media (max-width: 768px) {
   .creator .instruction {
     width: 100% !important;
-    height: 300px !important;
+    height: 400px !important;
   }
 }
 
@@ -1358,20 +1427,6 @@
 .creator .instruction .instruction-tshirt {
   width: 50% !important;
   height: 100% !important;
-  /*.fa-arrows-alt-v{
-                position: absolute;
-                left:20%;
-                font-size: 4rem;
-                color:rgb(219, 219, 219);
-            }
-            .fa-arrows-alt{
-                position: absolute;
-                font-size: 4rem;
-                color:rgb(219, 219, 219);
-                transform: translate(-40%,-25%);
-                left:40%;
-                top:25%;
-            }*/
 }
 
 @media (max-width: 450px) {
@@ -1400,11 +1455,17 @@
 
 @media (max-width: 576px) {
   .creator .instruction .instruction-tshirt img {
-    width: 13rem;
+    width: 14rem;
   }
 }
 
 @media (max-width: 450px) {
+  .creator .instruction .instruction-tshirt img {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 200px) {
   .creator .instruction .instruction-tshirt img {
     width: 10rem;
   }
@@ -1415,7 +1476,7 @@
   height: auto !important;
   padding: 0 !important;
   margin: 0 auto !important;
-  background: #003144;
+  background: #f50707;
 }
 
 @media (max-width: 576px) {
@@ -1452,6 +1513,13 @@
 @media (max-width: 450px) {
   .creator .instruction .instruction-tshirt-info button i {
     color: #003144;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .creator .instruction .instruction-tshirt-info button i {
+    font-size: 1.5rem;
   }
 }
 
