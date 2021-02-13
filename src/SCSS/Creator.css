@@ -375,7 +375,7 @@
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes {
   width: 100% !important;
-  height: 150px !important;
+  height: auto !important;
   padding: 0 !important;
   margin: 0 !important;
   position: relative;
@@ -400,9 +400,9 @@
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes p {
   width: 100% !important;
-  height: 30% !important;
+  height: auto !important;
   font-size: 1.1rem;
-  padding-top: 10px;
+  padding: 10px;
   margin-bottom: 0;
   text-align: center;
   color: #e6e6e6;
@@ -416,7 +416,7 @@
 
 .creator .creator-content .creator-pattern .creator-pattern-sizes ul {
   width: 100% !important;
-  height: 70% !important;
+  height: 60px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,6 +476,36 @@
   .creator .creator-content .creator-pattern .creator-pattern-sizes ul li p {
     font-size: 1.1rem;
   }
+}
+
+.creator .creator-content .creator-pattern .creator-pattern-sizes #all-sizes-btn {
+  width: 100% !important;
+  height: 50px !important;
+  padding: 0 !important;
+  margin: 10px 0px !important;
+  text-align: center;
+}
+
+.creator .creator-content .creator-pattern .creator-pattern-sizes #all-sizes-btn button {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: auto !important;
+  height: 50px !important;
+  padding: 10px !important;
+  margin: 0 !important;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
+  background: none;
+  color: white;
+}
+
+.creator .creator-content .creator-pattern .creator-pattern-sizes #all-sizes-btn button:hover {
+  background: red;
+  color: white;
 }
 
 .creator .creator-content .creator-pattern .theme-pattern-button {
@@ -633,9 +663,7 @@
 
 @media (max-width: 800px) {
   .creator .creator-content .creator-draw .tshirt {
-    top: 2%;
-    -webkit-transform: translateY(-2%);
-            transform: translateY(-2%);
+    top: 0%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1382,8 +1410,8 @@
 }
 
 .creator .instruction {
-  width: 700px !important;
-  height: 400px !important;
+  width: 750px !important;
+  height: 600px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1533,5 +1561,241 @@
   text-align: center;
   text-transform: uppercase;
   color: white;
+}
+
+.creator #all-sizes {
+  width: 80% !important;
+  height: auto !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.493)), to(rgba(0, 0, 0, 0.74))), url("../img/tvbg2.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.74)), url("../img/tvbg2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1100px) {
+  .creator #all-sizes {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.creator #all-sizes #sizes-title {
+  width: 100% !important;
+  height: 80px !important;
+  border-bottom: 2px solid #919191;
+  position: relative;
+}
+
+.creator #all-sizes #sizes-title p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50% !important;
+  height: auto !important;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 250px) {
+  .creator #all-sizes #sizes-title p {
+    font-size: 1rem;
+  }
+}
+
+.creator #all-sizes #sizes-title button {
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background: none;
+}
+
+.creator #all-sizes #sizes-title button:hover i {
+  color: white;
+}
+
+.creator #all-sizes #sizes-title button i {
+  color: red;
+}
+
+.creator #all-sizes #sizes-content {
+  width: 100% !important;
+  height: 450px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 996px) {
+  .creator #all-sizes #sizes-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element {
+  width: 50% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 996px) {
+  .creator #all-sizes #sizes-content .sizes-content-element:first-child {
+    width: 100% !important;
+    height: auto !important;
+    background: #6d6b6b;
+  }
+  .creator #all-sizes #sizes-content .sizes-content-element:last-child {
+    width: 100% !important;
+    height: 350px !important;
+    background: #000;
+  }
+}
+
+@media (max-width: 576px) {
+  .creator #all-sizes #sizes-content .sizes-content-element:last-child {
+    width: 100% !important;
+    height: 300px !important;
+    background: #000;
+  }
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 26rem;
+}
+
+@media (max-width: 996px) {
+  .creator #all-sizes #sizes-content .sizes-content-element img {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+}
+
+@media (max-width: 450px) {
+  .creator #all-sizes #sizes-content .sizes-content-element img {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .creator #all-sizes #sizes-content .sizes-content-element img {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .creator #all-sizes #sizes-content .sizes-content-element img {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 150px) {
+  .creator #all-sizes #sizes-content .sizes-content-element img {
+    width: 5rem;
+  }
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element #tshirt {
+  padding: 20px !important;
+  margin: 0 !important;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: silver;
+}
+
+@media (max-width: 250px) {
+  .creator #all-sizes #sizes-content .sizes-content-element #tshirt {
+    font-size: 1rem;
+  }
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element table {
+  width: 80% !important;
+  height: auto !important;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  position: relative;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .creator #all-sizes #sizes-content .sizes-content-element table {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element table tr {
+  width: 100% !important;
+  height: 50px !important;
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element table tr:first-child td {
+  color: white;
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element table tr:first-child td:first-child {
+  background: none;
+}
+
+.creator #all-sizes #sizes-content .sizes-content-element table tr td {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .creator #all-sizes #sizes-content .sizes-content-element table tr td {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .creator #all-sizes #sizes-content .sizes-content-element table tr td {
+    width: auto !important;
+    height: auto !important;
+    font-size: 0.6rem;
+  }
 }
 /*# sourceMappingURL=Creator.css.map */

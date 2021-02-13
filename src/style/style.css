@@ -32,9 +32,9 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  background: -webkit-gradient(linear, left top, right top, from(black), to(#073264));
-  background: linear-gradient(to right, black, #073264);
-  border-bottom: 2px solid #888888;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#030394));
+  background: linear-gradient(to right, black, #030394);
+  border-bottom: 2px solid black;
   z-index: 500;
 }
 
@@ -677,8 +677,6 @@
 .homePageInfo-col {
   padding: 0 !important;
   height: auto;
-  -webkit-box-shadow: 0 -20px 10px black;
-          box-shadow: 0 -20px 10px black;
   background: #e7e7e7;
 }
 
@@ -689,7 +687,7 @@
 
 .homePageInfo-col .homePageInfo .homePage-title {
   margin: 0 auto;
-  background: black;
+  background: #004f99;
 }
 
 .homePageInfo-col .homePageInfo .homePage-title p {
@@ -757,8 +755,8 @@
 }
 
 .homePageInfo-col .homePageInfo .homePage-article-prize .article-prize:first-child {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.829)), to(rgba(0, 0, 0, 0.507))), url("../img/sale.jpg") no-repeat;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.507)), url("../img/sale.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.829)), to(rgba(0, 0, 0, 0.507))), url("../img/tvbg2.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.507)), url("../img/tvbg2.jpg") no-repeat;
   background-position: top;
   background-size: cover;
 }
@@ -1493,6 +1491,7 @@ html body {
 main {
   width: 100% !important;
   height: 100% !important;
+  background: url("../img/tvbg2.jpg");
 }
 
 main .basket {
@@ -1512,8 +1511,8 @@ main .basket {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   position: absolute;
-  background: white;
   z-index: 300;
+  background: white;
 }
 
 @media (max-width: 768px) {
@@ -1548,17 +1547,35 @@ main .basket .basket-title p {
   text-transform: uppercase;
   color: white;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-title p {
+    font-size: 0.8rem;
+  }
 }
 
 main .basket .basket-title p:first-child {
   padding-left: 10%;
 }
 
+@media (max-width: 450px) {
+  main .basket .basket-title p:first-child {
+    padding-left: 5%;
+  }
+}
+
 main .basket .basket-title p:last-child {
   text-align: right;
   position: relative;
   padding-right: 10%;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-title p:last-child {
+    padding-right: 5%;
+  }
 }
 
 main .basket .empty-basket {
@@ -1579,7 +1596,7 @@ main .basket .empty-basket p {
 
 main .basket .basket-content {
   width: 100% !important;
-  height: 250px !important;
+  height: 300px !important;
   border-bottom: 2px solid #cacaca;
 }
 
@@ -1604,8 +1621,8 @@ main .basket .basket-content .content-element {
 }
 
 main .basket .basket-content .content-element .basket-tshirt {
-  width: 160px !important;
-  height: 210px !important;
+  width: 220px !important;
+  height: 280px !important;
   padding: 0 !important;
   margin: 0 auto !important;
   position: relative;
@@ -1619,6 +1636,27 @@ main .basket .basket-content .content-element .basket-tshirt {
           box-shadow: 0 0 5px silver;
 }
 
+@media (max-width: 450px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 180px !important;
+    height: 240px !important;
+  }
+}
+
+@media (max-width: 200px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 150px !important;
+    height: 210px !important;
+  }
+}
+
+@media (max-width: 150px) {
+  main .basket .basket-content .content-element .basket-tshirt {
+    width: 100px !important;
+    height: 160px !important;
+  }
+}
+
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern {
   width: 40% !important;
   height: 60% !important;
@@ -1627,16 +1665,16 @@ main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-patt
 }
 
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern .basket-pattern {
-  width: 100% !important;
-  height: 100% !important;
-  position: relative;
-  margin-top: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 40% !important;
+  height: 60% !important;
+  position: absolute;
+  margin-top: 20%;
   border: 1px solid black;
 }
 
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern .basket-pattern img {
+  width: 100% !important;
+  height: 50% !important;
   position: absolute;
   width: 4.5rem;
   left: 50%;
@@ -1714,6 +1752,12 @@ main .basket .basket-content .content-element table tr td p {
   text-transform: uppercase;
 }
 
+@media (max-width: 200px) {
+  main .basket .basket-content .content-element table tr td p {
+    font-size: 0.8rem;
+  }
+}
+
 main .basket .basket-button {
   width: 100% !important;
   height: auto !important;
@@ -1732,6 +1776,15 @@ main .basket .basket-button button {
           box-shadow: 0 0 5px #8b8b8b;
   outline: none;
   border: none;
+}
+
+@media (max-width: 450px) {
+  main .basket .basket-button button {
+    width: 90% !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 5px auto !important;
+  }
 }
 
 main .basket .basket-button button:hover {

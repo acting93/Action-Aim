@@ -80,3 +80,8 @@ export const quantityPrice =(quantity,price)=>({
 export const hideInstruction =()=>({
     type:'HIDE_INSTRUCTION'
 });
+
+export const showHideSizesTable =(show)=>({
+    type:'SIZES_TABLE',
+    show
+});

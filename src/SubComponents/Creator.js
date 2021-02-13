@@ -7,12 +7,14 @@ import CreatorSettings from './CreatorComponents/CreatorSettings';
 import composedHOCPatterns from './HomePageSub/FunctionsPatterns/HOCPatterns';
 import Summary from './CreatorComponents/Summary';
 import InstructionMove from './CreatorComponents/InstructionMove';
+import AllSizes from './AllSizes';
 
 const Creator = (props) => {
     
     const summary = useSelector(state => state.tshirtReducer.summary);
     const basket = useSelector(state => state.mainReducer.isBasket);
     const tshirtInstruction = useSelector(state => state.tshirtReducer.tshirtInstruction);
+    const sizeTable = useSelector(state => state.tshirtReducer.sizeTable);
 
     return ( 
         <>
@@ -27,7 +29,7 @@ const Creator = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content' style={summary || basket || tshirtInstruction ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
+                <div className='creator-content' style={summary || basket || tshirtInstruction || sizeTable ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
@@ -38,6 +40,7 @@ const Creator = (props) => {
                         <CreatorSettings />
                     </div>
                 </div>
+                {sizeTable ? <AllSizes /> : null}
                 {summary ? <Summary /> : null}
                 {tshirtInstruction ? <InstructionMove /> : null}
             </section>

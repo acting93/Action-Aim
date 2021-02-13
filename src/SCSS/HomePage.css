@@ -381,7 +381,7 @@
 
 .homePageInfo-col .homePageInfo .homePage-title {
   margin: 0 auto;
-  background: black;
+  background: #004f99;
 }
 
 .homePageInfo-col .homePageInfo .homePage-title p {
@@ -449,8 +449,8 @@
 }
 
 .homePageInfo-col .homePageInfo .homePage-article-prize .article-prize:first-child {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.829)), to(rgba(0, 0, 0, 0.507))), url("../img/sale.jpg") no-repeat;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.507)), url("../img/sale.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.829)), to(rgba(0, 0, 0, 0.507))), url("../img/tvbg2.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.507)), url("../img/tvbg2.jpg") no-repeat;
   background-position: top;
   background-size: cover;
 }

@@ -14,8 +14,6 @@ const InstructionMove = () => {
         <section className='instruction'>
             <div className='instruction-tshirt'>
                 <img src={TshirtIntro} alt=''/>
-                {/*<i className="fas fa-arrows-alt-v"></i>
-                <i className="fas fa-arrows-alt"></i>*/}
             </div>
             <div className='instruction-tshirt-info'>
                 <button onClick={hideInstruction}><i className="fas fa-times"></i></button>

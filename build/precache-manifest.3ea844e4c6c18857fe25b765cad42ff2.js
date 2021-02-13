@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f19cc40cd65be6e7699f74666def2746",
+    "revision": "2578de9e846f1ddf62c44755727d4f2c",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "4594e3a23ff535ee6e07",
+    "revision": "8689d77bcfa5e709e083",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "a313d645168a52607ba0",
-    "url": "/Action-Aim/static/css/main.0813e086.chunk.css"
+    "revision": "4800007cb21bbb3c9a16",
+    "url": "/Action-Aim/static/css/main.5648ebdb.chunk.css"
   },
   {
-    "revision": "4594e3a23ff535ee6e07",
-    "url": "/Action-Aim/static/js/2.d7163c38.chunk.js"
+    "revision": "8689d77bcfa5e709e083",
+    "url": "/Action-Aim/static/js/2.d1dfe104.chunk.js"
   },
   {
-    "revision": "a313d645168a52607ba0",
-    "url": "/Action-Aim/static/js/main.4b5696ee.chunk.js"
+    "revision": "4800007cb21bbb3c9a16",
+    "url": "/Action-Aim/static/js/main.44f6ee30.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1f7ef2d6a309108b46e518cd2764ffdd",
     "url": "/Action-Aim/static/media/africa.1f7ef2d6.jpg"
+  },
+  {
+    "revision": "57d20bb6125881fc8fae004339023742",
+    "url": "/Action-Aim/static/media/b777.57d20bb6.png"
   },
   {
     "revision": "5fb777b7455054ce20056a510ab0da29",
@@ -116,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/signal.e2d54cfe.jpg"
   },
   {
+    "revision": "7bd79f52ccb4e0b7642a80cfabe974ce",
+    "url": "/Action-Aim/static/media/sizes.7bd79f52.png"
+  },
+  {
     "revision": "1e0c44e32dc8eeff24fcb8511a9e1f9e",
     "url": "/Action-Aim/static/media/sport.1e0c44e3.jpg"
   },
@@ -142,5 +150,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4b73730eb60065b42cf466c0de217456",
     "url": "/Action-Aim/static/media/tshirtIntro.4b73730e.png"
+  },
+  {
+    "revision": "55548f28c406e4d385107230f4b88bef",
+    "url": "/Action-Aim/static/media/tshirtPNG.55548f28.png"
+  },
+  {
+    "revision": "4b4b92f9ab2a5a6c4c13a3378d3901f1",
+    "url": "/Action-Aim/static/media/tvbg.4b4b92f9.jpg"
+  },
+  {
+    "revision": "bb93ab6c99ea5a493d102f19d71ea4db",
+    "url": "/Action-Aim/static/media/tvbg2.bb93ab6c.jpg"
   }
 ]);

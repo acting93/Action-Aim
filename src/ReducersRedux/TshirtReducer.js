@@ -29,7 +29,8 @@ const tshirtState ={
     summary: false, //pokaż podsumowanie po kliknięciu buttona 'kup'
     quantity:0, //ilość koszulek
     priceTshirt: 0, //cena koszulki
-    tshirtInstruction:true //pokaż/ukryj instrukcje do przesuwania wzoru
+    tshirtInstruction:true, //pokaż/ukryj instrukcje do przesuwania wzoru
+    sizeTable: false // pokaż/ukryj tabelę rozmiarów
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -176,6 +177,14 @@ const TshirtReducer =(state=tshirtState,action)=>{
             return{
                 ...state,
                 tshirtInstruction:false
+            }
+
+//akcja pokazuje/ukrywa tabele rozmiarów    
+
+        case 'SIZES_TABLE':
+            return{
+                ...state,
+                sizeTable: action.show
             }
 
 //akcja resetująca wszystko na koszulce 

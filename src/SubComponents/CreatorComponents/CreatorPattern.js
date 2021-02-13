@@ -1,5 +1,5 @@
 import React,{useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import CreatorPatternColors from './CreatorPatternColors';
 import SizesAvailable from './SizesAvailable';
 import TshirtPattern from './ThemesPatternFunctions/TshirtPattern';
@@ -11,6 +11,7 @@ const CreatorPattern = () => {
     const mapColors = colors.map(color => <CreatorPatternColors id={color.id} key={color.id} color={color.color} active={color.active} sizes={color.sizes} />);//mapowanie listy kolorów => utworzenie nowgo komponentu kolorów
     const sizes = useSelector(state => state.tshirtReducer.activeSizePerColor);//pobranie aktywnych rozmiarów danego koloru przy kliknięciu na kolor
     const [showPattern,setShowPattern] = useState(true);
+    const dispatch = useDispatch();   
     
     //auto pojawianie się TshirtPattern
     const windowWidth =()=>{
@@ -30,6 +31,10 @@ const CreatorPattern = () => {
         setShowPattern(!showPattern);
     };
 
+    const showSizeTable =()=>{
+        dispatch({type:'SIZES_TABLE',show:true});
+    };
+
     return ( 
         <>
             <div className='color-pattern'>
@@ -43,6 +48,7 @@ const CreatorPattern = () => {
             <div className='creator-pattern-sizes'>
                 <p>Dostępne rozmiary:</p>
                 {isSize === true ? <SizesAvailable sizes={sizes} /> : null}
+                <div id='all-sizes-btn'><button onClick={showSizeTable}>Tablica wzorów</button></div>
             </div>
             <div className='theme-pattern-button'>
                 <button onClick={showHide}>{showPattern === true ? 'ukryj wzory' : 'pokaż wzory'}</button>

@@ -219,7 +219,7 @@
         padding: 0px !important;
         .homePage-title{
             margin: 0 auto;
-            background: rgb(0, 0, 0);
+            background: rgb(0, 79, 153);
             p{
                 padding: 2rem;
                 margin-left: 5%;
@@ -255,7 +255,7 @@
                         @include maxWidthmaxHeight(100%,300px); 
                     }
                 &:first-child{
-                    background:linear-gradient(to right,rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.507)),url('../img/sale.jpg') no-repeat;
+                    background:linear-gradient(to right,rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.507)),url('../img/tvbg2.jpg') no-repeat;
                     background-position:top;
                     background-size: cover;
                     p{
