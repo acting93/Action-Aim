@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.0813e086.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.4b5696ee.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.4b5696ee.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.5648ebdb.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.44f6ee30.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.44f6ee30.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.68c786cf.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.68c786cf.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d7163c38.chunk.js": "/Action-Aim/static/js/2.d7163c38.chunk.js",
-    "static/js/2.d7163c38.chunk.js.map": "/Action-Aim/static/js/2.d7163c38.chunk.js.map",
+    "static/js/2.d1dfe104.chunk.js": "/Action-Aim/static/js/2.d1dfe104.chunk.js",
+    "static/js/2.d1dfe104.chunk.js.map": "/Action-Aim/static/js/2.d1dfe104.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
-    "precache-manifest.5ce97685adcd9f782d977cd2524cc50b.js": "/Action-Aim/precache-manifest.5ce97685adcd9f782d977cd2524cc50b.js",
+    "precache-manifest.3ea844e4c6c18857fe25b765cad42ff2.js": "/Action-Aim/precache-manifest.3ea844e4c6c18857fe25b765cad42ff2.js",
     "service-worker.js": "/Action-Aim/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.0813e086.chunk.css.map": "/Action-Aim/static/css/main.0813e086.chunk.css.map",
+    "static/css/main.5648ebdb.chunk.css.map": "/Action-Aim/static/css/main.5648ebdb.chunk.css.map",
     "static/media/action.png": "/Action-Aim/static/media/action.b63a54b8.png",
     "static/media/action2.png": "/Action-Aim/static/media/action2.3d0157d7.png",
     "static/media/action3.png": "/Action-Aim/static/media/action3.0bd50f0b.png",
     "static/media/africa.jpg": "/Action-Aim/static/media/africa.1f7ef2d6.jpg",
+    "static/media/b777.png": "/Action-Aim/static/media/b777.57d20bb6.png",
     "static/media/bg1.jpg": "/Action-Aim/static/media/bg1.5fb777b7.jpg",
     "static/media/bg2.jpg": "/Action-Aim/static/media/bg2.32027dde.jpg",
     "static/media/bg4.png": "/Action-Aim/static/media/bg4.25232d67.png",
@@ -36,19 +37,22 @@
     "static/media/prize2.jpg": "/Action-Aim/static/media/prize2.bd12c591.jpg",
     "static/media/sale.jpg": "/Action-Aim/static/media/sale.37a2e077.jpg",
     "static/media/signal.jpg": "/Action-Aim/static/media/signal.e2d54cfe.jpg",
+    "static/media/sizes.png": "/Action-Aim/static/media/sizes.7bd79f52.png",
     "static/media/sport.jpg": "/Action-Aim/static/media/sport.1e0c44e3.jpg",
     "static/media/sport2.png": "/Action-Aim/static/media/sport2.ec351c93.png",
     "static/media/sport3.png": "/Action-Aim/static/media/sport3.286db7e2.png",
     "static/media/summary.jpg": "/Action-Aim/static/media/summary.a0b3d7c9.jpg",
     "static/media/travel.jpg": "/Action-Aim/static/media/travel.a0fbf0f4.jpg",
-    "static/media/Creator.scss": "/Action-Aim/static/media/tshirt.475df4a0.png",
-    "static/media/tshirtIntro.png": "/Action-Aim/static/media/tshirtIntro.4b73730e.png"
+    "static/media/Creator.scss": "/Action-Aim/static/media/tvbg2.bb93ab6c.jpg",
+    "static/media/tshirtIntro.png": "/Action-Aim/static/media/tshirtIntro.4b73730e.png",
+    "static/media/tshirtPNG.png": "/Action-Aim/static/media/tshirtPNG.55548f28.png",
+    "static/media/tvbg.jpg": "/Action-Aim/static/media/tvbg.4b4b92f9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.68c786cf.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.d7163c38.chunk.js",
-    "static/css/main.0813e086.chunk.css",
-    "static/js/main.4b5696ee.chunk.js"
+    "static/js/2.d1dfe104.chunk.js",
+    "static/css/main.5648ebdb.chunk.css",
+    "static/js/main.44f6ee30.chunk.js"
   ]
 }
