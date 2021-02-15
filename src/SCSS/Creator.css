@@ -2,12 +2,20 @@
   height: auto;
   padding: 0 !important;
   margin: 0 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1960c9), to(black));
-  background: linear-gradient(#1960c9, black);
+  background: -webkit-gradient(linear, left top, left bottom, from(#003380), to(black));
+  background: linear-gradient(#003380, black);
   background-position: top;
   background-size: cover;
   -webkit-animation: creator 0.8s linear;
           animation: creator 0.8s linear;
+  border-top: 5px solid #0ba9d1;
+  border-radius: 20% 20% 0 0;
+}
+
+@media (max-width: 1200px) {
+  .creator {
+    border-radius: 5% 5% 0 0;
+  }
 }
 
 @-webkit-keyframes creator {
@@ -29,7 +37,7 @@
 }
 
 .creator .creator-title {
-  width: 85% !important;
+  width: 90% !important;
   height: 80px !important;
   padding: 0 !important;
   margin: 10px auto !important;
@@ -43,13 +51,6 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-@media (max-width: 1200px) {
-  .creator .creator-title {
-    width: 100% !important;
-    height: 100px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -88,8 +89,14 @@
   margin: 0 !important;
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: #949494;
   text-align: center;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .creator .creator-title p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -215,7 +222,7 @@
 }
 
 .creator .creator-content {
-  width: 80% !important;
+  width: 90% !important;
   height: auto !important;
   padding: 0 !important;
   margin: 0 auto !important;
@@ -230,8 +237,7 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow: hidden;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(58, 58, 58, 0)), to(rgba(0, 0, 0, 0.247)));
-  background: linear-gradient(to left, rgba(58, 58, 58, 0), rgba(0, 0, 0, 0.247));
+  background: radial-gradient(rgba(58, 58, 58, 0), rgba(0, 0, 0, 0.247));
 }
 
 @media (max-width: 1500px) {
@@ -280,21 +286,23 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 2px solid silver;
+  border-bottom: 5px solid #0ba9d1;
+  border-radius: 0 0 10% 10%;
 }
 
 @media (max-width: 992px) {
   .creator .creator-content .creator-pattern .color-pattern {
     width: 50% !important;
-    height: 150px !important;
+    height: 200px !important;
     float: left;
+    background: radial-gradient(#0c78d1, black);
   }
 }
 
 @media (max-width: 576px) {
   .creator .creator-content .creator-pattern .color-pattern {
     width: 100% !important;
-    height: 100px !important;
+    height: 200px !important;
     display: block;
   }
 }
@@ -379,21 +387,23 @@
   padding: 0 !important;
   margin: 0 !important;
   position: relative;
-  border-bottom: 2px solid silver;
+  border-bottom: 5px solid #0ba9d1;
+  border-radius: 0 0 10% 10%;
 }
 
 @media (max-width: 992px) {
   .creator .creator-content .creator-pattern .creator-pattern-sizes {
     width: 50% !important;
-    height: 150px !important;
+    height: 200px !important;
     float: left;
+    background: radial-gradient(#0c78d1, black);
   }
 }
 
 @media (max-width: 576px) {
   .creator .creator-content .creator-pattern .creator-pattern-sizes {
     width: 100% !important;
-    height: 140px !important;
+    height: 200px !important;
     display: block;
   }
 }
@@ -946,7 +956,8 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-bottom: 1px solid white;
+  border-bottom: 5px solid #0ba9d1;
+  border-radius: 0 0 20% 20%;
 }
 
 @media (max-width: 1199px) {
@@ -962,7 +973,7 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: auto !important;
-    height: 120px !important;
+    height: 150px !important;
   }
 }
 
@@ -1045,7 +1056,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  border: 1px solid white;
+  border: 2px dashed white;
   text-align: center;
 }
 
@@ -1060,7 +1071,7 @@
   color: #f0f0f0;
   text-align: center;
   background: none;
-  border: 1px solid silver;
+  border: 2px dashed silver;
 }
 
 .creator .creator-content .creator-settings .creator-summary .summary-element .element-content input::-webkit-outer-spin-button,
@@ -1673,12 +1684,10 @@
   .creator #all-sizes #sizes-content .sizes-content-element:first-child {
     width: 100% !important;
     height: auto !important;
-    background: #6d6b6b;
   }
   .creator #all-sizes #sizes-content .sizes-content-element:last-child {
     width: 100% !important;
     height: 350px !important;
-    background: #000;
   }
 }
 

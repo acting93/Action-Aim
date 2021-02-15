@@ -1,7 +1,9 @@
 main {
   width: 100% !important;
   height: 100% !important;
-  background: url("../img/tvbg2.jpg");
+  background: #2c2c2c;
+  background-size: cover;
+  background-position: center;
 }
 
 main .basket {

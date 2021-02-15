@@ -3,10 +3,15 @@
 .creator{
     height:auto;
     @include paddingMargin(0,0);
-    background: linear-gradient(rgb(25, 96, 201),black);
+    background: linear-gradient(rgb(0, 51, 128),black);
     background-position: top;
     background-size: cover;
     animation: creator 0.8s linear;
+    border-top:5px solid rgb(11, 169, 209);;
+    border-radius: 20% 20% 0 0;
+    @media(max-width:1200px){
+        border-radius: 5% 5% 0 0;
+    }
         @keyframes creator {
             0%{
                 opacity: 0;
@@ -16,12 +21,9 @@
             }
         }
     .creator-title{
-        @include maxWidthmaxHeight(85%,80px);
+        @include maxWidthmaxHeight(90%,80px);
         @include paddingMargin(0,10px auto);
         @include displayFlex(row);
-            @media(max-width:1200px){
-                @include maxWidthmaxHeight(100%,100px);
-            }
             @media(max-width:768px){
                 @include displayFlex(column);
                 @include maxWidthmaxHeight(100%,120px);
@@ -36,8 +38,11 @@
             @include paddingMargin(5px,0);
             text-transform: uppercase;
             font-size: 1.5rem;
-            @include colorFont;
             text-align: center;
+            color: white;
+                @media(max-width:992px){
+                    font-size: 1rem; 
+                }
                 @media(max-width:768px){
                     @include maxWidthmaxHeight(100%,50%);
                     @include paddingMargin(10px,0);
@@ -108,11 +113,11 @@
         }
     }
     .creator-content{
-        @include maxWidthmaxHeight(80%,auto);
+        @include maxWidthmaxHeight(90%,auto);
         @include paddingMargin(0,0 auto);
         @include displayFlex(row);
         overflow: hidden;
-        background: linear-gradient(to left,rgba(58, 58, 58, 0),rgba(0, 0, 0, 0.247));
+        background: radial-gradient(rgba(58, 58, 58, 0),rgba(0, 0, 0, 0.247));
             @media(max-width: 1500px){
                 @include maxWidthmaxHeight(95%,auto);
             }
@@ -131,13 +136,15 @@
                 @include maxWidthmaxHeight(100%,150px);
                 @include displayFlex(column);
                 justify-content: center;
-                border-bottom:2px solid rgb(192, 192, 192);
+                border-bottom:5px solid rgb(11, 169, 209);
+                border-radius: 0 0 10% 10%;
                 @media(max-width:992px){
-                    @include maxWidthmaxHeight(50%,150px);
+                    @include maxWidthmaxHeight(50%,200px);
                     float: left;
+                    background: radial-gradient(rgb(12, 120, 209),black);
                 }
                 @media(max-width:576px){
-                    @include maxWidthmaxHeight(100%,100px);
+                    @include maxWidthmaxHeight(100%,200px);
                     display: block;
                 }
                 .color-title{
@@ -180,13 +187,15 @@
                 @include maxWidthmaxHeight(100%,auto);
                 @include paddingMargin(0,0);
                 position: relative;
-                border-bottom:2px solid rgb(192, 192, 192);
+                border-bottom:5px solid rgb(11, 169, 209);
+                border-radius: 0 0 10% 10%;
                 @media(max-width:992px){
-                    @include maxWidthmaxHeight(50%,150px);
+                    @include maxWidthmaxHeight(50%,200px);
                     float: left;
+                    background: radial-gradient(rgb(12, 120, 209),black);
                 }
                 @media(max-width:576px){
-                    @include maxWidthmaxHeight(100%,140px);
+                    @include maxWidthmaxHeight(100%,200px);
                     display: block;
                 }
                 p{
@@ -481,10 +490,11 @@
                 .summary-element{
                     @include maxWidthmaxHeight(100%,80px);
                     @include displayFlex(row);
-                    border-bottom: 1px solid white;
+                    border-bottom:5px solid rgb(11, 169, 209);
+                    border-radius: 0 0 20% 20%;
                         @media(max-width:1199px){
                             @include displayFlex(column);
-                            @include maxWidthmaxHeight(auto,120px);
+                            @include maxWidthmaxHeight(auto,150px);
                         }
                         @media(max-width:576px){
                             @include maxWidthmaxHeight(50%,200px);
@@ -517,7 +527,7 @@
                         #picked-color{
                             @include maxWidthmaxHeight(50px,50px);
                             @include top50;
-                            border: 1px solid white; 
+                            border: 1px solid rgb(255, 255, 255); 
                             left:50%;
                             transform: translate(-50%,-50%);
                         }
@@ -525,7 +535,7 @@
                             @include maxWidthmaxHeight(50px,50px);
                             @include paddingMargin(0,0 auto);
                             @include top50;
-                            border: 1px solid white; 
+                            border: 2px dashed white; 
                             text-align: center;
                         }
                         input{
@@ -537,7 +547,7 @@
                             color:rgb(240, 240, 240);
                             text-align: center;
                             background: none;
-                            border: 1px solid silver;
+                            border: 2px dashed silver;
                         }
                         input::-webkit-outer-spin-button,
                         input::-webkit-inner-spin-button{
@@ -886,11 +896,9 @@
                     @media(max-width:996px){
                         &:first-child{
                             @include maxWidthmaxHeight(100%,auto);
-                            background: rgb(109, 107, 107);
                         }
                         &:last-child{
                             @include maxWidthmaxHeight(100%,350px);
-                            background: #000;
                         }
                     }
                     @media(max-width: 576px){

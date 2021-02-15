@@ -2,7 +2,9 @@
 
 main{
     @include maxWidthmaxHeight(100%,100%);
-    background:url('../img/tvbg2.jpg');
+    background:rgb(44, 44, 44);
+    background-size: cover;
+    background-position: center;
     .basket{
         @include displayFlex(column);
         width:700px;

@@ -4,7 +4,6 @@
     @include headerHeight(100px);
     @include displayFlex(row);
     @include paddingMargin(0,0);
-    //background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
     background:linear-gradient(to right,black,rgb(3, 3, 148));
     border-bottom: 2px solid rgb(0, 0, 0);
     z-index: 500;

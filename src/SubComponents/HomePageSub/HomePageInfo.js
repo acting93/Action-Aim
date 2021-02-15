@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
+import Tshirt from '../../img/tshirtPNG.png';
 
 const HomePageInfo = () => {
     return ( 
@@ -11,18 +12,29 @@ const HomePageInfo = () => {
                         <p>Witamy w krainie kreacji koszulek</p>
                     </div>
                     <article className='homePage-article-prize col-12'>
-                        <div className='article-prize'>
-                            <p>Każda koszulka tylko</p>
-                            <p>15 zł</p>
+                        <div className='article-prize-el'>
+                            <img src={Tshirt} alt=''/>
+                            <div className='element-descript'>
+                                <p>Wybierz odpowiedni kolor</p>
+                            </div>
                         </div>
-                        <div className='article-prize'>
-                            <p>Każda koszulka tylko</p>
-                            <p>15 zł</p>
+                        <div className='article-prize-el'>
+                            <img src={Tshirt} alt=''/>
+                            <div className='element-descript'>
+                            <p>Wybierz odpowiedni kolor</p>
+                            </div>
+                        </div>
+
+                        <div className='article-prize-el'>
+                            <img src={Tshirt} alt=''/>
+                            <div className='element-descript'>
+                                <p>Wybierz odpowiedni kolor</p>
+                            </div>
                         </div>
                     </article>
                     <article className='homePage-article col-12'>
                         <div className='article-part'>
-                            <p>Zapraszamy do skorzystania z naszego kreatora koszulek. Do wyboru ferujemy kilkadziesiąt wzorów do wyboru,
+                            <p id='zapraszamy'>Zapraszamy</p><br/><p>do skorzystania z naszego kreatora koszulek.<br/> Do wyboru ferujemy kilkadziesiąt wzorów do wyboru,
                                 Naszym głównym celem jest zadowolenie klienta czyli Ciebie
                             </p>
                         </div>

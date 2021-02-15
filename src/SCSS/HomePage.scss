@@ -219,14 +219,14 @@
         padding: 0px !important;
         .homePage-title{
             margin: 0 auto;
-            background: rgb(0, 79, 153);
+            background: rgb(233, 233, 233);
             p{
                 padding: 2rem;
                 margin-left: 5%;
                 font-size: 1.6rem;
                 text-align: left;
                 text-transform: uppercase;
-                color: rgb(243, 243, 243);
+                color: rgb(48, 48, 48);
                 font-weight: 400;
                     @media(max-width:992px){
                         font-size: 1.5rem;
@@ -246,63 +246,61 @@
         .homePage-article-prize{
             padding: 0;
             margin-bottom: 10px;
-            @include displayFlex(column);
-            height:auto;
+            @include displayFlex(row);
+            flex-wrap: wrap;
+            justify-content: center;
+            height:600px;
             overflow: hidden;
-            .article-prize{
-                @include maxWidthmaxHeight(100%,500px);
-                    @media(max-width:768px){
-                        @include maxWidthmaxHeight(100%,300px); 
-                    }
-                &:first-child{
-                    background:linear-gradient(to right,rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.507)),url('../img/tvbg2.jpg') no-repeat;
-                    background-position:top;
-                    background-size: cover;
+            background:white;
+                @media(max-width:1200px){
+                    height: auto;
+                }
+            .article-prize-el{
+                @include maxWidthmaxHeight(350px,500px);
+                @include paddingMargin(0,20px 10px);
+                box-shadow: 0 0 5px rgb(105, 105, 105);
+                position: relative;
+                @media(max-width:1200px){
+                    @include maxWidthmaxHeight(250px,350px); 
+                }
+                @media(max-width:576px){
+                    @include maxWidthmaxHeight(200px,300px); 
+                }
+                @media(max-width:450px){
+                    @include maxWidthmaxHeight(150px,250px); 
+                }
+                img{
+                    @include paddingMargin(0,10px auto);
+                    width: 100%;
+                }
+                .element-descript{
+                    @include maxWidthmaxHeight(100%,20%);
+                    position: absolute;
+                    bottom: 0%;
+                    background: rgb(0, 60, 116);
                     p{
-                        @include top50();
+                        @include top50;
                         text-align: center;
-                        color:rgb(194, 194, 194);
-                        font-size: 2rem;
-                        text-transform: uppercase;
-                        font-weight: 500;
-                            &:last-child{
-                                font-size: 3rem;
-                            }
-                            @media(max-width:768px){
-                                font-size: 1.2rem; 
-                            }
-                    }
-                };
-                &:last-child{
-                    @include maxWidthmaxHeight(100%,300px);
-                    background:linear-gradient(to right,rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0.507)),url('../img/bg5.jpg') no-repeat;
-                    background-position: top;
-                    background-size: cover;
-                    display:none;
-                    p{
-                        @include top50();
-                        text-align: center;
-                        color:rgb(224, 224, 224);
-                        font-size: 2rem;
-                        font-family: 'Indie Flower', cursive;
-                        &:last-child{
-                            font-size: 2.5rem;
+                        color: white;
+                        font-size: 1.2rem;
+                        @media(max-width:576px){
+                            font-size: 0.8rem; 
                         }
-                    }
-                };
+                    } 
+                }
             }
         }
         .homePage-article{
             @include paddingMargin(0px,0 auto);
             @include displayFlex(row);
             @include maxWidthmaxHeight(100%,500px);
-            background: linear-gradient(to right,rgb(0, 0, 0),rgb(7, 50, 100));
+            background:rgb(3, 67, 128);
                 @media(max-width:1200px){
-                    @include maxWidthmaxHeight(100%,350px);
+                    @include maxWidthmaxHeight(100%,400px);
                 }
                 @media(max-width:768px){
                     @include displayFlex(column);
-                    height:350px;
+                    height:500px;
                 }
             .article-part{
                 position: relative;
@@ -311,16 +309,13 @@
                         width:100%;
                     }
                 &:first-child{
-                    color: rgb(214, 214, 214);
+                    color: rgb(199, 199, 199);
                     animation:leftArrow 1s linear;
                     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
                         @media(max-width:768px){
-                            @include maxWidthmaxHeight(80%,50%);
+                            @include maxWidthmaxHeight(100%,60%);
                             @include paddingMargin(0,0 auto);
                             clip-path: none;
-                        }
-                        @media(max-width:576px){
-                            @include maxWidthmaxHeight(100%,50%);
                         }
                         @keyframes leftArrow{
                             0%{
@@ -330,18 +325,38 @@
                                 left:0%;
                             }
                         }
+                    #zapraszamy{
+                        @include paddingMargin(0,5px auto);
+                        text-align: center;
+                        top:20%;
+                        position: absolute;
+                        font-size: 3rem;
+                        color:rgb(224, 224, 224);
+                        font-weight: 800;
+                        @media(max-width:996px){
+                            left:0;
+                        }
+                        @media(max-width:768px){
+                            font-size: 2rem; 
+                        }
+                        @media(max-width:200px){
+                            font-size: 1rem; 
+                        }
+                    }
                     p{
                         @include maxWidthmaxHeight(80%,auto);
                         @include paddingMargin(0,0 auto);
                         @include top50;
-                        text-align: center;
+                        text-align: justify;
                         font-size: 1.5rem;
-                            @media(max-width:992px){
+                        font-weight: 400;
+                            @media(max-width:1200px){
                                 font-size: 1rem;
                             }
                             @media(max-width:768px){
                                 font-size: 1rem;
                                 @include maxWidthmaxHeight(95%,auto);
+                                text-align: center;
                             }
                             @media(max-width:425px){
                                 font-size: 0.9rem;
@@ -357,9 +372,14 @@
                     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
                     animation:rightArrow 2s linear;
                     transform: skewY(10deg);
+                        @media(max-width:992px){
+                            @include maxWidthmaxHeight(50%,100%);
+                            transform: skewY(0deg);
+                            clip-path: none;
+                        }
                         @media(max-width:768px){
-                            @include maxWidthmaxHeight(80%,50%);
                             @include paddingMargin(0,0 auto);
+                            @include maxWidthmaxHeight(100%,40%);
                         }
                         @media(max-width:576px){
                             @include maxWidthmaxHeight(100%,50%);
@@ -401,7 +421,6 @@
         .homePage-article-2{
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,auto);
-            //background:linear-gradient(to bottom,rgba(0, 0, 0, 0.651),rgba(0, 0, 0, 0.555)),url('../img/moon.jpg') no-repeat;
             background: linear-gradient(to bottom,rgb(0, 0, 0),rgb(1, 30, 85));
             background-position: right;
             .homePage-title-article-2{
@@ -476,7 +495,7 @@
                             @include maxWidthmaxHeight(90%,250px);
                         }
                         @media(max-width:320px){
-                            @include maxWidthmaxHeight(100%,250px);
+                            @include maxWidthmaxHeight(100%,300px);
                         }
                     .fa{
                         position: absolute;
@@ -618,7 +637,7 @@
             margin: 0 !important;
             height: auto;
             padding: 50px;
-            background:rgb(0, 0, 0);
+            background:rgb(255, 255, 255);
             @media(max-width:768px){
                 padding: 30px;
             }
@@ -637,14 +656,11 @@
                 transform: translateX(-50%);
                 text-transform: uppercase;
                 outline: none;
-                border-right: none;
-                border-bottom: none;
-                border-top: 1px solid rgb(80, 80, 80);
-                border-left: 1px solid rgb(80, 80, 80);
-                color:rgb(87, 87, 87);
-                background: none;
+                border:none;
+                color:rgb(255, 255, 255);
+                background: red;
                 &:hover{
-                    background: rgba(61, 0, 0, 0.63);
+                    background: rgb(1, 41, 100);
                 }
                 @media(max-width:375px){
                     font-size: 1rem;
