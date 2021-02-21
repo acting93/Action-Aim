@@ -1,7 +1,9 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
-import Tshirt from '../../img/tshirtPNG.png';
+import African from '../../img/AFRICAN.png';
+import Eagle from '../../img/eagle.png';
+import Cross from '../../img/cross.png';
 
 const HomePageInfo = () => {
     return ( 
@@ -13,22 +15,21 @@ const HomePageInfo = () => {
                     </div>
                     <article className='homePage-article-prize col-12'>
                         <div className='article-prize-el'>
-                            <img src={Tshirt} alt=''/>
+                            <img src={African} alt=''/>
                             <div className='element-descript'>
-                                <p>Wybierz odpowiedni kolor</p>
+                                <p>Afryka - 15 pln</p>
                             </div>
                         </div>
                         <div className='article-prize-el'>
-                            <img src={Tshirt} alt=''/>
+                            <img src={Eagle} alt=''/>
                             <div className='element-descript'>
-                            <p>Wybierz odpowiedni kolor</p>
+                            <p>Angry Eagle - 15 pln</p>
                             </div>
                         </div>
-
                         <div className='article-prize-el'>
-                            <img src={Tshirt} alt=''/>
+                            <img src={Cross} alt=''/>
                             <div className='element-descript'>
-                                <p>Wybierz odpowiedni kolor</p>
+                                <p>Krzyż Południa - 15zł</p>
                             </div>
                         </div>
                     </article>

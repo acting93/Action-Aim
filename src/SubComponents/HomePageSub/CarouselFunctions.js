@@ -12,7 +12,7 @@ const CarouselFunctions = (props) => {
     const [signal,setSignal] = useState(false);
 
     //funkcja zwraza spany dla każdego elementu do przechodzenia między elementami karuzeli
-     const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue=== item.id ? {background:"#007ea5"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id}></span>);
+     const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue === item.id ? {background:"#007ea5"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id}></span>);
 
     //mapowanie elementów z json do karuzeli tworzenie diva dla każdego elementu.
     const slide = carousel.map(element => {

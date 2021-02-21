@@ -251,15 +251,16 @@
             justify-content: center;
             height:600px;
             overflow: hidden;
-            background:white;
+            background:radial-gradient(rgb(2, 38, 138),black);
                 @media(max-width:1200px){
                     height: auto;
                 }
             .article-prize-el{
                 @include maxWidthmaxHeight(350px,500px);
                 @include paddingMargin(0,20px 10px);
-                box-shadow: 0 0 5px rgb(105, 105, 105);
+                box-shadow: 0 0 5px rgb(27, 26, 26);
                 position: relative;
+                //background: radial-gradient(rgb(255, 255, 255),rgb(82, 82, 82));
                 @media(max-width:1200px){
                     @include maxWidthmaxHeight(250px,350px); 
                 }
@@ -274,10 +275,10 @@
                     width: 100%;
                 }
                 .element-descript{
-                    @include maxWidthmaxHeight(100%,20%);
+                    @include maxWidthmaxHeight(100%,15%);
                     position: absolute;
                     bottom: 0%;
-                    background: rgb(0, 60, 116);
+                    background: rgb(146, 0, 0);
                     p{
                         @include top50;
                         text-align: center;
@@ -294,7 +295,7 @@
             @include paddingMargin(0px,0 auto);
             @include displayFlex(row);
             @include maxWidthmaxHeight(100%,500px);
-            background:rgb(3, 67, 128);
+            background:rgb(0, 43, 83);
                 @media(max-width:1200px){
                     @include maxWidthmaxHeight(100%,400px);
                 }
@@ -367,6 +368,7 @@
                     }
                 };
                 &:last-child{
+                    @include maxWidthmaxHeight(50%,400px);
                     background: linear-gradient(to right,rgb(0, 49, 112),rgba(0, 0, 0, 0)),url('../img/bg2.jpg');
                     background-size: cover;
                     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -421,7 +423,7 @@
         .homePage-article-2{
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,auto);
-            background: linear-gradient(to bottom,rgb(0, 0, 0),rgb(1, 30, 85));
+            background: black;
             background-position: right;
             .homePage-title-article-2{
                 @include maxWidthmaxHeight(100%,100px);

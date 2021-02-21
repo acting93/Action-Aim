@@ -1,5 +1,6 @@
 import React,{useState,useRef, useEffect} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
+import TshirtNew from '../../img/tshirtNEW2.png';
 
 const CreatorShape = (props) => {
     const dispatch = useDispatch();

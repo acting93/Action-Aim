@@ -24,7 +24,7 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"pks.png"
+            "img":"crossPattern.png"
         },
         {
             "id":5,
@@ -44,14 +44,14 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"pks.png"
+            "img":"africaPattern.png"
         },
         {
             "id":8,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"kdst.png"
+            "img":"phi.png"
         },{
             "id":9,
             "name":"SPORT",
@@ -69,7 +69,7 @@
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"kdst.png"
+            "img":"phi2.png"
         },{
             "id":12,
             "name":"SPORT",
