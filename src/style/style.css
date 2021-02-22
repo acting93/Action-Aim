@@ -745,7 +745,7 @@
           justify-content: center;
   height: 600px;
   overflow: hidden;
-  background: white;
+  background: radial-gradient(#02268a, black);
 }
 
 @media (max-width: 1200px) {
@@ -759,8 +759,8 @@
   height: 500px !important;
   padding: 0 !important;
   margin: 20px 10px !important;
-  -webkit-box-shadow: 0 0 5px dimgray;
-          box-shadow: 0 0 5px dimgray;
+  -webkit-box-shadow: 0 0 5px #1b1a1a;
+          box-shadow: 0 0 5px #1b1a1a;
   position: relative;
 }
 
@@ -793,10 +793,10 @@
 
 .homePageInfo-col .homePageInfo .homePage-article-prize .article-prize-el .element-descript {
   width: 100% !important;
-  height: 20% !important;
+  height: 15% !important;
   position: absolute;
   bottom: 0%;
-  background: #003c74;
+  background: #920000;
 }
 
 .homePageInfo-col .homePageInfo .homePage-article-prize .article-prize-el .element-descript p {
@@ -830,7 +830,7 @@
           flex-grow: 1;
   width: 100% !important;
   height: 500px !important;
-  background: #034380;
+  background: #002b53;
 }
 
 @media (max-width: 1200px) {
@@ -976,6 +976,8 @@
 }
 
 .homePageInfo-col .homePageInfo .homePage-article .article-part:last-child {
+  width: 50% !important;
+  height: 400px !important;
   background: -webkit-gradient(linear, left top, right top, from(#003170), to(rgba(0, 0, 0, 0))), url("../img/bg2.jpg");
   background: linear-gradient(to right, #003170, rgba(0, 0, 0, 0)), url("../img/bg2.jpg");
   background-size: cover;
@@ -1073,8 +1075,7 @@
   margin: 0 !important;
   width: 100% !important;
   height: auto !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#011e55));
-  background: linear-gradient(to bottom, black, #011e55);
+  background: black;
   background-position: right;
 }
 
@@ -1529,7 +1530,7 @@ html body {
 main {
   width: 100% !important;
   height: 100% !important;
-  background: #2c2c2c;
+  background: radial-gradient(black, black);
   background-size: cover;
   background-position: center;
 }

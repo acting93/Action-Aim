@@ -2,11 +2,11 @@
 
 .carousel{
     @include maxWidthmaxHeight(80%,auto);
-    @include paddingMargin(0,0 auto);
+    @include paddingMargin(0,5px auto);
     overflow: hidden;
     border:20px solid rgb(0, 0, 0);
     border-bottom:5px solid rgb(224, 224, 224);
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0px 5px 10px rgb(128, 128, 128);
         @media(max-width: 1200px){
             @include maxWidthmaxHeight(98%,auto); 
         }
@@ -215,19 +215,22 @@
     height:auto;
     background: rgb(231, 231, 231);
     .homePageInfo{
-        height: auto;
+        height:auto;
         padding: 0px !important;
         .homePage-title{
+            height: 100px;
             margin: 0 auto;
-            background: rgb(233, 233, 233);
+            background: rgb(133, 0, 0);
             p{
-                padding: 2rem;
-                margin-left: 5%;
-                font-size: 1.6rem;
-                text-align: left;
+                @include top50;
+                @include paddingMargin(0,0 auto);
+                width: 80%;
+                padding:0rem;
+                font-size: 1.7rem;
                 text-transform: uppercase;
-                color: rgb(48, 48, 48);
-                font-weight: 400;
+                color: rgb(192, 192, 192);
+                font-weight: 800;
+                border-bottom: 1px solid white;
                     @media(max-width:992px){
                         font-size: 1.5rem;
                     }
@@ -245,13 +248,14 @@
         }
         .homePage-article-prize{
             padding: 0;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
             @include displayFlex(row);
             flex-wrap: wrap;
             justify-content: center;
             height:600px;
             overflow: hidden;
-            background:radial-gradient(rgb(2, 38, 138),black);
+            //background:radial-gradient(rgb(2, 38, 138),black);
+            background:rgb(255, 255, 255);
                 @media(max-width:1200px){
                     height: auto;
                 }
@@ -260,19 +264,21 @@
                 @include paddingMargin(0,20px 10px);
                 box-shadow: 0 0 5px rgb(27, 26, 26);
                 position: relative;
-                //background: radial-gradient(rgb(255, 255, 255),rgb(82, 82, 82));
                 @media(max-width:1200px){
                     @include maxWidthmaxHeight(250px,350px); 
                 }
                 @media(max-width:576px){
                     @include maxWidthmaxHeight(200px,300px); 
                 }
-                @media(max-width:450px){
-                    @include maxWidthmaxHeight(150px,250px); 
+                @media(max-width:250px){
+                    @include maxWidthmaxHeight(100%,250px); 
                 }
                 img{
                     @include paddingMargin(0,10px auto);
                     width: 100%;
+                    @media(max-width:576px){
+                        @include paddingMargin(0,15px auto); 
+                    }
                 }
                 .element-descript{
                     @include maxWidthmaxHeight(100%,15%);
@@ -423,17 +429,16 @@
         .homePage-article-2{
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,auto);
-            background: black;
             background-position: right;
             .homePage-title-article-2{
                 @include maxWidthmaxHeight(100%,100px);
                 p{
                     @include top50;
-                    font-size: 1.5rem;
-                    text-align: left;
-                    margin-left: 10%;
-                    padding: 2rem;
-                    color:rgb(255, 255, 255);
+                    font-size: 1.7rem;
+                    text-align: center;
+                    padding: 1.5rem;
+                    color:rgb(223, 12, 12);
+                    border-bottom: 4px solid red;
                         @media(max-width:450px){
                             font-size: 1.2rem;
                         }
@@ -451,15 +456,13 @@
                     @include displayFlex(column);
                 }
                 .homePage-article-2-icon{
-                    @include maxWidthmaxHeight(400px,500px);
-                    @include paddingMargin(0,0);
+                    @include maxWidthmaxHeight(500px,500px);
+                    @include paddingMargin(0,10px);
                     position: relative;
                     text-align: center;
-                    clip-path: polygon(50% 0, 100% 30%, 100% 100%, 0 100%, 0 30%);
                         &:first-child{
                             background: linear-gradient(to bottom,rgba(0, 0, 0, 0.479)50%,rgba(0, 0, 0, 0.836)50%),url('../img/bg1.jpg') center;
                             background-size: cover;
-                            transform: skewY(-5deg);
                                 @media(max-width:768px){
                                     transform:skewY(0deg);
                                 }
@@ -467,7 +470,6 @@
                         &:nth-child(2){
                             background: linear-gradient(to bottom,rgba(0, 0, 0, 0.479)50%,rgba(0, 0, 0, 0.836)50%),url('../img/bg2.jpg') center;
                             background-size: cover;
-                            top:-18px;
                                 @media(max-width:768px){
                                     transform:skewY(0deg);
                                 }
@@ -475,7 +477,6 @@
                         &:last-child{
                             background: linear-gradient(to bottom,rgba(0, 0, 0, 0.479)50%,rgba(0, 0, 0, 0.836)50%),url('../img/bg5.jpg') center;
                             background-size: cover;
-                            transform: skewY(5deg);
                                 @media(max-width:768px){
                                     transform:skewY(0deg);
                                 }
@@ -499,39 +500,10 @@
                         @media(max-width:320px){
                             @include maxWidthmaxHeight(100%,300px);
                         }
-                    .fa{
-                        position: absolute;
-                        color: rgb(36, 2, 2);
-                        text-shadow: 0 0 10px rgb(255, 217, 0);
-                        font-size: 7rem;
-                        left:50%;
-                        transform: translateX(-50%);
-                        top:10%;
-                        @media(max-width:768px){
-                            font-size: 5rem; 
-                        }
-                    }
-                    .fas{
-                        position: absolute;
-                        font-size: 7rem;
-                        left:50%;
-                        transform: translateX(-50%);
-                        top:10%;
-                        @media(max-width:768px){
-                            font-size: 5rem;
-                            top:5%; 
-                        }
-                    }
-                    .fa-palette{
-                        color: rgb(0, 189, 31);
-                    }
-                    .fa-tshirt{
-                        color: rgb(121, 0, 0);
-                    }
                     p{
                         @include paddingMargin(2px,0);
                         position: relative;
-                        color: rgb(165, 165, 165);
+                        color: rgb(255, 255, 255);
                         font-size: 2rem;
                         left:50%;
                         transform: translateX(-50%);
@@ -568,19 +540,22 @@
             @include maxWidthmaxHeight(100%,auto);
             text-align: center;
             justify-content: center;
-            background: linear-gradient(to bottom,rgba(41, 41, 41, 0.521),rgba(0, 0, 0, 0.151)), url('../img/hangtshirt.jpg');
+            //background: linear-gradient(to bottom,rgba(41, 41, 41, 0.521),rgba(0, 0, 0, 0.151)), url('../img/hangtshirt.jpg');
+            background: rgb(253, 253, 253);
             background-position: top;
             background-size: cover;
             .homePage-article-3-title{
                 @include maxWidthmaxHeight(100%,100px);
                 display:block;
                 overflow: hidden;
-                text-align: left;
+                text-align: center;
                 p{
+                    @include paddingMargin(0,0 auto);
                     @include top50;
-                    margin-left: 10%;
-                    font-size: 25px;
-                    color: rgb(255, 255, 255);
+                    width: 80%;
+                    font-size: 2rem;
+                    color: rgb(126, 126, 126);
+                    border-bottom: 1px solid red;
                 }
             }
             .category{
@@ -588,7 +563,8 @@
                 @include paddingMargin(0,10px);
                 text-align: center;
                 display: inline-block;
-                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                //clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                box-shadow: 0 0 10px rgb(26, 26, 26);
                     &:nth-child(2){
                         background: url('../img/motto.jpg');
                         background-size: cover;

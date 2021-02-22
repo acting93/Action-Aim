@@ -670,7 +670,7 @@
                             @include maxWidthmaxHeight(42%,60%);
                         }
                         img{
-                            @include maxWidthmaxHeight(100%,50%);
+                            @include maxWidthmaxHeight(100%,auto);
                             position: relative;
                             left:50%;
                             transform: translateX(-50%);

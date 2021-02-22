@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84443e9d57aa6076b5556f173c734de2",
+    "revision": "d5927c040d9fcd1fe0d3cfe9bb5a1bce",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "50dc8d712d44f66289a4",
+    "revision": "d8e3a6cb314cc7a43b1c",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "1351643039a77c8ba623",
-    "url": "/Action-Aim/static/css/main.27379807.chunk.css"
+    "revision": "575f59ee54cad41092df",
+    "url": "/Action-Aim/static/css/main.068789ea.chunk.css"
   },
   {
-    "revision": "50dc8d712d44f66289a4",
-    "url": "/Action-Aim/static/js/2.1aff9f62.chunk.js"
+    "revision": "d8e3a6cb314cc7a43b1c",
+    "url": "/Action-Aim/static/js/2.81bde702.chunk.js"
   },
   {
-    "revision": "1351643039a77c8ba623",
-    "url": "/Action-Aim/static/js/main.eeb85061.chunk.js"
+    "revision": "575f59ee54cad41092df",
+    "url": "/Action-Aim/static/js/main.77082739.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
     "url": "/Action-Aim/static/js/runtime-main.68c786cf.js"
+  },
+  {
+    "revision": "54f87c20fa3a56de2c649ffc320f96ec",
+    "url": "/Action-Aim/static/media/AFRICAN.54f87c20.png"
   },
   {
     "revision": "b63a54b837c5eb3086cd1cdd2c04da85",
@@ -38,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1f7ef2d6a309108b46e518cd2764ffdd",
     "url": "/Action-Aim/static/media/africa.1f7ef2d6.jpg"
+  },
+  {
+    "revision": "ed544fbaab6e43b3ade4a75507a2f753",
+    "url": "/Action-Aim/static/media/africaPattern.ed544fba.png"
   },
   {
     "revision": "57d20bb6125881fc8fae004339023742",
@@ -76,8 +84,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/contact.07d53875.jpg"
   },
   {
+    "revision": "bfed7144a1e98c741acdda1f0c66af94",
+    "url": "/Action-Aim/static/media/cross.bfed7144.png"
+  },
+  {
+    "revision": "972c05d5e9e145c8b026b95c2e88acc7",
+    "url": "/Action-Aim/static/media/crossPattern.972c05d5.png"
+  },
+  {
     "revision": "b4021e774e9b06aeb4f110f7d2ae1163",
     "url": "/Action-Aim/static/media/desks.b4021e77.jpg"
+  },
+  {
+    "revision": "02110a3a05f50efbbda0738722e315ef",
+    "url": "/Action-Aim/static/media/eagle.02110a3a.png"
   },
   {
     "revision": "34d5a14dd4b84dca3e0c674d8255e0fb",
@@ -98,6 +118,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a8df7ffdede47698bd7e2cd86014f060",
     "url": "/Action-Aim/static/media/motto.a8df7ffd.jpg"
+  },
+  {
+    "revision": "e981f9e97e2e13497b1f7890cc6c21d8",
+    "url": "/Action-Aim/static/media/phi.e981f9e9.png"
+  },
+  {
+    "revision": "b1cd618d77783c4e9e64e0fdd2bd2e98",
+    "url": "/Action-Aim/static/media/phi2.b1cd618d.png"
   },
   {
     "revision": "bdf9d57b087687fb8c1f0b2132899374",
@@ -150,6 +178,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4b73730eb60065b42cf466c0de217456",
     "url": "/Action-Aim/static/media/tshirtIntro.4b73730e.png"
+  },
+  {
+    "revision": "52e8900a66db8534ef9b17aff348f68d",
+    "url": "/Action-Aim/static/media/tshirtNEW2.52e8900a.png"
+  },
+  {
+    "revision": "01c781ad416fab0cc1d62632d8c062a9",
+    "url": "/Action-Aim/static/media/tshirtNew.01c781ad.png"
   },
   {
     "revision": "55548f28c406e4d385107230f4b88bef",

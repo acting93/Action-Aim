@@ -11,7 +11,7 @@ import Basket from './Basket';
 const MainContent = () => {
 
     const basket = useSelector(state => state.mainReducer.isBasket);
-
+    
     return ( 
         <>
             <main>

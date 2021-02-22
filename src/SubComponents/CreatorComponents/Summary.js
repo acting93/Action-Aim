@@ -27,6 +27,7 @@ const Summary = () => {
             'size':size,
             'price':price,
             'position': topPositionPattern,
+            'pattern': pattern
         }];
         dispatch({type:'PUT_BASKET',basketContent:arrayBasket});
         dispatch({type:'TOTAL_BASKET',total:price});

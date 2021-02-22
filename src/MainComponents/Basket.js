@@ -6,12 +6,11 @@ const Basket = () => {
 
     const dispatch = useDispatch();
     const basketContent = useSelector(state => state.mainReducer.basketContent);
-    const tshirtPattern = useSelector(state => state.tshirtReducer.tshirtPattern);
     const total = useSelector(state => state.mainReducer.total);
-
+    
     const basketContentMap = basketContent.map(item =>
-        <BasketContent key={item.id} id={item.id} quantity={item.quantity} price={item.price} colorTshirt={item.colorTshirt} position={item.position} size={item.size} pattern={tshirtPattern}
-    />)
+        <BasketContent key={item.id} id={item.id} quantity={item.quantity} price={item.price} colorTshirt={item.colorTshirt} position={item.position} size={item.size} pattern={item.pattern}
+    />);
     
     const hideBasket =()=>{
         dispatch({type:'SHOW_BASKET',isBasket:false});

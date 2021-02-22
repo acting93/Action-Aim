@@ -1295,7 +1295,7 @@
 
 .creator .summary .summary-content .summary-content-element .tshirt-summary .tshirt-summary-pattern img {
   width: 100% !important;
-  height: 50% !important;
+  height: auto !important;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);

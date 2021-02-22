@@ -50,17 +50,14 @@ const HomePageInfo = () => {
                         </div>
                         <div className='homePage-article-2-part'>
                             <div className='homePage-article-2-icon'>
-                                <i className="fa fa-lightbulb-o"></i>
                                 <p>Pomysł</p>
                                 <p className='description'>Dobierz własny wzór z naszych propozycji.</p>
                             </div>   
                             <div className='homePage-article-2-icon'>
-                                <i className='fas fa-palette'></i>
                                 <p>Wdrożenie</p>
                                 <p className='description'>Kreacja zajmie Ci kilka minut, a może nawet i sekund.</p>
                             </div>   
                             <div className='homePage-article-2-icon'>
-                                <i className='fas fa-tshirt'></i>
                                 <p>Gotowe</p>
                                 <p className='description'>Koszulka Twojego własnego autorstwa jest gotowa.</p>
                             </div>   

@@ -2,9 +2,7 @@
 
 main{
     @include maxWidthmaxHeight(100%,100%);
-    background:radial-gradient(black,black);
-    background-size: cover;
-    background-position: center;
+    background:rgb(255, 255, 255);
     .basket{
         @include displayFlex(column);
         width:700px;
@@ -103,7 +101,7 @@ main{
                             margin-top: 20%;
                             border: 1px solid black;
                             img{
-                                @include maxWidthmaxHeight(100%,50%);
+                                @include maxWidthmaxHeight(100%,auto);
                                 position: absolute;
                                 width: 4.5rem;
                                 left:50%;

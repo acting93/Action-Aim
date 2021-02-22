@@ -1,9 +1,7 @@
 main {
   width: 100% !important;
   height: 100% !important;
-  background: radial-gradient(black, black);
-  background-size: cover;
-  background-position: center;
+  background: white;
 }
 
 main .basket {
@@ -186,7 +184,7 @@ main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-patt
 
 main .basket .basket-content .content-element .basket-tshirt .basket-tshirt-pattern .basket-pattern img {
   width: 100% !important;
-  height: 50% !important;
+  height: auto !important;
   position: absolute;
   width: 4.5rem;
   left: 50%;
