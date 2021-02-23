@@ -8,7 +8,6 @@
     background-size: cover;
     animation: creator 0.8s linear;
     border-top:5px solid rgb(11, 169, 209);;
-    border-radius: 20% 20% 0 0;
     @media(max-width:1200px){
         border-radius: 5% 5% 0 0;
     }
@@ -400,7 +399,7 @@
                         text-align: center;
                         cursor: move;
                         img{
-                            @include maxWidthmaxHeight(100%,50%);
+                            @include maxWidthmaxHeight(100%,auto);
                         }
                     }
                 }

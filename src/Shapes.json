@@ -5,14 +5,14 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"b777.png"
+            "img":"dominica.png"
         },
         {
             "id":2,
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"kdst.png"
+            "img":"malawi.png"
         },{
             "id":3,
             "name":"SPORT",
@@ -31,13 +31,13 @@
             "name":"MOTTO",
             "category":"motto",
             "active":"false",
-            "img":"kdst.png"
+            "img":"cat.png"
         },{
             "id":6,
             "name":"SPORT",
             "category":"sport",
             "active":"false",
-            "img":"sport1.png"
+            "img":"ultras.png"
         },
         {
             "id":7,
@@ -57,7 +57,7 @@
             "name":"SPORT",
             "category":"sport",
             "active":"false",
-            "img":"sport2.png"
+            "img":"champions.png"
         },{
             "id":10,
             "name":"TRAVEL",
@@ -75,7 +75,7 @@
             "name":"SPORT",
             "category":"sport",
             "active":"false",
-            "img":"sport3.png"
+            "img":"ultras2.png"
         }
     ]
 }

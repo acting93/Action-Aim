@@ -254,25 +254,24 @@
             justify-content: center;
             height:600px;
             overflow: hidden;
-            //background:radial-gradient(rgb(2, 38, 138),black);
-            background:rgb(255, 255, 255);
+            background: rgb(255, 255, 255);
                 @media(max-width:1200px){
                     height: auto;
                 }
             .article-prize-el{
-                @include maxWidthmaxHeight(350px,500px);
-                @include paddingMargin(0,20px 10px);
-                box-shadow: 0 0 5px rgb(27, 26, 26);
+                @include maxWidthmaxHeight(350px,450px);
+                @include paddingMargin(0,20px 2px);
+                box-shadow: 0 0 5px rgb(37, 37, 37);
                 position: relative;
-                @media(max-width:1200px){
-                    @include maxWidthmaxHeight(250px,350px); 
-                }
-                @media(max-width:576px){
-                    @include maxWidthmaxHeight(200px,300px); 
-                }
-                @media(max-width:250px){
-                    @include maxWidthmaxHeight(100%,250px); 
-                }
+                    @media(max-width:1200px){
+                        @include maxWidthmaxHeight(250px,350px); 
+                    }
+                    @media(max-width:576px){
+                        @include maxWidthmaxHeight(200px,300px); 
+                    }
+                    @media(max-width:250px){
+                        @include maxWidthmaxHeight(100%,250px); 
+                    }
                 img{
                     @include paddingMargin(0,10px auto);
                     width: 100%;
@@ -429,7 +428,6 @@
         .homePage-article-2{
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,auto);
-            background-position: right;
             .homePage-title-article-2{
                 @include maxWidthmaxHeight(100%,100px);
                 p{
@@ -460,6 +458,7 @@
                     @include paddingMargin(0,10px);
                     position: relative;
                     text-align: center;
+                    border-radius: 20%;
                         &:first-child{
                             background: linear-gradient(to bottom,rgba(0, 0, 0, 0.479)50%,rgba(0, 0, 0, 0.836)50%),url('../img/bg1.jpg') center;
                             background-size: cover;
@@ -507,7 +506,7 @@
                         font-size: 2rem;
                         left:50%;
                         transform: translateX(-50%);
-                        top:60%;
+                        top:40%;
                         @media(max-width:768px){
                             font-size: 1.2rem;
                         }
@@ -521,7 +520,7 @@
                         width:100%;
                         position: absolute;
                         font-size: 1rem;
-                        top:80%;
+                        top:60%;
                         @media(max-width:768px){
                             font-size: 0.9rem;
                             top:80%;  
@@ -541,7 +540,7 @@
             text-align: center;
             justify-content: center;
             //background: linear-gradient(to bottom,rgba(41, 41, 41, 0.521),rgba(0, 0, 0, 0.151)), url('../img/hangtshirt.jpg');
-            background: rgb(253, 253, 253);
+            background: rgb(117, 4, 4);
             background-position: top;
             background-size: cover;
             .homePage-article-3-title{
@@ -554,8 +553,8 @@
                     @include top50;
                     width: 80%;
                     font-size: 2rem;
-                    color: rgb(126, 126, 126);
-                    border-bottom: 1px solid red;
+                    color: rgb(235, 235, 235);
+                    border-bottom: 1px solid rgb(236, 236, 236);
                 }
             }
             .category{

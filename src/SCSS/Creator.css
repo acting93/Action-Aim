@@ -9,7 +9,6 @@
   -webkit-animation: creator 0.8s linear;
           animation: creator 0.8s linear;
   border-top: 5px solid #0ba9d1;
-  border-radius: 20% 20% 0 0;
 }
 
 @media (max-width: 1200px) {
@@ -758,7 +757,7 @@
 
 .creator .creator-content .creator-draw .tshirt .tshirt-content .tshirt-content-element img {
   width: 100% !important;
-  height: 50% !important;
+  height: auto !important;
 }
 
 .creator .creator-content .creator-settings {
