@@ -18,7 +18,7 @@ const tshirtState ={
     activeColor: 'white', //domyślny kolor biały przy pierwszym załadowaniu strony
     dataPattern:patternArray,//wzory z JSON
     activePattern:randomPattern,//losowa grupa wzorów przy załadowaniu kreatora
-    tshirtPattern:'kdst.png',//aktywny wzór na koszulce
+    tshirtPattern:'poland.png',//aktywny wzór na koszulce
     tshirtActive:true,
     colors:colorsSizes,
     isSize:true,
@@ -30,7 +30,8 @@ const tshirtState ={
     quantity:0, //ilość koszulek
     priceTshirt: 0, //cena koszulki
     tshirtInstruction:true, //pokaż/ukryj instrukcje do przesuwania wzoru
-    sizeTable: false // pokaż/ukryj tabelę rozmiarów
+    sizeTable: false, // pokaż/ukryj tabelę rozmiarów
+    allPatternsShow: false //pokaż/ukryj wszystkie wzory
 }
 
 const TshirtReducer =(state=tshirtState,action)=>{
@@ -94,6 +95,12 @@ const TshirtReducer =(state=tshirtState,action)=>{
                 ...state,
                 activePattern: mottoElement
             }
+//akcja pokazuje wszystkie wzory 
+        case 'SHOW_ALL_PATTERNS':
+            return{
+                ...state,
+                allPatternsShow:action.isShow            
+            }
 
 //akcja pobierająca wszystkie wzory 
         case 'GET_DATA_PATTERN':
@@ -155,7 +162,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             }
 
 //akcja przekazuje ilość koszulek
-        
         case 'QUANTITY_PRICE':
             return{
                 ...state,
@@ -164,7 +170,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             }
         
 //akcja pokazuje/ukrywa podsumowanie
-
         case 'SHOW_HIDE_SUMMARY':
             return{
                 ...state,
@@ -172,7 +177,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             }
 
 //akcja ukrywa instrukcje
-        
         case 'HIDE_INSTRUCTION':
             return{
                 ...state,
@@ -180,7 +184,6 @@ const TshirtReducer =(state=tshirtState,action)=>{
             }
 
 //akcja pokazuje/ukrywa tabele rozmiarów    
-
         case 'SIZES_TABLE':
             return{
                 ...state,

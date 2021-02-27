@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {useSelector} from 'react-redux';
 import '../SCSS/Creator.scss';
 import CreatorPattern from './CreatorComponents/CreatorPattern';
@@ -8,6 +8,7 @@ import composedHOCPatterns from './HomePageSub/FunctionsPatterns/HOCPatterns';
 import Summary from './CreatorComponents/Summary';
 import InstructionMove from './CreatorComponents/InstructionMove';
 import AllSizes from './AllSizes';
+import AllPatterns from './AllPatterns';
 
 const Creator = (props) => {
     
@@ -15,6 +16,14 @@ const Creator = (props) => {
     const basket = useSelector(state => state.mainReducer.isBasket);
     const tshirtInstruction = useSelector(state => state.tshirtReducer.tshirtInstruction);
     const sizeTable = useSelector(state => state.tshirtReducer.sizeTable);
+    const allPatternsShow = useSelector(state => state.tshirtReducer.allPatternsShow);
+    const allPatterns = useSelector(state => state.tshirtReducer.dataPattern);
+
+    const [showAllPatterns,setShowAllPatterns] = useState(false);
+
+    const hideShowAllPattern =()=>{
+        setShowAllPatterns(!showAllPatterns);
+    };
 
     return ( 
         <>
@@ -26,10 +35,11 @@ const Creator = (props) => {
                             <li onClick={()=>{props.sport();props.showMobilePattern()}}><p>SPORT</p></li>
                             <li onClick={()=>{props.travel();props.showMobilePattern()}}><p>TRAVEL</p></li>
                             <li onClick={()=>{props.motto();props.showMobilePattern()}}><p>MOTTO</p></li>
+                            <li onClick={hideShowAllPattern}><p>WSZYSTKIE</p></li>
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content' style={summary || basket || tshirtInstruction || sizeTable ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
+                <div className='creator-content' style={showAllPatterns || summary || basket || tshirtInstruction || sizeTable ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
@@ -40,6 +50,7 @@ const Creator = (props) => {
                         <CreatorSettings />
                     </div>
                 </div>
+                {showAllPatterns ? <AllPatterns patterns={allPatterns}/> : null}
                 {sizeTable ? <AllSizes /> : null}
                 {summary ? <Summary /> : null}
                 {tshirtInstruction ? <InstructionMove /> : null}

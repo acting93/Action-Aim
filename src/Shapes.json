@@ -18,7 +18,7 @@
             "name":"SPORT",
             "category":"sport",
             "active":"false",
-            "img":"action.png"
+            "img":"poland.png"
         },{
             "id":4,
             "name":"TRAVEL",
@@ -63,7 +63,7 @@
             "name":"TRAVEL",
             "category":"travel",
             "active":"false",
-            "img":"pks.png"
+            "img":"globetrotter.png"
         },{
             "id":11,
             "name":"MOTTO",

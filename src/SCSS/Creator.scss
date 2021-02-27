@@ -389,7 +389,6 @@
                     margin-top: 20%;
                     margin-left: 50%;
                     transform: translateX(-50%);
-                    border:2px solid rgb(175, 175, 175);
                     @media(max-width:300px){
                         @include maxWidthmaxHeight(50%,60%);      
                     }
@@ -574,6 +573,38 @@
                 &:hover{
                     @include fontCreator;
                 }
+            }
+        }
+    }
+    .all-patterns{
+        @include displayFlex(row);
+        flex-wrap: wrap;
+        justify-content: center;
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        background: rgb(255, 255, 255);
+        height: 600px;
+        overflow-y: scroll;
+        box-shadow: 0 0 10px black;
+        &::-webkit-scrollbar{
+            background: rgb(255, 255, 255);
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: rgb(223, 0, 0);
+        }
+        .all-patterns-element{
+            @include maxWidthmaxHeight(25%,auto);
+            @include paddingMargin(15px,0);
+            box-shadow: 0 0 5px silver;
+            img{
+                position: relative;
+                width:10rem;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
             }
         }
     }

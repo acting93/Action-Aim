@@ -27,6 +27,11 @@ export const getPatternTravel =(getPattern,id)=>({
     id
 });
 
+export const showAllPatterns =(isShow)=>({
+    type:'SHOW_ALL_PATTERNS',
+    isShow
+});
+
 export const getDataPattern =()=>({
     type:'GET_DATA_PATTERN'
 });

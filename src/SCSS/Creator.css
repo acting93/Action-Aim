@@ -737,7 +737,6 @@
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border: 2px solid #afafaf;
 }
 
 @media (max-width: 300px) {
@@ -1105,6 +1104,61 @@
 
 .creator .creator-content .creator-settings .buy:hover {
   color: #0b8292;
+}
+
+.creator .all-patterns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: white;
+  height: 600px;
+  overflow-y: scroll;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+}
+
+.creator .all-patterns::-webkit-scrollbar {
+  background: white;
+  width: 5px;
+}
+
+.creator .all-patterns::-webkit-scrollbar-thumb {
+  background: #df0000;
+}
+
+.creator .all-patterns .all-patterns-element {
+  width: 25% !important;
+  height: auto !important;
+  padding: 15px !important;
+  margin: 0 !important;
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+}
+
+.creator .all-patterns .all-patterns-element img {
+  position: relative;
+  width: 10rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .creator .summary {
