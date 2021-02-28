@@ -45,7 +45,7 @@ const Menu = (props) => {
                     </div>
                 : null}
                 <div className='basket-icon' onClick={showBasket} style={isSticky === true && less768px === true ? {right:"50%"} : null}> 
-                    <i className="fas fa-shopping-basket"></i>
+                    <i className="fa fa-shopping-basket"></i>
                     <span>
                         <p>{basketContentLength}</p>
                     </span>

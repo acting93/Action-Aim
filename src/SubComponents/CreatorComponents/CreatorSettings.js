@@ -36,8 +36,8 @@ const CreatorSettings = () => {
         <>
             <p>Ustawienia</p>
             <div className='creator-sett-content'>
-                <button onClick={clearPattern}><i className="fas fa-trash-alt"></i>Usuń wzór</button>
-                <button onClick={resetAll}><i className="fas fa-broom"></i>Reset</button>
+                <button onClick={clearPattern}><i className="fa fa-trash-o"></i>Usuń wzór</button>
+                <button onClick={resetAll}><i className="fa fa-refresh"></i>Reset</button>
             </div>
             <p className='summary-title'>Podsumowanie</p>
             <div className='creator-summary'>

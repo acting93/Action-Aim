@@ -16,7 +16,7 @@ const InstructionMove = () => {
                 <img src={TshirtIntro} alt=''/>
             </div>
             <div className='instruction-tshirt-info'>
-                <button onClick={hideInstruction}><i className="fas fa-times"></i></button>
+                <button onClick={hideInstruction}><i className="fa fa-times"></i></button>
                 <p>Za pomocą myszki możesz kliknąć <br/> i przesunąć wzór na koszulce</p>
             </div>
         </section>

@@ -19,12 +19,6 @@ const Creator = (props) => {
     const allPatternsShow = useSelector(state => state.tshirtReducer.allPatternsShow);
     const allPatterns = useSelector(state => state.tshirtReducer.dataPattern);
 
-    const [showAllPatterns,setShowAllPatterns] = useState(false);
-
-    const hideShowAllPattern =()=>{
-        setShowAllPatterns(!showAllPatterns);
-    };
-
     return ( 
         <>
             <section className='creator col-12'>
@@ -35,11 +29,11 @@ const Creator = (props) => {
                             <li onClick={()=>{props.sport();props.showMobilePattern()}}><p>SPORT</p></li>
                             <li onClick={()=>{props.travel();props.showMobilePattern()}}><p>TRAVEL</p></li>
                             <li onClick={()=>{props.motto();props.showMobilePattern()}}><p>MOTTO</p></li>
-                            <li onClick={hideShowAllPattern}><p>WSZYSTKIE</p></li>
+                            <li onClick={()=>{props.showAllPattern()}}><p>WSZYSTKIE</p></li>
                         </ul>
                     </div>
                 </div>
-                <div className='creator-content' style={showAllPatterns || summary || basket || tshirtInstruction || sizeTable ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
+                <div className='creator-content' style={allPatternsShow || summary || basket || tshirtInstruction || sizeTable ? {filter:'blur(10px)',pointerEvents:"none"} : null}>
                     <div className='creator-pattern col-12 col-lg-4 col-xl-3'>
                         <CreatorPattern />
                     </div>
@@ -50,7 +44,7 @@ const Creator = (props) => {
                         <CreatorSettings />
                     </div>
                 </div>
-                {showAllPatterns ? <AllPatterns patterns={allPatterns}/> : null}
+                {allPatternsShow ? <AllPatterns patterns={allPatterns}/> : null}
                 {sizeTable ? <AllSizes /> : null}
                 {summary ? <Summary /> : null}
                 {tshirtInstruction ? <InstructionMove /> : null}
