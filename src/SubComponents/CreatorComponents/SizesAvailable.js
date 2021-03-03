@@ -14,10 +14,10 @@ const SizesAvailable = (props) => {
     };
     //mapowanie rozmiarów per wybrany kolor
     const mapSingleSize = singleSize.map(size =>
-        <li key={size.id} id={size.id} onClick={()=>pickColor(size.id)}>
+        <li key={size.id} id={size.id} onClick={size.active ? ()=> pickColor(size.id) : null } style={size.active ? null : {pointerEvents:'none'}}>
             <p style={size.active === false ? {color:'red'} : {color:'white'} }>{size.size}</p>
         </li>);
-    
+
     return ( 
         <>
             <ul>
@@ -25,6 +25,6 @@ const SizesAvailable = (props) => {
             </ul>
         </>
      );
-}
+};
  
 export default SizesAvailable;

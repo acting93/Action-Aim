@@ -16,7 +16,7 @@ const AllSizes = () => {
             <section id='all-sizes'>
                 <div id='sizes-title'>
                     <p>Tablica rozmiarów</p>
-                    <button onClick={hideSizesTable}><i className="fas fa-times"></i></button>    
+                    <button onClick={hideSizesTable}><i className="fa fa-times"></i></button>    
                 </div>
                 <div id='sizes-content'>
                     <div className='sizes-content-element'>

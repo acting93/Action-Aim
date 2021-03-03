@@ -2,7 +2,7 @@
 
 main{
     @include maxWidthmaxHeight(100%,100%);
-    background:rgb(255, 255, 255);
+    background:radial-gradient(rgb(33, 7, 129),black);
     .basket{
         @include displayFlex(column);
         width:700px;

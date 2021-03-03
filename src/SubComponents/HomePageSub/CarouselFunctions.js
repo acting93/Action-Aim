@@ -87,7 +87,7 @@ const CarouselFunctions = (props) => {
                         <div className='carousel-element' style={{background:`url(${SignalImg})`,backgroundSize:"cover"}}></div>    
                     }
                 </div>
-                <div className='carousel-tv'><p>KOSZULKA TV</p></div>
+                {/*<div className='carousel-tv'><p>KOSZULKA TV</p></div>*/}
             </div>
             <div className='carousel-content-stand'></div>
         </>

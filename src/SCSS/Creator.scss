@@ -3,7 +3,7 @@
 .creator{
     height:auto;
     @include paddingMargin(0,0);
-    background: linear-gradient(rgb(0, 51, 128),black);
+    background: linear-gradient(rgb(0, 29, 71),black);
     background-position: top;
     background-size: cover;
     animation: creator 0.8s linear;
@@ -108,7 +108,7 @@
         }
     }
     .creator-content{
-        @include maxWidthmaxHeight(90%,auto);
+        @include maxWidthmaxHeight(95%,auto);
         @include paddingMargin(0,0 auto);
         @include displayFlex(row);
         overflow: hidden;
@@ -315,6 +315,9 @@
                         @include top50;
                         width: 10rem;
                         @media(max-width:992px){
+                            width: 7rem; 
+                        }
+                        @media(max-width:300px){
                             width: 6rem; 
                         }
                     }
@@ -324,8 +327,14 @@
                     }
                     @media(max-width: 768px){
                         @include top50;
-                        @include maxWidthmaxHeight(50%,150px); 
+                        @include maxWidthmaxHeight(30%,150px); 
                         @include paddingMargin(0,5px 10px)
+                    }
+                    @media(max-width: 450px){
+                        @include maxWidthmaxHeight(50%,150px); 
+                    }
+                    @media(max-width: 300px){
+                        @include maxWidthmaxHeight(70%,150px); 
                     }
                 }
             }

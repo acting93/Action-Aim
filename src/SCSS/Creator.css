@@ -2,8 +2,8 @@
   height: auto;
   padding: 0 !important;
   margin: 0 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#003380), to(black));
-  background: linear-gradient(#003380, black);
+  background: -webkit-gradient(linear, left top, left bottom, from(#001d47), to(black));
+  background: linear-gradient(#001d47, black);
   background-position: top;
   background-size: cover;
   -webkit-animation: creator 0.8s linear;
@@ -215,7 +215,7 @@
 }
 
 .creator .creator-content {
-  width: 90% !important;
+  width: 95% !important;
   height: auto !important;
   padding: 0 !important;
   margin: 0 auto !important;
@@ -607,6 +607,12 @@
 
 @media (max-width: 992px) {
   .creator .creator-content .creator-pattern .theme-pattern .theme-pattern-element img {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .creator .creator-content .creator-pattern .theme-pattern .theme-pattern-element img {
     width: 6rem;
   }
 }
@@ -625,10 +631,24 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    width: 50% !important;
+    width: 30% !important;
     height: 150px !important;
     padding: 0 !important;
     margin: 5px 10px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .creator .creator-content .creator-pattern .theme-pattern .theme-pattern-element {
+    width: 50% !important;
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .creator .creator-content .creator-pattern .theme-pattern .theme-pattern-element {
+    width: 70% !important;
+    height: 150px !important;
   }
 }
 

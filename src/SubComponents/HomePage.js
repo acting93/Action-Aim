@@ -11,6 +11,6 @@ const HomePage = () => {
             <HomePageInfo />
         </>
      );
-}
+};
  
 export default HomePage;

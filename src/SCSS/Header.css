@@ -12,8 +12,8 @@
           flex-grow: 1;
   padding: 0 !important;
   margin: 0 !important;
-  background: -webkit-gradient(linear, left top, right top, from(black), to(#030394));
-  background: linear-gradient(to right, black, #030394);
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#00004b));
+  background: linear-gradient(to right, black, #00004b);
   border-bottom: 2px solid black;
   z-index: 500;
 }
