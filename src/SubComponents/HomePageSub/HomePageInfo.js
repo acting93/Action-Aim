@@ -61,25 +61,29 @@ const HomePageInfo = () => {
                             <div className='homePage-article-2-icon'>
                                 <img src={Flower} alt=''/>
                                 <p>Pomysł</p>
-                                {/*<p className='description'>Dobierz własny wzór z naszych propozycji.</p>*/}
+                                <p className='description'>Dobierz własny wzór z naszych propozycji.</p>
                             </div>   
                             <div className='homePage-article-2-icon'>
                                 <img src={Sett} alt=''/>
                                 <p>Wdrożenie</p>
-                                {/*<p className='description'>Kreacja zajmie Ci kilka minut, a może nawet i sekund.</p>*/}
+                                <p className='description'>Kreacja zajmie Ci kilka minut, a może nawet i sekund.</p>
                             </div>   
                             <div className='homePage-article-2-icon'>
                                 <img src={Basket} alt=''/>
                                 <p>Gotowe</p>
-                                {/*<p className='description'>Koszulka Twojego własnego autorstwa jest gotowa.</p>*/}
+                                <p className='description'>Koszulka Twojego własnego autorstwa jest gotowa.</p>
                             </div>   
                         </div>
                     </article>
                     <article className='homePage-article-3'>
-                        <div className='homePage-article-3-title'><p>Kategorie wzorów</p></div>
-                        <div className='category'><p>MOTTO</p></div>
-                        <div className='category'><p>SPORT</p></div>
-                        <div className='category'><p>TRAVEL</p></div>
+                        <div className='homePage-article-3-content'>
+                            <div className='homePage-article-3-title'><p>Kategorie wzorów</p></div>
+                            <div className='category-content'>
+                                <div className='category'><p>MOTTO</p></div>
+                                <div className='category'><p>SPORT</p></div>
+                                <div className='category'><p>TRAVEL</p></div>
+                            </div>
+                        </div>
                     </article>
                     <article className='homePage-redirect'>
                         <NavLink to='/creator'><button>Przejdź do kreatora</button></NavLink>

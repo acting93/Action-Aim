@@ -1,7 +1,6 @@
 main {
   width: 100% !important;
-  height: 100% !important;
-  background: radial-gradient(#210781, black);
+  height: 0% !important;
 }
 
 main .basket {

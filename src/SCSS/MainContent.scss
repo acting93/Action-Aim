@@ -1,8 +1,7 @@
 @import './Variables';
 
 main{
-    @include maxWidthmaxHeight(100%,100%);
-    background:radial-gradient(rgb(33, 7, 129),black);
+    @include maxWidthmaxHeight(100%,0%);
     .basket{
         @include displayFlex(column);
         width:700px;
