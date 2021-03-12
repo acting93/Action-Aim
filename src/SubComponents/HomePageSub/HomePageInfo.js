@@ -14,7 +14,7 @@ const HomePageInfo = () => {
             <Col lg={12} className='homePageInfo-col'>
                 <section className='homePageInfo'>
                     <div className='homePage-title col-12'>
-                        <p>Przykładowe wzory</p>
+                        <p>Koszulki</p>
                     </div>
                     <article className='homePage-article-prize col-12'>
                         <div className='article-prize-el'>

@@ -21,7 +21,7 @@ main .basket {
           transform: translateX(50%);
   position: absolute;
   z-index: 300;
-  background: white;
+  background: black;
 }
 
 @media (max-width: 768px) {

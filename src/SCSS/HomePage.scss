@@ -5,22 +5,6 @@
     @include paddingMargin(0,0 auto);
     overflow: hidden;
     z-index: 1; 
-        @media(max-width: 1200px){
-            @include maxWidthmaxHeight(98%,auto); 
-        }
-        @media(max-width:768px){
-            border:15px solid rgb(0, 0, 0);
-            border-bottom:5px solid rgb(224, 224, 224);
-        }
-        @media(max-width:576px){
-            border:8px solid rgb(0, 0, 0);
-            border-bottom:5px solid rgb(224, 224, 224);
-        }
-        @media(max-width:450px){
-            @include maxWidthmaxHeight(100%,auto);
-            border:2px solid rgb(0, 0, 0);
-            border-bottom:3px solid rgb(224, 224, 224);
-        }
     .nextBtn{
         @include maxWidthmaxHeight(30%,100%);
         position: absolute;
@@ -57,13 +41,16 @@
         @include maxWidthmaxHeight(100%,60px);
         @include displayFlex(row);
         justify-content: center;
-        background-color:black;
+        background-color:rgba(0, 0, 0, 0.712);
         position: absolute;
         bottom: 0px;
         z-index: 1;
             @media(max-width:576px){
                 @include maxWidthmaxHeight(100%,30px);
                 bottom: 15px;
+            }
+            @media(max-width:450px){
+                display: none;
             }
         .navBtn{
             @include maxWidthmaxHeight(60px,5px);
@@ -80,20 +67,35 @@
             }
     }
     .carousel-content{
-        @include maxWidthmaxHeight(100%,650px);
+        @include maxWidthmaxHeight(100%,600px);
         @include displayFlex(row);
         scroll-behavior: smooth;
-            @media(max-width:996px){
-                @include maxWidthmaxHeight(100%,550px);
-            }
-            @media(max-width:768px){
+            @media(max-width:1200px){
                 @include maxWidthmaxHeight(100%,500px);
             }
-            @media(max-width:576px){
+            @media(max-width:992px){
+                @include maxWidthmaxHeight(100%,500px);
+            }
+            @media(max-width:880px){
                 @include maxWidthmaxHeight(100%,450px);
             }
-            @media(max-width:450px){
+            @media(max-width:768px){
                 @include maxWidthmaxHeight(100%,400px);
+            }
+            @media(max-width:672px){
+                @include maxWidthmaxHeight(100%,350px);
+            }
+            @media(max-width:576px){
+                @include maxWidthmaxHeight(100%,300px);
+            }
+            @media(max-width:450px){
+                @include maxWidthmaxHeight(100%,200px);
+            }
+            @media(max-width:320px){
+                @include maxWidthmaxHeight(100%,150px);
+            }
+            @media(max-width:300px){
+                display: none;
             }
         .carousel-element{
             display: flex;
@@ -101,6 +103,7 @@
             @include maxWidthmaxHeight(100%,100%);
             @include paddingMargin(0,0);
             position: relative;
+            background-size: contain;
             /*.catClass{
                 @include maxWidthmaxHeight(100%,auto);
                 position: absolute;
@@ -230,16 +233,18 @@
                 text-align: center;
                 font-size: 2rem;
                 text-transform: uppercase;
-                color: rgb(255, 255, 255);
-                font-weight: 800;
-                border-bottom: 1px solid white;
-                background: rgb(167, 7, 7);
+                color: rgb(207, 207, 207);
+                font-weight: 600;
+                background: rgb(141, 0, 0);
                     @media(max-width:992px){
                         font-size: 1.5rem;
                     }
                     @media(max-width:768px){
                         font-size: 1.2rem;
                         text-align: center;
+                    }
+                    @media(max-width:768px){
+                        width:100%;
                     }
                     @media(max-width:425px){
                         font-size: 1rem;
@@ -256,7 +261,7 @@
             @include displayFlex(row);
             height:auto;
             overflow: hidden;
-            box-shadow: 0 10px 20px black;
+            box-shadow: 0 10px 10px black;
             justify-content: center;
                 @media(max-width:1200px){
                     height: auto;
@@ -344,12 +349,15 @@
             @include displayFlex(row);
             @include maxWidthmaxHeight(100%,500px);
             @include paddingMargin(0,30px auto);
+            background: rgb(22, 22, 22);
                 @media(max-width:1200px){
-                    @include maxWidthmaxHeight(100%,450px);
+                    @include maxWidthmaxHeight(100%,500px);
                 }
                 @media(max-width:768px){
                     @include displayFlex(column);
-                    height:500px;
+                }
+                @media(max-width:450px){
+                    @include maxWidthmaxHeight(100%,400px);
                 }
             .article-part{
                 position: relative;
@@ -358,25 +366,14 @@
                         width:100%;
                     }
                 &:first-child{
-                    animation:leftArrow 1s linear;
-                    z-index: 1;
-                    background: url('../img/bg12.jpg');
-                    //clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+                        box-shadow: 0 0 5px rgb(0, 0, 0);
                         @media(max-width:768px){
                             @include maxWidthmaxHeight(100%,50%);
                             @include paddingMargin(0,0 auto);
                         }
-                        @keyframes leftArrow{
-                            0%{
-                                left:-100%;
-                            }
-                            100%{
-                                left:0%;
-                            }
-                        }
                     #zapraszamy{
                         font-size: 3rem;
-                        color:rgb(226, 226, 226);
+                        color:rgb(241, 0, 0);
                         font-weight: 800;
                         @media(max-width:996px){
                             left:0;
@@ -394,7 +391,7 @@
                         @include top50;
                         font-size: 1.5rem;
                         font-weight: 400;
-                        color:rgb(218, 218, 218);
+                        color:rgb(199, 199, 199);
                             @media(max-width:1200px){
                                 font-size: 1rem;
                             }
@@ -412,11 +409,11 @@
                     }
                 };
                 &:last-child{
-                    animation:rightArrow 2s linear;
+                    //animation:rightArrow 2s linear;
                     background-position: top;
                     background-position: top left;
-                    background: url('../img/bg13.jpg');
-                    background-size: cover;
+                    background:url('../img/catTshirt2.png') no-repeat;
+                    background-size: contain;
                         @media(max-width:992px){
                             @include maxWidthmaxHeight(50%,100%);
                         }
@@ -464,7 +461,7 @@
         .homePage-article-2{
             @include paddingMargin(0,0);
             @include maxWidthmaxHeight(100%,auto);
-            background: rgb(219, 219, 219);
+            background: url('../img/bg12.jpg');
             .homePage-title-article-2{
                 @include maxWidthmaxHeight(100%,100px);
                 @extend .homePage-title;
@@ -506,8 +503,6 @@
                     text-align: center;
                     overflow:hidden;
                     background: rgba(0, 27, 85, 0.623);
-                    border-radius: 20%;
-                    //clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
                         &:first-child{
                             background: rgba(196, 0, 0, 0.671);
                         }
@@ -600,42 +595,57 @@
             @include paddingMargin(20px,50px auto);
             .homePage-article-3-content{
                 @include maxWidthmaxHeight(80%,450px);
-                @include paddingMargin(0,0px auto);
-                background: rgb(255, 255, 255);
-                border: 1px solid rgb(83, 83, 83);
+                @include paddingMargin(10px,0 auto);
+                border: 10px solid rgb(139, 0, 0);
+                box-shadow: 0 0 15px rgb(0, 0, 0);
                 position: relative;
+                display: block;
+                    @media(max-width:1300px){
+                        @include maxWidthmaxHeight(100%,450px);
+                    }
+                    @media(max-width:768px){
+                        @include maxWidthmaxHeight(100%,auto);
+                        border: 1px solid rgb(139, 0, 0);
+                    }
                 .homePage-article-3-title{
-                    @include maxWidthmaxHeight(30%,100px);
+                    @include maxWidthmaxHeight(40%,auto);
                     @include paddingMargin(0,0 auto);
-                    overflow: hidden;
                     text-align: center;
+                    position: relative;
+                    transform: translateY(-10%);
+                    top:-10%;
                     background: rgb(255, 255, 255);
-                    position: absolute;
-                    top:-12%;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    @media(max-width:768px){
+                        transform: translateY(-100%);
+                        top:-100%;
+                    }
+                    @media(max-width:450px){
+                        @include maxWidthmaxHeight(auto,auto);
+                    }
                     p{
                         @include maxWidthmaxHeight(100%,auto);
                         @include paddingMargin(0,0 auto);
-                        @include top50;
-                        width: 80%;
+                        width: 100%;
                         font-size: 2rem;
-                        color: rgb(36, 36, 36);
+                        color: rgb(97, 0, 0);
                         font-weight: 800;
                             @media(max-width:768px){
-                                font-size: 1.2rem;
+                                font-size: 1.5rem;
+                            };
+                            @media(max-width:576px){
+                                font-size: 1rem;
                             };
                     }
                 }
                 .category-content{
-                    @include maxWidthmaxHeight(100%,300px); 
+                    @include maxWidthmaxHeight(100%,80%); 
+                    @include paddingMargin(0,0);
                     position: relative;
-                    top: 50%;
-                    transform: translateY(-50%);
                     text-align: center;
                     .category{
-                        @include maxWidthmaxHeight(300px,300px);
-                        @include paddingMargin(0,0px);
+                        @include maxWidthmaxHeight(calc(100%/3),300px);
+                        @include paddingMargin(0,0);
+                        @include top50;
                         text-align: center;
                         display: inline-block;
                         box-shadow: 0 0 10px rgb(26, 26, 26);
@@ -651,25 +661,19 @@
                                 background: url('../img/travel.jpg')center;
                                 background-size: cover;
                             }
-                            @media(max-width:992px){
+                            @media(max-width:1200px){
                                 @include maxWidthmaxHeight(250px,250px);
                                 @include paddingMargin(0,2px);
                             }
                             @media(max-width:768px){
-                                @include maxWidthmaxHeight(250px,250px);
-                                @include paddingMargin(0,0);
-                            }
-                            @media(max-width:576px){
+                                transform: translateY(0%);
                                 @include maxWidthmaxHeight(200px,200px);
-                                @include paddingMargin(0,0);
                             }
                             @media(max-width:400px){
                                 @include maxWidthmaxHeight(150px,150px);
-                                @include paddingMargin(0,2px);
                             }
                             @media(max-width:320px){
                                 @include maxWidthmaxHeight(90%,200px);
-                                @include paddingMargin(0,5px);
                             }
                         &:nth-child(3){
                             p{

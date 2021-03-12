@@ -18,7 +18,7 @@ const CarouselFunctions = (props) => {
     const slide = carousel.map(element => {
         return <div
             className='carousel-element'
-            style={{background:`url(`+ require(`../../img/${element.img}`) +`) no-repeat`,backgroundPosition:"top",backgroundSize:"cover"}}
+            style={{background:`url(`+ require(`../../img/${element.img}`) +`) no-repeat`,backgroundSize:"100% 100%",backgroundPosition:"top center"}}
             ref={elementRef}
             key={element.id}
             id={element.id}
@@ -83,9 +83,7 @@ const CarouselFunctions = (props) => {
                 <button onClick={nextSlide} className='nextBtn'></button>
                 <button onClick={prevSlide} className='prevBtn'></button>
                 <div className='carousel-content' ref={carouselRef}>
-                    {signal ? props.render(slide) :
-                        <div className='carousel-element' style={{background:`url(${SignalImg})`,backgroundSize:"cover"}}></div>    
-                    }
+                    {props.render(slide)}
                 </div>
                 {/*<div className='carousel-tv'><p>KOSZULKA TV</p></div>*/}
             </div>

@@ -10,7 +10,7 @@ main{
         transform: translateX(50%);
         position: absolute;
         z-index: 300;
-        background: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
         @media(max-width:768px){
             width:100%; 
         };
