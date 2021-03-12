@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd4e02565cba9faed0448f3f37c0201d",
+    "revision": "991ef866538f7e6553460a8461cf7faf",
     "url": "/Action-Aim/index.html"
   },
   {
-    "revision": "0ee15320a35f6d7eb959",
+    "revision": "4f93f69addb7cdaa2cb5",
     "url": "/Action-Aim/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "d5c581f90380beddd729",
-    "url": "/Action-Aim/static/css/main.016d6dc9.chunk.css"
+    "revision": "a81408dcc3856aa5cc79",
+    "url": "/Action-Aim/static/css/main.0086d2dc.chunk.css"
   },
   {
-    "revision": "0ee15320a35f6d7eb959",
-    "url": "/Action-Aim/static/js/2.9dcec44a.chunk.js"
+    "revision": "4f93f69addb7cdaa2cb5",
+    "url": "/Action-Aim/static/js/2.3e25bfee.chunk.js"
   },
   {
-    "revision": "d5c581f90380beddd729",
-    "url": "/Action-Aim/static/js/main.827a499d.chunk.js"
+    "revision": "a81408dcc3856aa5cc79",
+    "url": "/Action-Aim/static/js/main.d7ef37b8.chunk.js"
   },
   {
     "revision": "2000e64a09cc8543328a",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/action3.0bd50f0b.png"
   },
   {
-    "revision": "7a45c4fc3aed39aebe0972f3e94a5a0b",
-    "url": "/Action-Aim/static/media/africa.7a45c4fc.jpg"
+    "revision": "2c3422bf65c7de049c970b281cc7cc2f",
+    "url": "/Action-Aim/static/media/africa.2c3422bf.jpg"
   },
   {
     "revision": "ed544fbaab6e43b3ade4a75507a2f753",
@@ -88,6 +88,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/bgFlag.af2f7a92.png"
   },
   {
+    "revision": "8bf2cc24d02148ada5c51a8d65c1fa32",
+    "url": "/Action-Aim/static/media/bgHang.8bf2cc24.jpg"
+  },
+  {
+    "revision": "f01cadc8da4e6aaa3a1a50cf1a241235",
+    "url": "/Action-Aim/static/media/bgHang2.f01cadc8.jpg"
+  },
+  {
     "revision": "7d473668b8754cc6c9dc821ffcdfe13c",
     "url": "/Action-Aim/static/media/bgwallBlack.7d473668.jpg"
   },
@@ -96,12 +104,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/bird.9bab3e95.png"
   },
   {
-    "revision": "76f13abdecfd18d458397197e248cdc0",
-    "url": "/Action-Aim/static/media/carousel1.76f13abd.jpg"
+    "revision": "87f0d4dd50398a037b50e30130b9d1eb",
+    "url": "/Action-Aim/static/media/carousel1.87f0d4dd.jpg"
   },
   {
     "revision": "d900c6c5e4f34effa165f89e6a0a13d3",
     "url": "/Action-Aim/static/media/cat.d900c6c5.png"
+  },
+  {
+    "revision": "aac534e9b6e59a6f927df37d887fceb6",
+    "url": "/Action-Aim/static/media/catTshirt.aac534e9.png"
+  },
+  {
+    "revision": "57a8fb7583311380215062253c9a0d69",
+    "url": "/Action-Aim/static/media/catTshirt2.57a8fb75.png"
   },
   {
     "revision": "ba94ae26eb50ba10a84a32bd4f7d9dd9",
@@ -126,6 +142,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "972c05d5e9e145c8b026b95c2e88acc7",
     "url": "/Action-Aim/static/media/crossPattern.972c05d5.png"
+  },
+  {
+    "revision": "048dc2db38ab5ebae69d6e2665d29ec4",
+    "url": "/Action-Aim/static/media/cursorLeft.048dc2db.png"
+  },
+  {
+    "revision": "b471a1527796fb4a9b1dbca6d7c0d47d",
+    "url": "/Action-Aim/static/media/cursorRight.b471a152.png"
   },
   {
     "revision": "b4021e774e9b06aeb4f110f7d2ae1163",
@@ -172,10 +196,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Action-Aim/static/media/poland.098daac1.png"
   },
   {
-    "revision": "bd12c5918c9a7d197dc98d4f9960e7ca",
-    "url": "/Action-Aim/static/media/prize2.bd12c591.jpg"
-  },
-  {
     "revision": "96707fd73942b3db4dd2106f691431ec",
     "url": "/Action-Aim/static/media/sett.96707fd7.png"
   },
@@ -214,10 +234,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "55548f28c406e4d385107230f4b88bef",
     "url": "/Action-Aim/static/media/tshirtPNG.55548f28.png"
-  },
-  {
-    "revision": "4b4b92f9ab2a5a6c4c13a3378d3901f1",
-    "url": "/Action-Aim/static/media/tvbg.4b4b92f9.jpg"
   },
   {
     "revision": "bb93ab6c99ea5a493d102f19d71ea4db",
