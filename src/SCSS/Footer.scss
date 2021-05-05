@@ -1,0 +1,87 @@
+@import './Variables.scss';
+
+.footer{
+    @include maxWidthmaxHeight(100%,auto);
+    @include paddingMargin(0,0);
+    @include displayFlex(column);
+    border-top: 10px solid rgb(235, 235, 235);
+    background: rgb(22, 22, 22);
+    .footer-element-logo{
+        @include maxWidthmaxHeight(100%,auto);
+        img{
+            position: relative;
+            width: 10rem;
+            left:50%;
+            transform: translateX(-50%);
+        }
+    }
+    .footer-element{
+        border-top: 2px solid rgb(59, 59, 59);
+        @include maxWidthmaxHeight(100%,auto);
+        @include displayFlex(row);
+        justify-content: center;
+        @media(max-width:768px){
+            @include displayFlex(column);
+        }
+        .footer-element-info{
+            @include paddingMargin(2px,0);
+            @include maxWidthmaxHeight(45%,100%);
+            text-align: center;
+            @media(max-width:992px){
+                @include maxWidthmaxHeight(50%,100%);
+            }
+            @media(max-width:768px){
+                @include maxWidthmaxHeight(100%,50%);
+                @include displayFlex(column);
+            }
+            p{
+                font-size: 1rem;
+                padding-top: 10px;
+                width: 50%;
+                margin: 10px auto;
+                color:rgb(110, 110, 110);
+                @media(max-width:768px){
+                    font-size: 0.8rem;
+                    text-align: center;
+                    width: 80%;
+                }
+            }
+            ul{
+                @include maxWidthmaxHeight(100%,100%);
+                @include paddingMargin(0,0);
+                list-style-type: none;
+                @media(max-width:768px){
+                    text-align: center;
+                }
+                li{
+                    @include maxWidthmaxHeight(100%,auto);
+                    padding:8px;
+                    text-align: center;
+                    display: block;
+                    text-decoration: none;
+                    &:first-child{
+                        color:gold;
+                        font-size: 1rem;
+                    }
+                    @media(max-width:992px){
+                        padding:5px;
+                    }
+                    @media(max-width:768px){
+                        display: inline-block;
+                        @include maxWidthmaxHeight(auto,auto);
+                        @include paddingMargin(10px,5px);
+                    }
+                    a{
+                        font-size: 0.9rem;
+                        position: relative;
+                        text-decoration: none;
+                        color:rgb(110, 110, 110);
+                        &:hover{
+                          color:silver;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import './Variables';
+
+.container-fluid{
+    @include paddingMargin(0!important,0!important);
+    .row{
+        @include paddingMargin(0!important,0!important);
+        .wrapper{
+            position: relative;
+            @include maxWidthmaxHeight(100%,100%);
+            @include paddingMargin(0!important,0!important);
+            font-family: 'Monda', sans-serif;
+            font-weight: 400;
+        }
+    }
+}
+
+

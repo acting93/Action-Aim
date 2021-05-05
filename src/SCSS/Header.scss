@@ -1,0 +1,165 @@
+@import './Variables';
+
+.header-col{
+    @include headerHeight(100px);
+    @include displayFlex(row);
+    @include paddingMargin(0,0);
+    background:linear-gradient(to right,black,rgb(0, 1, 77));
+    border-bottom: 2px solid rgb(0, 0, 0);
+    z-index: 500;
+    @media(max-width: 768px){
+      @include displayFlex(column);
+      @include headerHeight(180px);
+    }
+    .header-contents{
+        width:50%;
+        height:100%;
+        text-align: center;
+        &:first-child{
+            @media(max-width: 992px){
+                width:30%;
+            }
+            @media(max-width: 768px){
+                width:100%;
+            }
+        }
+        &:last-child{
+            @media(max-width: 992px){
+                width:70%;
+            }
+            @media(max-width: 768px){
+                width:100%;
+            }
+        }
+        img{
+            width:9rem;
+            @include top50;
+            @media(max-width: 768px){
+                width:9rem;
+            }
+        }
+        .menu{
+            @include paddingMargin(0,0);
+            @include maxWidthmaxHeight(100%,50%);
+            text-align: center;
+            z-index: 1;
+            position: relative;
+            @include top50;
+            @media(max-width:768px){
+                background: none;
+            }
+            .toggler{
+                @include maxWidthmaxHeight(50px,40px);
+                position: relative;
+                background: none;
+                border:none;
+                display: none;
+                margin: -5px auto;
+                outline:none;
+                @media(max-width:768px){
+                    display: block; 
+                }
+                .toggler-hamburger{
+                    position: relative;
+                    @include maxWidthmaxHeight(auto,auto);
+                    span{
+                        margin: 6px auto;
+                        display: block;
+                        @include maxWidthmaxHeight(90%,5px);
+                        background-color: rgb(112, 112, 112);
+                    }
+                }
+                .toggler-double{
+                    position: relative;
+                    @include maxWidthmaxHeight(auto,auto);
+                    span{
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        display: block;
+                        left:5%;
+                        text-align: center;
+                        @include maxWidthmaxHeight(90%,5px);
+                        background-color: rgb(112, 112, 112);
+                        &:first-child{
+                            transform: rotate(45deg);
+                        }
+                        &:last-child{
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+            .menu-items{
+                width: 100%;
+                @include top50;
+                @include paddingMargin(20px,0);
+                @media(max-width:768px){
+                    @include displayFlex(column);
+                    position: absolute;
+                    width:100%;
+                    top: 180px;
+                    background: rgb(0, 0, 0);
+                }
+                a{
+                    color:rgb(238, 238, 238);
+                    position: relative;
+                    top: 30%;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    @media(max-width:768px){
+                        margin: 20px auto;
+                        &:hover{
+                            color: rgb(114, 114, 114);
+                        }
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        color: rgb(114, 114, 114);
+                    }
+                }
+            }
+            .basket-icon{
+                @include maxWidthmaxHeight(auto,60px);
+                @include displayFlex(row);
+                position: absolute;
+                right: 5%;
+                top:0%;
+                cursor: pointer;
+                text-align: center;
+                i{
+                    @include maxWidthmaxHeight(50%,60%);
+                    @include top50;
+                    color:rgb(253, 253, 253);
+                    font-size: 2rem;
+                    @media (max-width: 1200px){
+                        font-size: 1.5rem; 
+                    }
+                    &:hover{
+                        color:rgb(16, 123, 150);
+                        transition: 0.2s linear;
+                    }
+                }
+                span{
+                    @include maxWidthmaxHeight(30px,30px);
+                    background: rgb(255, 255, 255);
+                    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                    @media (max-width: 450px){
+                        @include maxWidthmaxHeight(25px,25px);
+                    }
+                    p{
+                        text-align: center;
+                        @include top50;
+                        font-size: 1rem;
+                        color:rgb(0, 0, 0);
+                        font-weight: 500;
+                        @media (max-width: 450px){
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
