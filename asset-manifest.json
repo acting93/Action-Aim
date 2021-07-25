@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Action-Aim/static/css/main.09238ad5.chunk.css",
-    "main.js": "/Action-Aim/static/js/main.99e68c29.chunk.js",
-    "main.js.map": "/Action-Aim/static/js/main.99e68c29.chunk.js.map",
+    "main.css": "/Action-Aim/static/css/main.72021ce0.chunk.css",
+    "main.js": "/Action-Aim/static/js/main.f0aa7255.chunk.js",
+    "main.js.map": "/Action-Aim/static/js/main.f0aa7255.chunk.js.map",
     "runtime-main.js": "/Action-Aim/static/js/runtime-main.f743e520.js",
     "runtime-main.js.map": "/Action-Aim/static/js/runtime-main.f743e520.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/Action-Aim/static/css/2.4c97ca4f.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.579dd819.chunk.js.map": "/Action-Aim/static/js/2.579dd819.chunk.js.map",
     "index.html": "/Action-Aim/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/Action-Aim/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.09238ad5.chunk.css.map": "/Action-Aim/static/css/main.09238ad5.chunk.css.map",
+    "static/css/main.72021ce0.chunk.css.map": "/Action-Aim/static/css/main.72021ce0.chunk.css.map",
     "static/js/2.579dd819.chunk.js.LICENSE.txt": "/Action-Aim/static/js/2.579dd819.chunk.js.LICENSE.txt",
     "static/media/1catcat.png": "/Action-Aim/static/media/1catcat.65aeae45.png",
     "static/media/AFRICAN.png": "/Action-Aim/static/media/AFRICAN.2a66d3d8.png",
@@ -69,7 +69,7 @@
     "static/js/runtime-main.f743e520.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.579dd819.chunk.js",
-    "static/css/main.09238ad5.chunk.css",
-    "static/js/main.99e68c29.chunk.js"
+    "static/css/main.72021ce0.chunk.css",
+    "static/js/main.f0aa7255.chunk.js"
   ]
 }
