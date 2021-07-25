@@ -4,7 +4,7 @@
     @include headerHeight(100px);
     @include displayFlex(row);
     @include paddingMargin(0,0);
-    background:linear-gradient(to right,black,rgb(0, 0, 97));
+    background:black;
     border-bottom: 2px solid rgb(0, 0, 0);
     z-index: 500;
     @media(max-width: 768px){
@@ -93,16 +93,16 @@
             .menu-items{
                 width: 100%;
                 @include top50;
-                @include paddingMargin(20px,0);
+                @include paddingMargin(10px,0);
                 @media(max-width:768px){
                     @include displayFlex(column);
                     position: absolute;
                     width:100%;
-                    top: 180px;
-                    background: rgb(0, 0, 0);
+                    top: 100px;
+                    background: rgb(255, 255, 255);
                 }
                 a{
-                    color:rgb(238, 238, 238);
+                    color:rgb(119, 119, 119);
                     position: relative;
                     top: 30%;
                     margin-left: 20px;

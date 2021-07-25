@@ -12,17 +12,18 @@ const CarouselFunctions = (props) => {
     const [signal,setSignal] = useState(false);
 
     //funkcja zwraza spany dla każdego elementu do przechodzenia między elementami karuzeli
-     const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue === item.id ? {background:"#007ea5"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id}></span>);
+    const createNavBtn = carousel.map(item => <span className='navBtn' style={currentValue === item.id ? {background:"#007ea5"} : null} onClick={()=> scrollByBtn(item.id)} key={item.id}></span>);
 
     //mapowanie elementów z json do karuzeli tworzenie diva dla każdego elementu.
     const slide = carousel.map(element => {
         return <div
             className='carousel-element'
-            style={{background:`url(`+ require(`../../img/${element.img}`).default +`) no-repeat`,backgroundSize:"100% 100%",backgroundPosition:"top center"}}
+            /*style={{background:`url(`+ require(`../../img/${element.img}`).default +`) no-repeat`,backgroundSize:"100% 100%",backgroundPosition:"top center"}}
             ref={elementRef}
-            key={element.id}
+            key={element.id}*/
             id={element.id}
         >
+            <img src={require(`../../img/${element.img}`).default}  alt=''/>
             <span className={element.spanClass}><p>{element.firstText}</p></span>
             <span className={element.spanClass}><p>{element.secondText}</p></span>
         </div>
@@ -66,6 +67,17 @@ const CarouselFunctions = (props) => {
             movingSlide();
         }
     },[currentValue]);
+
+
+    //funkcja, która zapobiega przesuwaniu karuzeli przy wykonywaniu czynności 'resize' w oknie przeglądarki
+    useEffect(()=>{
+        const slider = document.querySelector('.carousel-content');
+        const element = document.querySelector('.carousel-element');
+            window.addEventListener('resize',()=>{
+                slider.style.transform = `translateX(` +(-element.offsetWidth * currentValue) + `px)`;
+                slider.style.transition = 'none'
+            })
+    },[currentValue])
 
     //zmiana state signal true/false
     useEffect(()=>{
