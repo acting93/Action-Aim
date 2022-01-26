@@ -22,8 +22,6 @@ const Footer = () => {
                             <li>Na skróty:</li>
                             <li><NavLink to="/">Strona Główna</NavLink></li>
                             <li><NavLink to="/creator">Kreator</NavLink></li>
-                            <li><NavLink to="/aboutus">O nas</NavLink></li>
-                            <li><NavLink to="/contact">Kontakt</NavLink></li>
                         </ul>
                     </div>
                 </div>
