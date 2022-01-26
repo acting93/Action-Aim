@@ -2,20 +2,17 @@
     "slides":[
         {
             "id":0,
-            "img":"africa.jpg",
+            "img":"bg1.jpg",
             "firstText":"",
+            "secondText":"",
             "spanClass":""
         },            
         {
             "id":1,
-            "img":"carousel1.jpg",
+            "img":"bg7.jpg",
             "firstText":"",
             "secondText":"",
             "spanClass":""
-        },
-        {
-            "id":2,
-            "img":"bgHang2.jpg"
         }
     ]
 }
