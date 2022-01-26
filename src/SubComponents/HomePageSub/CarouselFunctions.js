@@ -18,9 +18,8 @@ const CarouselFunctions = (props) => {
     const slide = carousel.map(element => {
         return <div
             className='carousel-element'
-            /*style={{background:`url(`+ require(`../../img/${element.img}`).default +`) no-repeat`,backgroundSize:"100% 100%",backgroundPosition:"top center"}}
             ref={elementRef}
-            key={element.id}*/
+            key={element.id}
             id={element.id}
         >
             <img src={require(`../../img/${element.img}`).default}  alt=''/>
@@ -29,7 +28,7 @@ const CarouselFunctions = (props) => {
         </div>
     });
 
-    // funkcja odpowiada z poruszanie karuzeli3
+    // funkcja odpowiada z poruszanie karuzeli
     const movingSlide =()=>{
         const slider = document.querySelector('.carousel-content');
         const element = document.querySelector('.carousel-element');
