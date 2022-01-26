@@ -9,10 +9,10 @@
         position: absolute;
         right:0%;
         top:0%;
-        z-index: 100;
         background: none;
         outline: none;
         border: none;
+        z-index: 600;
         @media(max-width:768px){
             @include maxWidthmaxHeight(50%,100%); 
         }
@@ -29,6 +29,7 @@
         background: none;
         outline: none;
         border: none;
+        z-index: 600;
         @media(max-width:768px){
             @include maxWidthmaxHeight(50%,100%); 
         }
@@ -37,14 +38,14 @@
         }
     }
     .navBtnContent{
-        @include maxWidthmaxHeight(100%,60px);
+        @include maxWidthmaxHeight(100%,30px);
         @include displayFlex(row);
         max-width: 100%;
         justify-content: center;
-        background-color:rgb(0, 0, 0);
+        background-color:rgb(212, 212, 212);
         position: absolute;
         bottom: 0px;
-        z-index: 1;
+        z-index: 600;
             @media(max-width:576px){
                 @include maxWidthmaxHeight(100%,30px);
             }
@@ -52,7 +53,7 @@
                 display: none;
             }
         .navBtn{
-            @include maxWidthmaxHeight(60px,5px);
+            @include maxWidthmaxHeight(60px,8px);
             @include paddingMargin(0,2px);
             position: relative;
             border: 1px solid rgb(151, 151, 151);
@@ -67,9 +68,9 @@
     }
     .carousel-content{
         @include maxWidthmaxHeight(100%,auto);
-        
         @include  displayFlex(row);
         scroll-behavior: smooth;
+        background: #000;
             /*@media(max-width:1200px){
                 height: 500px;
             }
@@ -95,15 +96,57 @@
                 display: none;
             }
         .carousel-element{
-            //@include maxWidthmaxHeight(100vw,100%);
+            @include maxWidthmaxHeight(100vw,100%);
             @include paddingMargin(0,0);
-            @include displayFlex(row);
+            @include displayFlex(column);
             flex-shrink: 0;
             position: relative;
-            width: 100%;
-            min-height: auto;
+            span{
+                width: 100%;
+                height: 49%;
+                position: absolute;
+                text-transform: uppercase;
+                text-align: center;
+                animation: firstCarousel 1s ease-in;
+                &:nth-child(2){
+                    top:0% !important; 
+                }
+                &:last-child{
+                    top:45%;
+                }
+                p{
+                    position: relative;
+                    top: 25%;
+                    transform: translateY(-25%);
+                    color: rgb(255, 255, 255);
+                    font-size: 3rem;
+                    text-decoration: underline;
+                    @media(max-width:992px){
+                        font-size: 2.5rem; 
+                    }
+                    @media(max-width:768px){
+                        font-size: 1.5rem; 
+                    }
+                    @media(max-width:450px){
+                        font-size: 1rem; 
+                    }
+                    @media(max-width:350px){
+                        font-size: 0.8rem; 
+                    }
+                }
+                @keyframes firstCarousel {
+                    0%{
+                        background: rgb(0, 0, 0);
+                    }
+                    100%{
+                        background: rgba(0, 0, 0, 0.336);
+                    }
+                }
+            }
+            
             img{
-                @include maxWidthmaxHeight(100%,100%);
+                max-width: 100%;
+                max-height: 800;
                 position: relative;
             }
         }
@@ -140,6 +183,7 @@
         }
 }*/
 .homePageInfo-col{
+    background: linear-gradient(to bottom,black,rgb(0, 13, 27));
     padding: 0 !important;
     height:auto;
     .homePageInfo{
@@ -161,7 +205,7 @@
                 text-transform: uppercase;
                 color: rgb(207, 207, 207);
                 font-weight: 600;
-                background: rgb(141, 0, 0);
+                background: rgb(99, 0, 0);
                     @media(max-width:992px){
                         font-size: 1.5rem;
                     }
@@ -181,13 +225,12 @@
             }
         }
         .homePage-article-prize{
-            background: url('../img/bg8.jpg');
+            //background: url('../img/bg8.jpg');
             padding: 0;
             margin-bottom: 0px;
             @include displayFlex(row);
             height:auto;
             overflow: hidden;
-            box-shadow: 0 10px 10px black;
             justify-content: center;
                 @media(max-width:1200px){
                     height: auto;
@@ -253,13 +296,13 @@
                     p{
                         @include paddingMargin(0,10px);
                         text-align: center;
-                        color: rgb(197, 197, 197);
+                        color: rgb(0, 100, 187);
                         font-size: 1rem;
                         font-weight: 400;
                         &:first-child{
                             font-size: 1.5rem; 
                             font-weight: 600;
-                            color: rgb(255, 255, 255);
+                            color: aliceblue;
                             @media(max-width:576px){
                                 font-size: 1rem; 
                             }
@@ -275,7 +318,6 @@
             @include displayFlex(row);
             @include maxWidthmaxHeight(100%,500px);
             @include paddingMargin(0,30px auto);
-            background: rgb(22, 22, 22);
                 @media(max-width:1200px){
                     @include maxWidthmaxHeight(100%,500px);
                 }
@@ -292,7 +334,8 @@
                         width:100%;
                     }
                 &:first-child{
-                        box-shadow: 0 0 5px rgb(0, 0, 0);
+                        //background: linear-gradient(to right, black,rgba(0, 0, 0, 0.349)),url('../img/moon.jpg');
+                        background-size: cover;
                         display: block;
                         @media(max-width:768px){
                             @include maxWidthmaxHeight(100%,50%);
@@ -392,22 +435,14 @@
             }
         }
         .homePage-article-2{
-            @include paddingMargin(0,0);
+            @include paddingMargin(0,0 0);
             @include maxWidthmaxHeight(100%,auto);
-            background: url('../img/bg12.jpg');
+            background: url('../img/bgwallBlack.jpg') fixed;
+            background-size: cover;
             .homePage-title-article-2{
                 @include maxWidthmaxHeight(100%,100px);
                 @extend .homePage-title;
                 p{
-                    /*@include top50;
-                    @include maxWidthmaxHeight(80%,auto);
-                    @include paddingMargin(0,0 auto);
-                    font-size: 1.7rem;
-                    text-align: left;
-                    padding: 2rem;
-                    color: rgb(54, 54, 54);
-                    font-weight: 800;
-                    background: rgb(0, 65, 185);*/
                         @media(max-width:450px){
                             font-size: 1.2rem;
                         }
@@ -430,17 +465,17 @@
                     @include displayFlex(column);
                 }
                 .homePage-article-2-icon{
-                    @include maxWidthmaxHeight(30%,400px);
+                    @include maxWidthmaxHeight(30%,450px);
                     @include paddingMargin(0,10px);
                     position: relative;
                     text-align: center;
                     overflow:hidden;
-                    background: rgba(0, 27, 85, 0.623);
+                    background: rgba(0, 0, 0, 0);
                         &:first-child{
-                            background: rgba(196, 0, 0, 0.671);
+                            background: rgba(0, 0, 0, 0);
                         }
                         &:last-child{
-                            background: rgba(25, 0, 117, 0.664);
+                            background: rgba(0, 0, 0, 0);
                         }
                         @media(max-width:1300px){
                             @include maxWidthmaxHeight(35%,400px);
@@ -487,7 +522,7 @@
                     p{
                         @include paddingMargin(2px,0);
                         position: relative;
-                        color: rgb(236, 236, 236);
+                        color: rgb(245, 245, 245);
                         font-size: 2rem;
                         left:50%;
                         transform: translateX(-50%);
@@ -525,9 +560,10 @@
         }
         .homePage-article-3{
             @include maxWidthmaxHeight(100%,auto);
-            @include paddingMargin(20px,50px auto);
+            @include paddingMargin(20px,0px auto);
+            background-size: cover;
             .homePage-article-3-content{
-                @include maxWidthmaxHeight(80%,450px);
+                @include maxWidthmaxHeight(80%,550px);
                 @include paddingMargin(10px,0 auto);
                 border: 10px solid rgb(139, 0, 0);
                 box-shadow: 0 0 15px rgb(0, 0, 0);
@@ -545,9 +581,6 @@
                     @include paddingMargin(0,0 auto);
                     text-align: center;
                     position: relative;
-                    transform: translateY(-10%);
-                    top:-10%;
-                    background: rgb(255, 255, 255);
                     @media(max-width:768px){
                         transform: translateY(-100%);
                         top:-100%;
@@ -560,7 +593,7 @@
                         @include paddingMargin(0,0 auto);
                         width: 100%;
                         font-size: 2rem;
-                        color: rgb(97, 0, 0);
+                        color: rgb(216, 216, 216);
                         font-weight: 800;
                             @media(max-width:768px){
                                 font-size: 1.5rem;
@@ -576,12 +609,11 @@
                     position: relative;
                     text-align: center;
                     .category{
-                        @include maxWidthmaxHeight(calc(100%/3),300px);
-                        @include paddingMargin(0,0);
+                        @include maxWidthmaxHeight(calc(100%/4),300px);
+                        @include paddingMargin(0,0 5px);
                         @include top50;
                         text-align: center;
                         display: inline-block;
-                        box-shadow: 0 0 10px rgb(26, 26, 26);
                             &:nth-child(1){
                                 background: url('../img/motto.jpg');
                                 background-size: cover;
@@ -633,11 +665,11 @@
             }
         }
         .homePage-redirect{
+            background: none;
             width: 100%;
             margin: 0 !important;
             height: auto;
             padding: 50px;
-            background: #000;
             @media(max-width:768px){
                 padding: 30px;
             }
