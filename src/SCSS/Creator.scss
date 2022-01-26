@@ -523,7 +523,6 @@
                     @include maxWidthmaxHeight(100%,80px);
                     @include displayFlex(row);
                     border-bottom:3px solid rgb(88, 88, 88);
-                    border-radius: 0 0 20% 20%;
                         @media(max-width:1199px){
                             @include displayFlex(column);
                             @include maxWidthmaxHeight(auto,150px);

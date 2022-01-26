@@ -1001,7 +1001,6 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-bottom: 3px solid #585858;
-  border-radius: 0 0 20% 20%;
 }
 
 @media (max-width: 1199px) {

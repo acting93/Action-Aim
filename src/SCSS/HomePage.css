@@ -139,38 +139,11 @@
           flex-grow: 1;
   scroll-behavior: smooth;
   background: #000;
-  /*@media(max-width:1200px){
-                height: 500px;
-            }
-            @media(max-width:880px){
-                height: 450px;
-            }
-            @media(max-width:768px){
-                height: 400px;
-            }
-            @media(max-width:672px){
-                height: 350px;
-            }
-            @media(max-width:576px){
-                height:300px;
-            }
-            @media(max-width:450px){
-                height: 250px;
-            }
-            @media(max-width:350px){
-                height: 200px;
-            }*/
-}
-
-@media (max-width: 350px) {
-  .carousel .carousel-content {
-    display: none;
-  }
 }
 
 .carousel .carousel-content .carousel-element {
-  width: 100vw !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
   padding: 0 !important;
   margin: 0 !important;
   display: -webkit-box;
@@ -189,6 +162,7 @@
 }
 
 .carousel .carousel-content .carousel-element span {
+  display: none;
   width: 100%;
   height: 49%;
   position: absolute;
@@ -259,9 +233,21 @@
 }
 
 .carousel .carousel-content .carousel-element img {
-  max-width: 100%;
-  max-height: 800;
+  width: 100%;
+  height: 100%;
   position: relative;
+}
+
+@media (max-width: 576px) {
+  .carousel .carousel-content .carousel-element img {
+    height: calc(100vw/1.8);
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel .carousel-content .carousel-element img {
+    display: none;
+  }
 }
 
 /*.carousel-content-stand{
@@ -338,6 +324,8 @@
 @media (max-width: 425px) {
   .homePageInfo-col .homePageInfo .homePage-title p, .homePageInfo-col .homePageInfo .homePage-article-2 .homePage-title-article-2 p {
     font-size: 1rem;
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 
@@ -780,12 +768,6 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media (max-width: 1300px) {
-  .homePageInfo-col .homePageInfo .homePage-article-2 .homePage-article-2-part {
-    background: black;
-  }
 }
 
 @media (max-width: 768px) {
